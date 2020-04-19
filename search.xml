@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Java学习</title>
+    <url>/uncategorized/Java%E5%AD%A6%E4%B9%A0.html</url>
+    <content><![CDATA[<h1 id="java-day-1"><a href="#java-day-1" class="headerlink" title="java_day-1"></a>java_day-1</h1><p>[TOC]</p>
+<h2 id="java的历史"><a href="#java的历史" class="headerlink" title="java的历史"></a>java的历史</h2><p><strong>java语言的创始人：</strong>James-Gosling</p>
+<p><strong>Java语言的创世公司：</strong>SUN –&gt; Standford University  Network —&gt;SUN Microsysytems</p>
+<p><strong>Java语言的重大事件：</strong></p>
+<p>​                            <strong>1995</strong>    正式发布</p>
+<p>​                            <strong>1996</strong>    正式发布了可以下载的JDK工具包</p>
+<p>​                            <strong>1999</strong>    发布了第二代Java平台    简称Java2    细分为了三个版本</p>
+<p>​                                                    标准版    Standard    Edition            J2SE</p>
+<p>​                                                    企业版    Enterprise    Edition          J2SE</p>
+<p>​                                                    微型办    Micro    Edition                  J2SE</p>
+<p>​                            <strong>2004</strong>    JDK1.5版本    添加了很多新的特性    Jvav5</p>
+<p>​                            <strong>2005</strong>    Java6版本</p>
+<p>​                            <strong>2009</strong>    Oracle公司收购74亿$    收购了SUN</p>
+<h2 id="java语言的特点"><a href="#java语言的特点" class="headerlink" title="java语言的特点"></a>java语言的特点</h2><p><strong>1.跨平台性</strong>                                 平台（不同厂商的芯片） 平台（不同版本的操作系统）</p>
+<p><strong>2.面向对象</strong>                                </p>
+<p><strong>3.简单性</strong>                                     省去了C++多继承，指针等等</p>
+<p><strong>4.健壮性</strong>                                     垃圾回收机制    异常处理机制</p>
+<p><strong>5.多线程性</strong>                                 并行操作 提高执行性能 线程安全</p>
+<p><strong>6.大数据开发</strong></p>
+<h2 id="java跨平台机制，环境搭建"><a href="#java跨平台机制，环境搭建" class="headerlink" title="java跨平台机制，环境搭建"></a>java跨平台机制，环境搭建</h2><p><strong>1.JDK、JRE和JVM的关系：</strong>、</p>
+<p>​                                    <strong>JDK</strong>(Java Development Kit)：Java语言开发工具包，包含JRE、编译器和调试器等用于程序开发的文件。抛开jRE不谈，他的功能主要能干编译和调试两件事。其中Javac.exe用来编译的程序java.exe用来执行的程序。</p>
+<p>​                                    <strong>JRE</strong>(Java Runtime Environment)：Java运行环境，包含了JVM及Java的核心类库。抛开JVM不谈，它主要的功能是提供一些必要的运行环境。</p>
+<p>​                                    <strong>JVM</strong>(Java Virtual Machine)：Java虚拟机，他是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。Java的解释器就包含在JVM中。JVM有自己完善的硬件结构，如处理器、堆栈（Stack)、寄存器等、还具有相应的指令系统（字节码就是一种指令格式）。他的主要功能就是，将字节码文件class文件解释成对应平台机器码并执行。不同的操作系统因为他们的机器码不同所以他们的JVM不同。</p>
+<p>​                                    <strong>它们的关系图为</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5CJDK&JRE&JVM%E5%85%B3%E7%B3%BB.png" alt=""></p>
+<p><strong>2.Java程序运行机制</strong>：先编译在解释执行</p>
+<p>​                            1).先通过“编译器”将Java源程序编译成Java字节码文件（.class）（字节码文件采用结构中立的中间文件格式）</p>
+<p>​                            2).通过不同的虚拟机(JVM)将字节码文件解释成为机器语言并执行</p>
+<p><strong>用图表示为：</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5CJava%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png" alt=""></p>
+<p><strong>3.Java 跨平台原理：</strong></p>
+<p>因为程序都需要编译生成字节码文件(.class)，而字节码文件生成后是结构中立的中间文件格式，即可看作是无关于源文件(.java)也无关于虚拟机（JVM）的文件，这样在不同机器上执行同一份.class文件他们的执行结果也相同。</p>
+<p><strong>用图表示为：</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5C%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%8E%9F%E7%90%86.png" alt=""></p>
+<p><strong>4.环境的搭建：</strong></p>
+<p>​                安装JDK，因为JDK中包含了JRE，JRE中包含了JVM，所以不用重新再次安装JRE，从官网下载JDK：开发者工具，在进行安装。</p>
+<p>​                JDK中有bin文件夹，include文件夹，jre文件夹，lib文件夹，src.zip压缩文件</p>
+<p>​                            <strong>bin文件夹</strong>                全是工具</p>
+<p>​                            <strong>include文件夹</strong>        包含了其他语言写的程序    native修饰符</p>
+<p>​                            <strong>jre文件夹</strong>                包含了运行环境</p>
+<p>​                            <strong>lib文件夹</strong>                包含了别人写好的所有Java类</p>
+<p>​                            <strong>src.zip压缩文件</strong>     源代码</p>
+<h2 id="java的编译与执行，环境变量"><a href="#java的编译与执行，环境变量" class="headerlink" title="java的编译与执行，环境变量"></a>java的编译与执行，环境变量</h2><p><strong>1.如何编写一段Java源代码    dos命令窗口</strong></p>
+<p>​            源代码—-&gt;一堆英文（按照某种规则来写）</p>
+<p>​            以文件形式储存在计算机的硬盘上</p>
+<p>​            源代码    以后后缀名.java结尾的</p>
+<p>​            文件打开里面的内容是一堆按照规律写的英文</p>
+<p>​            先写一个关键字class —–&gt; 表示类的意思</p>
+<p>​            类后面给它起一个名字—-&gt;理论上可以随便写</p>
+<p>​            命名规则和规约</p>
+<p>​                    规则：</p>
+<p>​                            可以包含字母、数字、符号、汉字（强烈不推荐）</p>
+<p>​                            字母：区分大小写，敏感52个</p>
+<p>​                            数字：0-9可以用，不能用做开头</p>
+<p>​                            符号：英文 _ $</p>
+<p>​                    规约：</p>
+<p>​                            类名字    首字母大写TestOne    如果两个以上的单词    每个单词的首字母都要大写</p>
+<p>​                            起名字的时候要见名知意    建议使用英文</p>
+<p><strong>2.利用JDK包中提供的工具    代码的编译及执行</strong></p>
+<p>​            dos命令窗口</p>
+<p>​            D:\Program Files\Java\jdk1.8.0_201\bin</p>
+<p>​            路径下存在一个javac.exe编译工具</p>
+<p>​            遇到了两个问题</p>
+<p>​                                1.编译工具双击是黑色的对话框一闪而过</p>
+<p>​                                            编译工具是在dos命令窗口中才能使用</p>
+<p>​                                2.想要利用编译工具去编译写好的Java源文件</p>
+<p>​                                            源文件所在路径于编译工具不在一起</p>
+<p>​                                            让工具在当前电脑所有目录都可以公同访问到的的位置</p>
+<p>​                                            相当于搭建环境的一个补充    安装JDK    配置环境变量</p>
+<p><strong>3.环境变量的配置：</strong></p>
+<p><strong>path：</strong>让工具可以在任意的位置都可以使用</p>
+<p><strong>classpath：</strong>不管源文件在哪儿    生成的class文件都统一的储存在配置的目录下</p>
+<p><strong>JAVA_HOME：</strong>目的是为了让路径（path）的写法变得简单</p>
+<p><strong>path：</strong>安装路径所在的目录 D:\Program Files\Java\jdk1.8.0_201\bin || %JAVA_HOME%\bin</p>
+<p><strong>JAVA_HOME：</strong>JDK安装路径</p>
+<p>问题：</p>
+<p>源文件和生成的字节码文件名字不一致</p>
+]]></content>
+  </entry>
+</search>

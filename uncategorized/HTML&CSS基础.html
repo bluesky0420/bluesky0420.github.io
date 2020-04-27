@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/appleone-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/am-favicon-16%C3%9716.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/am-favicon-32%C3%9732.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bluesky.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+  <meta name="description" content="HTML&amp;CSS   概述HTML &amp;  CSS概述1.web ​            互联网 2.W3C ​            万维网联盟 ​            为互联网提供各种标准 3.xml ​            可扩展的标记语言：extension markup language,用于定义文档结构。 4.什么是HTML ​            HTML是W3C定义的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML&amp;CSS基础">
+<meta property="og:url" content="http://bluesky.com/uncategorized/HTML&CSS%E5%9F%BA%E7%A1%80.html">
+<meta property="og:site_name" content="Bulesky の Blog">
+<meta property="og:description" content="HTML&amp;CSS   概述HTML &amp;  CSS概述1.web ​            互联网 2.W3C ​            万维网联盟 ​            为互联网提供各种标准 3.xml ​            可扩展的标记语言：extension markup language,用于定义文档结构。 4.什么是HTML ​            HTML是W3C定义的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-27T15:30:17.380Z">
+<meta property="article:modified_time" content="2020-04-27T15:26:26.364Z">
+<meta property="article:author" content="Bluesky0420">
+<meta property="article:tag" content="Web前端，js，Java，Mysql，Music，Anime">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://bluesky.com/uncategorized/HTML&CSS%E5%9F%BA%E7%A1%80.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>HTML&CSS基础 | Bulesky の Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Bulesky の Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bulesky の Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">为爱发电</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/HTML&CSS%E5%9F%BA%E7%A1%80.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bluesky0420">
+      <meta itemprop="description" content="编程，学习，动漫，分享新鲜事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bulesky の Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML&CSS基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-27 15:30:17 / 修改时间：15:26:26" itemprop="dateCreated datePublished" datetime="2020-04-27T15:30:17Z">2020-04-27</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <center style = "font-size:30px;font-weight:600;">HTML&CSS</center>
+
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h2><h3 id="HTML-amp-CSS概述"><a href="#HTML-amp-CSS概述" class="headerlink" title="HTML &amp;  CSS概述"></a><strong>HTML &amp;  CSS概述</strong></h3><p><strong>1.web</strong></p>
+<p>​            互联网</p>
+<p><strong>2.W3C</strong></p>
+<p>​            万维网联盟</p>
+<p>​            为互联网提供各种标准</p>
+<p><strong>3.xml</strong></p>
+<p>​            可扩展的标记语言：extension markup language,用于定义文档结构。</p>
+<p><strong>4.什么是HTML</strong></p>
+<p>​            HTML是W3C定义的语言标准：用来描述页面结构的语言。</p>
+<p>​            结构：有什么东西，这个东西表示什么含义。</p>
+<p>​            HTML：Hyper Text Markup Language，超文本标记语言</p>
+<p><strong>5.什么是CSS</strong></p>
+<p>​            CSS是W3C定义的语言标准：用来展示页面效果的语言。</p>
+<p>​            CSS决定了页面长什么样子。</p>
+<p><strong>6.执行HTML    CSS</strong></p>
+<p>​            HTML、CSS    →    浏览器内核执行    →    页面</p>
+<p>​            浏览器：shell(外壳) + core(内核):js执行引擎、渲染引擎、其他模块</p>
+<p>​            主流浏览器及其内核：</p>
+<p>​                    IE：Trident</p>
+<p>​                    Chrome：webkit(前)    blink(现)</p>
+<p>​                    Firefox：Gecko</p>
+<p>​                    Safari：Webkit</p>
+<p>​                    Opera：Presto(前)    blink(现)</p>
+<p><strong>7.版本和兼容</strong></p>
+<p>​            HTML5：2014年制定完成</p>
+<p>​            CSS3：至今还没有制定完成</p>
+<p>​            XHTML：完全符合XML规范的HTML的一个版本</p>
+<h3 id="开发环境准备"><a href="#开发环境准备" class="headerlink" title="开发环境准备"></a><strong>开发环境准备</strong></h3><p><strong>1.显示文件扩展名</strong></p>
+<p>​            大部分文件都有文件扩展名</p>
+<p>​            文件扩展名决定了文件用什么应用程序打开</p>
+<p><strong>2.安装浏览器</strong></p>
+<p>​            IE，chrome，Firefox，safari，opera    (推荐chrome)</p>
+<p><strong>3.安装编辑器</strong></p>
+<p>​            记事本(推荐前期使用记事本)，sublime，vscode(插件多)，Atom，Dw(不推荐)，HBuilder</p>
+<h2 id="HTML核心"><a href="#HTML核心" class="headerlink" title="HTML核心"></a><strong>HTML核心</strong></h2><h3 id="第一个网页"><a href="#第一个网页" class="headerlink" title="第一个网页"></a><strong>第一个网页</strong></h3><p><strong>1.注释</strong></p>
+<p>​            注释为文档编辑者提供帮助，不参与运行</p>
+<p>​            HTML中的注释如下</p>
+<blockquote>
+<p>&lt;! –    注释内容    –&gt;    如果使用的是VScode和sublime可以使用快捷键    ctrl + ?</p>
+</blockquote>
+<p><strong>2.元素</strong></p>
+<p>​            其他叫法：标签、标记</p>
+<p>​            官方文档为Element：元素</p>
+<p>​            元素 = begin tag(起始标记) + end tag(结束标记) + 元素内容 + 元素属性</p>
+<p>​            属性 = 属性名 + 属性值</p>
+<p>​            属性分类：</p>
+<p>​                    局部属性：元素特有的属性</p>
+<p>​                    全局属性：所有元素通用</p>
+<p>​            <strong>空元素</strong>：没有结束标记的元素，有两种写法，如下。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset &#x3D; &quot;UTF-8&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.元素的嵌套</strong></p>
+<p>​            元素不能互相嵌套</p>
+<p>​            父元素、子元素、祖先元素、后代元素、兄弟元素</p>
+<p><strong>4.标准的文档结构</strong></p>
+<p>​            如下图</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">！DOCTYPE</span> <span class="attr">HTML</span>&gt;</span>		//文档声明，告诉浏览器当前文档使用的是HTML5标准，不写文档声明会导致浏览器进入怪异渲染模式</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span>	//根元素，一个页面只能有一个，且该元素是其他元素的父元素或祖先元素，H5版本没有强制要求书写该属性。</span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span>			//文档头，文档头部属性，不显示在页面，通常里面添加元数据(用于给浏览器看的附加信息)，外部链接。</span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span>	//元数据</span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">name</span> = <span class="string">"viewport"</span> <span class="attr">conten</span> = <span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">http-equiv</span> = <span class="string">"X-UA-Compatible"</span> <span class="attr">content</span> = <span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">title</span>&gt;</span>My First Webpage<span class="tag">&lt;/<span class="name">title</span>&gt;</span>	//文档标题，及网页的标题</span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span>			//文档主体，包含了文档的所有内容</span><br><span class="line">        <span class="comment">&lt;!-- 注释内容--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://www.bilibili.com"</span>&gt;</span>bilibili<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>5.知识补充</strong></p>
+<p>​            lang：表示文档内容是用什么自然语言书写而成的。</p>
+<p>​            charset：网页内容的编码。</p>
+<p>​            计算机中自能存储数字</p>
+<p>​            计算机中，低电压(0-2 V) 0，高电压(2-5 V) 1，表示成二进制。</p>
+<p>​            UTF-8是Unicode编码的一个版本</p>
+<p>​            页面上要参与显示的元素都应该放在元素体中(body)</p>
+<h3 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a><strong>语义化</strong></h3><p><strong>1.什么是语义化</strong></p>
+<p>​            每一个HTML元素都具体有具体含义</p>
+<p>​            所有HTML元素与展示在页面的效果无关,页面效果由CSS决定</p>
+<p>​            当我们只有HTML元素而没有设置CSS属性但页面仍有效果是因为浏览器有默认的CSS样式</p>
+<p><strong>2.为什么需要语义化</strong></p>
+<p>​            为了搜索引擎优化(SEO)</p>
+<p>​                    每隔一段时间搜索引擎会从整个网页获取网页源码</p>
+<p>​            为了让浏览器理解网页</p>
+<p>​                    阅读模式、语音模式</p>
+<h3 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a><strong>文本元素</strong></h3><p><strong>1.h元素</strong></p>
+<p>​            标题元素h1-h6</p>
+<p><strong>2.p元素</strong></p>
+<p>​            文本元素，paragraphs</p>
+<p><strong>3.span元素</strong></p>
+<p>​            没有语义，用来设置样式</p>
+<p><strong>4.pre元素</strong></p>
+<p>​            预格式化文本元素</p>
+<p>​            空白折叠：在源码中连续的空白字符，在页面显示会被折叠成一个空格</p>
+<p>​            在pre元素中不会出现空白折叠，通常用于显示页面中的一些代码</p>
+<p>​            pre元素的本质：他有一个默认的css属性white-space：pre;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>文本元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>我虽然是文本元素但是我的用途一般是设置样式<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>pre元素的用法<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--方法1--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        	var i = 2;</span><br><span class="line">        	if(i)&#123;</span><br><span class="line">        		console.log(i);</span><br><span class="line">        	&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--方法2为了语义化--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">code</span> <span class="attr">style</span> = <span class="string">"white-space: pre;"</span>&gt;</span></span><br><span class="line">            var i = 2;</span><br><span class="line">            if(i)&#123;</span><br><span class="line">            	console.log(i);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>推荐网页：<a href="http://www.xuanfengge.com/funny/html5/element/" target="_blank" rel="noopener">HTML5元素周期表</a></p>
+<p>###　<strong>HTML实体</strong></p>
+<p><strong>1.实体字符，HTML Entity</strong></p>
+<p>​            实体字符通常用于在页面中显示一些特殊符号。</p>
+<p><strong>2.书写形式</strong></p>
+<p>​            &amp;单词;</p>
+<p>​            &amp;#数字;</p>
+<p><strong>3.常用的实体字符</strong></p>
+<p>​            小于：&lt; &#60;</p>
+<p>​            大于：&gt; </p>
+<p>​            空格：&nbsp;</p>
+<p>​            版权：&copy;</p>
+<p>跟多实体字符请查看：<a href="https://www.w3school.com.cn/tags/html_ref_entities.html" target="_blank" rel="noopener">html实体参考手册</a></p>
+<h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a><strong>a标签</strong></h3><p><strong>1.href属性</strong></p>
+<p>​            hyper reference(引用)</p>
+<p><strong>2.功能</strong></p>
+<p>​            跳转地址</p>
+<p>​            跳转锚点</p>
+<p>​            功能性链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>a标签的使用<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--跳转地址--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"https://www.bilibili.com"</span>&gt;</span>bilibili<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--跳转锚点--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"#锚点地址"</span>&gt;</span>跳转锚点<span class="tag">&lt;/<span class="name">a</span>&gt;</span>   //可以跳转到某个页面的锚点，也可以跳转到本页面的锚点位置</span><br><span class="line">        <span class="comment">&lt;!--功能性链接--&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"javascipt:alert("</span>你好!")"&gt;</span>弹出你好!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"mailto:xxxx@gmail.com"</span>&gt;</span>点击发送邮箱<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"telto:xxxxx"</span>&gt;</span>点击通话<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3.target属性</strong></p>
+<p>​            跳转到新页面</p>
+<p>​            target = “blank”;</p>
+<p><strong>4.全局属性</strong></p>
+<p>​            title = “提示文字”;</p>
+<h3 id="路径的写法"><a href="#路径的写法" class="headerlink" title="路径的写法"></a><strong>路径的写法</strong></h3><p><strong>1.站内资源和站外资源</strong></p>
+<p>​            站内资源：当前网站的资源</p>
+<p>​            站外资源：非当前网站的资源</p>
+<p><strong>2.绝对路径和相对路径</strong></p>
+<p>​            绝对路径书写格式：</p>
+<p>​                    url地址:</p>
+<p>​                    协议名://主机号:端口/路径</p>
+<p>​                    协议名：https、http、file….</p>
+<p>​                    主机号：域名、IP地址</p>
+<p>​                    端口号：http协议默认端口是80，https协议默认端口号是443。</p>
+<p>​            相对路径：</p>
+<p>​                    以./开头./表示当前目录所在资源</p>
+<p>​            站内资源：使用相对路径和绝对路径都可以</p>
+<p>​            站外资源：绝对路径</p>
+<h3 id="图片元素"><a href="#图片元素" class="headerlink" title="图片元素"></a><strong>图片元素</strong></h3><p><strong>1.img元素</strong></p>
+<p>​            image缩写，空元素</p>
+<p>​            src(source)属性：图像资源地址</p>
+<p>​            alt属性：当图片资源失效时，将使用该元素文字代替图片</p>
+<p><strong>2.和a元素联用</strong></p>
+<p>​            在a元素中添加img元素</p>
+<p><strong>3.和map元素联用</strong></p>
+<p>​            map：地图，可将一张图片的各个区域分割成不同的链接地址</p>
+<p>​            map子元素：area</p>
+<p>​            circle：园形    （圆心坐标，半径）</p>
+<p>​            rect：矩形      （左上角坐标，右下角坐标）</p>
+<p>​            poly：多边形 （各个坐标点的坐标）</p>
+<p><strong>4.figure元素</strong></p>
+<p>​            将图片、图片标题、图片描述包裹起来</p>
+<p>​            子元素：figcaption</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">cahrset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>img元素的用法<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"链接地址"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> = <span class="string">"图片资源"</span> <span class="attr">usemap</span> = <span class="string">"map标签的名字"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h2</span>&gt;</span>图片标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>图片描述<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span> = <span class="string">"map标签的名字"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span> = <span class="string">"目标形状"</span> <span class="attr">coord</span> = <span class="string">"坐标位置"</span> <span class="attr">href</span> = <span class="string">"链接地址"</span> <span class="attr">target</span> = <span class="string">"blank"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="多媒体元素"><a href="#多媒体元素" class="headerlink" title="多媒体元素"></a><strong>多媒体元素</strong></h3><p><strong>1.video：视频</strong></p>
+<p>​            属性autoplay：自动播放，muted：静音播放，controls：控制控件显示，loop：循环播放</p>
+<p><strong>2.audio：音频</strong></p>
+<p>​            属性autoplay：自动播放，muted：静音播放，controls：控制控件显示，loop：循环播放</p>
+<p><strong>3.兼容性</strong></p>
+<p>​            旧版本浏览器不支持这两个属性</p>
+<p>​            不同版本的浏览器支持的音频格式可能不同</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>多媒体元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"资源地址"</span> <span class="attr">autoplay</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"资源地址"</span> <span class="attr">autoplay</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">vedio</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--兼容性写法--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">audio</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span> = <span class="string">"资源地址"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>对不起你的浏览器不支持video元素<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"下载链接"</span>&gt;</span>请点击下载新版本浏览器<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表元素"><a href="#列表元素" class="headerlink" title="列表元素"></a><strong>列表元素</strong></h3><p><strong>1.有序列表</strong></p>
+<p>​            ol：ordered list</p>
+<p>​            li：list item</p>
+<p>​            ol的属性，type值为1时，按数字大小排列；为i时，按罗马数字排序，为A，a时，按大写小写排序</p>
+<p>​            不建议使用type属性，在css属性的list-style-type可以进行修改</p>
+<p><strong>2.无序列表</strong></p>
+<p>​            ul：unordered list</p>
+<p>​            li：list itme</p>
+<p>​            通常用于制作菜单</p>
+<p><strong>3.定义列表</strong></p>
+<p>​            用于一些专业术语的定义</p>
+<p>​            dl：definition list</p>
+<p>​            dt：definition title</p>
+<p>​            dd：definition description</p>
+<h3 id="容器元素"><a href="#容器元素" class="headerlink" title="容器元素"></a><strong>容器元素</strong></h3><p><strong>1.div元素</strong></p>
+<p>​            没有语义，用来定义块级元素</p>
+<p><strong>2.语义化元素</strong></p>
+<p>​            header：通常表示页头或者文章的头部</p>
+<p>​            article：通常表示整篇文章</p>
+<p>​            section：通常表示文章的章节</p>
+<p>​            footer：通常用于表示页尾，或表示文章的尾部</p>
+<p>​            aside：通常用于表示附加信息，侧边栏</p>
+<h3 id="元素的包含关系"><a href="#元素的包含关系" class="headerlink" title="元素的包含关系"></a><strong>元素的包含关系</strong></h3><p><strong>1.之前的说法</strong></p>
+<p>​            之前的说法是，会计元素可以包含行级元素，行级元素不能包含块级元素，a元素除外</p>
+<p>​            现在因为语义化的提出，上面的说法失效，因为html元素与它展现页面的效果无关</p>
+<p><strong>2.总结</strong></p>
+<p>​            1.容器元素中可以包含任何元素</p>
+<p>​            2.a元素中可以包含几乎所有元素</p>
+<p>​            3.某些元素有固定的子元素如：ul &gt; li…..</p>
+<p>​            4.标题元素和段落元素不能互相嵌套，且不能包含容器元素</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/uncategorized/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.html" rel="prev" title="Java 学习路线">
+      <i class="fa fa-chevron-left"></i> Java 学习路线
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+          <div>
+          	  <center>
+    			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1422013341&auto=1&height=66"></iframe>
+  			  </center>
+          </div>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-amp-CSS概述"><span class="nav-number">1.1.</span> <span class="nav-text">HTML &amp;  CSS概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发环境准备"><span class="nav-number">1.2.</span> <span class="nav-text">开发环境准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML核心"><span class="nav-number">2.</span> <span class="nav-text">HTML核心</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个网页"><span class="nav-number">2.1.</span> <span class="nav-text">第一个网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语义化"><span class="nav-number">2.2.</span> <span class="nav-text">语义化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本元素"><span class="nav-number">2.3.</span> <span class="nav-text">文本元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a标签"><span class="nav-number">2.4.</span> <span class="nav-text">a标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路径的写法"><span class="nav-number">2.5.</span> <span class="nav-text">路径的写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片元素"><span class="nav-number">2.6.</span> <span class="nav-text">图片元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多媒体元素"><span class="nav-number">2.7.</span> <span class="nav-text">多媒体元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表元素"><span class="nav-number">2.8.</span> <span class="nav-text">列表元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器元素"><span class="nav-number">2.9.</span> <span class="nav-text">容器元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素的包含关系"><span class="nav-number">2.10.</span> <span class="nav-text">元素的包含关系</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bluesky0420"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Bluesky0420</p>
+  <div class="site-description" itemprop="description">编程，学习，动漫，分享新鲜事</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bluesky0420" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bluesky0420" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1208219758@qq.com" title="E-Mail → mailto:1208219758@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/15610216" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;15610216" rel="noopener" target="_blank"><i class="fa-fa-bilibili fa-fw"></i>bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/yourname" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/yourname" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="skype:yourname?call|chat" title="Skype → skype:yourname?call|chat" rel="noopener" target="_blank"><i class="fab fa-skype fa-fw"></i>Skype</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://dp2px.com/" title="https:&#x2F;&#x2F;dp2px.com&#x2F;" rel="noopener" target="_blank">dp2px</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bluesky</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">13k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">12 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="/js/src/wobblewindow.js"></script>
+  <script>
+    //只在桌面版网页启用特效
+    if (window.innerWidth > 768) {
+      $(document).ready(function () {
+        
+        // 根据类名获取，而不是id
+        $('.header').wobbleWindow({
+          radius: 50,
+          movementTop: false,
+          movementLeft: false,
+          movementRight: false,
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.sidebar').wobbleWindow({
+          radius: 50,
+          movementLeft: false,
+          movementTop: false,
+          movementBottom: false,
+          position: 'fixed',
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.footer').wobbleWindow({
+          radius: 50,
+          movementBottom: false,
+          movementLeft: false,
+          movementRight: false,
+          
+          position: 'absolute',
+          debug: false,
+        });
+        
+      });
+    }
+  </script>
+
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="/js/cursor/explosion.min.js"></script>
+
+
+
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+ 
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/ Relative","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacityDefault":0.6}});</script></body>
+</html>

@@ -1,6 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>我的Java学习之路</title>
+    <url>/uncategorized/%E6%88%91%E7%9A%84Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.html</url>
+    <content><![CDATA[<h1 id="java-day-1"><a href="#java-day-1" class="headerlink" title="java_day-1"></a>java_day-1</h1><h2 id="java的历史"><a href="#java的历史" class="headerlink" title="java的历史"></a>java的历史</h2><p><strong>java语言的创始人：</strong>James-Gosling</p>
+<p><strong>Java语言的创世公司：</strong>SUN –&gt; Standford University  Network —&gt;SUN Microsysytems</p>
+<p><strong>Java语言的重大事件：</strong></p>
+<p>​                            <strong>1995</strong>    正式发布</p>
+<p>​                            <strong>1996</strong>    正式发布了可以下载的JDK工具包</p>
+<p>​                            <strong>1999</strong>    发布了第二代Java平台    简称Java2    细分为了三个版本</p>
+<p>​                                                    标准版    Standard    Edition            J2SE</p>
+<p>​                                                    企业版    Enterprise    Edition          J2SE</p>
+<p>​                                                    微型办    Micro    Edition                  J2SE</p>
+<p>​                            <strong>2004</strong>    JDK1.5版本    添加了很多新的特性    Jvav5</p>
+<p>​                            <strong>2005</strong>    Java6版本</p>
+<p>​                            <strong>2009</strong>    Oracle公司收购74亿$    收购了SUN</p>
+<h2 id="java语言的特点"><a href="#java语言的特点" class="headerlink" title="java语言的特点"></a>java语言的特点</h2><p><strong>1.跨平台性</strong>                                 平台（不同厂商的芯片） 平台（不同版本的操作系统）</p>
+<p><strong>2.面向对象</strong>                                </p>
+<p><strong>3.简单性</strong>                                     省去了C++多继承，指针等等</p>
+<p><strong>4.健壮性</strong>                                     垃圾回收机制    异常处理机制</p>
+<p><strong>5.多线程性</strong>                                 并行操作 提高执行性能 线程安全</p>
+<p><strong>6.大数据开发</strong></p>
+<h2 id="java跨平台机制，环境搭建"><a href="#java跨平台机制，环境搭建" class="headerlink" title="java跨平台机制，环境搭建"></a>java跨平台机制，环境搭建</h2><p><strong>1.JDK、JRE和JVM的关系：</strong>、</p>
+<p>​                                    <strong>JDK</strong>(Java Development Kit)：Java语言开发工具包，包含JRE、编译器和调试器等用于程序开发的文件。抛开jRE不谈，他的功能主要能干编译和调试两件事。其中Javac.exe用来编译的程序java.exe用来执行的程序。</p>
+<p>​                                    <strong>JRE</strong>(Java Runtime Environment)：Java运行环境，包含了JVM及Java的核心类库。抛开JVM不谈，它主要的功能是提供一些必要的运行环境。</p>
+<p>​                                    <strong>JVM</strong>(Java Virtual Machine)：Java虚拟机，他是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。Java的解释器就包含在JVM中。JVM有自己完善的硬件结构，如处理器、堆栈（Stack)、寄存器等、还具有相应的指令系统（字节码就是一种指令格式）。他的主要功能就是，将字节码文件class文件解释成对应平台机器码并执行。不同的操作系统因为他们的机器码不同所以他们的JVM不同。</p>
+<p>​                                    <strong>它们的关系图为</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5CJDK&JRE&JVM%E5%85%B3%E7%B3%BB.png" alt=""></p>
+<p><strong>2.Java程序运行机制</strong>：先编译在解释执行</p>
+<p>​                            1).先通过“编译器”将Java源程序编译成Java字节码文件（.class）（字节码文件采用结构中立的中间文件格式）</p>
+<p>​                            2).通过不同的虚拟机(JVM)将字节码文件解释成为机器语言并执行</p>
+<p><strong>用图表示为：</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5CJava%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png" alt=""></p>
+<p><strong>3.Java 跨平台原理：</strong></p>
+<p>因为程序都需要编译生成字节码文件(.class)，而字节码文件生成后是结构中立的中间文件格式，即可看作是无关于源文件(.java)也无关于虚拟机（JVM）的文件，这样在不同机器上执行同一份.class文件他们的执行结果也相同。</p>
+<p><strong>用图表示为：</strong></p>
+<p><img src="D:%5CMyblog%5Csource_posts%5C%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%8E%9F%E7%90%86.png" alt=""></p>
+<p><strong>4.环境的搭建：</strong></p>
+<p>​                安装JDK，因为JDK中包含了JRE，JRE中包含了JVM，所以不用重新再次安装JRE，从官网下载JDK：开发者工具，在进行安装。</p>
+<p>​                JDK中有bin文件夹，include文件夹，jre文件夹，lib文件夹，src.zip压缩文件</p>
+<p>​                            <strong>bin文件夹</strong>                全是工具</p>
+<p>​                            <strong>include文件夹</strong>        包含了其他语言写的程序    native修饰符</p>
+<p>​                            <strong>jre文件夹</strong>                包含了运行环境</p>
+<p>​                            <strong>lib文件夹</strong>                包含了别人写好的所有Java类</p>
+<p>​                            <strong>src.zip压缩文件</strong>     源代码</p>
+<h2 id="java的编译与执行，环境变量"><a href="#java的编译与执行，环境变量" class="headerlink" title="java的编译与执行，环境变量"></a>java的编译与执行，环境变量</h2><p><strong>1.如何编写一段Java源代码    dos命令窗口</strong></p>
+<p>​            源代码—-&gt;一堆英文（按照某种规则来写）</p>
+<p>​            以文件形式储存在计算机的硬盘上</p>
+<p>​            源代码    以后后缀名.java结尾的</p>
+<p>​            文件打开里面的内容是一堆按照规律写的英文</p>
+<p>​            先写一个关键字class —–&gt; 表示类的意思</p>
+<p>​            类后面给它起一个名字—-&gt;理论上可以随便写</p>
+<p>​            命名规则和规约</p>
+<p>​                    规则：</p>
+<p>​                            可以包含字母、数字、符号、汉字（强烈不推荐）</p>
+<p>​                            字母：区分大小写，敏感52个</p>
+<p>​                            数字：0-9可以用，不能用做开头</p>
+<p>​                            符号：英文 _ $</p>
+<p>​                    规约：</p>
+<p>​                            类名字    首字母大写TestOne    如果两个以上的单词    每个单词的首字母都要大写</p>
+<p>​                            起名字的时候要见名知意    建议使用英文</p>
+<p><strong>2.利用JDK包中提供的工具    代码的编译及执行</strong></p>
+<p>​            dos命令窗口</p>
+<p>​            D:\Program Files\Java\jdk1.8.0_201\bin</p>
+<p>​            路径下存在一个javac.exe编译工具</p>
+<p>​            遇到了两个问题</p>
+<p>​                                1.编译工具双击是黑色的对话框一闪而过</p>
+<p>​                                            编译工具是在dos命令窗口中才能使用</p>
+<p>​                                2.想要利用编译工具去编译写好的Java源文件</p>
+<p>​                                            源文件所在路径于编译工具不在一起</p>
+<p>​                                            让工具在当前电脑所有目录都可以公同访问到的的位置</p>
+<p>​                                            相当于搭建环境的一个补充    安装JDK    配置环境变量</p>
+<p><strong>3.环境变量的配置：</strong></p>
+<p><strong>path：</strong>让工具可以在任意的位置都可以使用</p>
+<p><strong>classpath：</strong>不管源文件在哪儿    生成的class文件都统一的储存在配置的目录下</p>
+<p><strong>JAVA_HOME：</strong>目的是为了让路径（path）的写法变得简单</p>
+<p><strong>path：</strong>安装路径所在的目录 D:\Program Files\Java\jdk1.8.0_201\bin || %JAVA_HOME%\bin</p>
+<p><strong>JAVA_HOME：</strong>JDK安装路径</p>
+<p>问题：</p>
+<p>源文件和生成的字节码文件名字不一致</p>
+<p>​                                                                                                                            </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>HTML&amp;CSS基础</title>
+    <url>/uncategorized/HTML&amp;CSS%E5%9F%BA%E7%A1%80.html</url>
+    <content><![CDATA[<center style = "font-size:30px;font-weight:600;">HTML&CSS</center>
+
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h2><h3 id="HTML-amp-CSS概述"><a href="#HTML-amp-CSS概述" class="headerlink" title="HTML &amp;  CSS概述"></a><strong>HTML &amp;  CSS概述</strong></h3><p><strong>1.web</strong></p>
+<p>​            互联网</p>
+<p><strong>2.W3C</strong></p>
+<p>​            万维网联盟</p>
+<p>​            为互联网提供各种标准</p>
+<p><strong>3.xml</strong></p>
+<p>​            可扩展的标记语言：extension markup language,用于定义文档结构。</p>
+<p><strong>4.什么是HTML</strong></p>
+<p>​            HTML是W3C定义的语言标准：用来描述页面结构的语言。</p>
+<p>​            结构：有什么东西，这个东西表示什么含义。</p>
+<p>​            HTML：Hyper Text Markup Language，超文本标记语言</p>
+<p><strong>5.什么是CSS</strong></p>
+<p>​            CSS是W3C定义的语言标准：用来展示页面效果的语言。</p>
+<p>​            CSS决定了页面长什么样子。</p>
+<p><strong>6.执行HTML    CSS</strong></p>
+<p>​            HTML、CSS    →    浏览器内核执行    →    页面</p>
+<p>​            浏览器：shell(外壳) + core(内核):js执行引擎、渲染引擎、其他模块</p>
+<p>​            主流浏览器及其内核：</p>
+<p>​                    IE：Trident</p>
+<p>​                    Chrome：webkit(前)    blink(现)</p>
+<p>​                    Firefox：Gecko</p>
+<p>​                    Safari：Webkit</p>
+<p>​                    Opera：Presto(前)    blink(现)</p>
+<p><strong>7.版本和兼容</strong></p>
+<p>​            HTML5：2014年制定完成</p>
+<p>​            CSS3：至今还没有制定完成</p>
+<p>​            XHTML：完全符合XML规范的HTML的一个版本</p>
+<h3 id="开发环境准备"><a href="#开发环境准备" class="headerlink" title="开发环境准备"></a><strong>开发环境准备</strong></h3><p><strong>1.显示文件扩展名</strong></p>
+<p>​            大部分文件都有文件扩展名</p>
+<p>​            文件扩展名决定了文件用什么应用程序打开</p>
+<p><strong>2.安装浏览器</strong></p>
+<p>​            IE，chrome，Firefox，safari，opera    (推荐chrome)</p>
+<p><strong>3.安装编辑器</strong></p>
+<p>​            记事本(推荐前期使用记事本)，sublime，vscode(插件多)，Atom，Dw(不推荐)，HBuilder</p>
+<h2 id="HTML核心"><a href="#HTML核心" class="headerlink" title="HTML核心"></a><strong>HTML核心</strong></h2><h3 id="第一个网页"><a href="#第一个网页" class="headerlink" title="第一个网页"></a><strong>第一个网页</strong></h3><p><strong>1.注释</strong></p>
+<p>​            注释为文档编辑者提供帮助，不参与运行</p>
+<p>​            HTML中的注释如下</p>
+<blockquote>
+<p>&lt;! –    注释内容    –&gt;    如果使用的是VScode和sublime可以使用快捷键    ctrl + ?</p>
+</blockquote>
+<p><strong>2.元素</strong></p>
+<p>​            其他叫法：标签、标记</p>
+<p>​            官方文档为Element：元素</p>
+<p>​            元素 = begin tag(起始标记) + end tag(结束标记) + 元素内容 + 元素属性</p>
+<p>​            属性 = 属性名 + 属性值</p>
+<p>​            属性分类：</p>
+<p>​                    局部属性：元素特有的属性</p>
+<p>​                    全局属性：所有元素通用</p>
+<p>​            <strong>空元素</strong>：没有结束标记的元素，有两种写法，如下。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta charset &#x3D; &quot;UTF-8&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.元素的嵌套</strong></p>
+<p>​            元素不能互相嵌套</p>
+<p>​            父元素、子元素、祖先元素、后代元素、兄弟元素</p>
+<p><strong>4.标准的文档结构</strong></p>
+<p>​            如下图</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">！DOCTYPE</span> <span class="attr">HTML</span>&gt;</span>		//文档声明，告诉浏览器当前文档使用的是HTML5标准，不写文档声明会导致浏览器进入怪异渲染模式</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span>	//根元素，一个页面只能有一个，且该元素是其他元素的父元素或祖先元素，H5版本没有强制要求书写该属性。</span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span>			//文档头，文档头部属性，不显示在页面，通常里面添加元数据(用于给浏览器看的附加信息)，外部链接。</span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span>	//元数据</span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">name</span> = <span class="string">"viewport"</span> <span class="attr">conten</span> = <span class="string">"width=device-width,initial-scale=1.0"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meat</span> <span class="attr">http-equiv</span> = <span class="string">"X-UA-Compatible"</span> <span class="attr">content</span> = <span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">title</span>&gt;</span>My First Webpage<span class="tag">&lt;/<span class="name">title</span>&gt;</span>	//文档标题，及网页的标题</span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span>			//文档主体，包含了文档的所有内容</span><br><span class="line">        <span class="comment">&lt;!-- 注释内容--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://www.bilibili.com"</span>&gt;</span>bilibili<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>5.知识补充</strong></p>
+<p>​            lang：表示文档内容是用什么自然语言书写而成的。</p>
+<p>​            charset：网页内容的编码。</p>
+<p>​            计算机中自能存储数字</p>
+<p>​            计算机中，低电压(0-2 V) 0，高电压(2-5 V) 1，表示成二进制。</p>
+<p>​            UTF-8是Unicode编码的一个版本</p>
+<p>​            页面上要参与显示的元素都应该放在元素体中(body)</p>
+<h3 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a><strong>语义化</strong></h3><p><strong>1.什么是语义化</strong></p>
+<p>​            每一个HTML元素都具体有具体含义</p>
+<p>​            所有HTML元素与展示在页面的效果无关,页面效果由CSS决定</p>
+<p>​            当我们只有HTML元素而没有设置CSS属性但页面仍有效果是因为浏览器有默认的CSS样式</p>
+<p><strong>2.为什么需要语义化</strong></p>
+<p>​            为了搜索引擎优化(SEO)</p>
+<p>​                    每隔一段时间搜索引擎会从整个网页获取网页源码</p>
+<p>​            为了让浏览器理解网页</p>
+<p>​                    阅读模式、语音模式</p>
+<h3 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a><strong>文本元素</strong></h3><p><strong>1.h元素</strong></p>
+<p>​            标题元素h1-h6</p>
+<p><strong>2.p元素</strong></p>
+<p>​            文本元素，paragraphs</p>
+<p><strong>3.span元素</strong></p>
+<p>​            没有语义，用来设置样式</p>
+<p><strong>4.pre元素</strong></p>
+<p>​            预格式化文本元素</p>
+<p>​            空白折叠：在源码中连续的空白字符，在页面显示会被折叠成一个空格</p>
+<p>​            在pre元素中不会出现空白折叠，通常用于显示页面中的一些代码</p>
+<p>​            pre元素的本质：他有一个默认的css属性white-space：pre;</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>文本元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>我虽然是文本元素但是我的用途一般是设置样式<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>pre元素的用法<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--方法1--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        	var i = 2;</span><br><span class="line">        	if(i)&#123;</span><br><span class="line">        		console.log(i);</span><br><span class="line">        	&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--方法2为了语义化--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">code</span> <span class="attr">style</span> = <span class="string">"white-space: pre;"</span>&gt;</span></span><br><span class="line">            var i = 2;</span><br><span class="line">            if(i)&#123;</span><br><span class="line">            	console.log(i);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>推荐网页：<a href="http://www.xuanfengge.com/funny/html5/element/" target="_blank" rel="noopener">HTML5元素周期表</a></p>
+<p>###　<strong>HTML实体</strong></p>
+<p><strong>1.实体字符，HTML Entity</strong></p>
+<p>​            实体字符通常用于在页面中显示一些特殊符号。</p>
+<p><strong>2.书写形式</strong></p>
+<p>​            &amp;单词;</p>
+<p>​            &amp;#数字;</p>
+<p><strong>3.常用的实体字符</strong></p>
+<p>​            小于：&lt; &#60;</p>
+<p>​            大于：&gt; </p>
+<p>​            空格：&nbsp;</p>
+<p>​            版权：&copy;</p>
+<p>跟多实体字符请查看：<a href="https://www.w3school.com.cn/tags/html_ref_entities.html" target="_blank" rel="noopener">html实体参考手册</a></p>
+<h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a><strong>a标签</strong></h3><p><strong>1.href属性</strong></p>
+<p>​            hyper reference(引用)</p>
+<p><strong>2.功能</strong></p>
+<p>​            跳转地址</p>
+<p>​            跳转锚点</p>
+<p>​            功能性链接</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>a标签的使用<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--跳转地址--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"https://www.bilibili.com"</span>&gt;</span>bilibili<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--跳转锚点--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"#锚点地址"</span>&gt;</span>跳转锚点<span class="tag">&lt;/<span class="name">a</span>&gt;</span>   //可以跳转到某个页面的锚点，也可以跳转到本页面的锚点位置</span><br><span class="line">        <span class="comment">&lt;!--功能性链接--&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"javascipt:alert("</span>你好!")"&gt;</span>弹出你好!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"mailto:xxxx@gmail.com"</span>&gt;</span>点击发送邮箱<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"telto:xxxxx"</span>&gt;</span>点击通话<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3.target属性</strong></p>
+<p>​            跳转到新页面</p>
+<p>​            target = “blank”;</p>
+<p><strong>4.全局属性</strong></p>
+<p>​            title = “提示文字”;</p>
+<h3 id="路径的写法"><a href="#路径的写法" class="headerlink" title="路径的写法"></a><strong>路径的写法</strong></h3><p><strong>1.站内资源和站外资源</strong></p>
+<p>​            站内资源：当前网站的资源</p>
+<p>​            站外资源：非当前网站的资源</p>
+<p><strong>2.绝对路径和相对路径</strong></p>
+<p>​            绝对路径书写格式：</p>
+<p>​                    url地址:</p>
+<p>​                    协议名://主机号:端口/路径</p>
+<p>​                    协议名：https、http、file….</p>
+<p>​                    主机号：域名、IP地址</p>
+<p>​                    端口号：http协议默认端口是80，https协议默认端口号是443。</p>
+<p>​            相对路径：</p>
+<p>​                    以./开头./表示当前目录所在资源</p>
+<p>​            站内资源：使用相对路径和绝对路径都可以</p>
+<p>​            站外资源：绝对路径</p>
+<h3 id="图片元素"><a href="#图片元素" class="headerlink" title="图片元素"></a><strong>图片元素</strong></h3><p><strong>1.img元素</strong></p>
+<p>​            image缩写，空元素</p>
+<p>​            src(source)属性：图像资源地址</p>
+<p>​            alt属性：当图片资源失效时，将使用该元素文字代替图片</p>
+<p><strong>2.和a元素联用</strong></p>
+<p>​            在a元素中添加img元素</p>
+<p><strong>3.和map元素联用</strong></p>
+<p>​            map：地图，可将一张图片的各个区域分割成不同的链接地址</p>
+<p>​            map子元素：area</p>
+<p>​            circle：园形    （圆心坐标，半径）</p>
+<p>​            rect：矩形      （左上角坐标，右下角坐标）</p>
+<p>​            poly：多边形 （各个坐标点的坐标）</p>
+<p><strong>4.figure元素</strong></p>
+<p>​            将图片、图片标题、图片描述包裹起来</p>
+<p>​            子元素：figcaption</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">cahrset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>img元素的用法<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"链接地址"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> = <span class="string">"图片资源"</span> <span class="attr">usemap</span> = <span class="string">"map标签的名字"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h2</span>&gt;</span>图片标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>图片描述<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span> = <span class="string">"map标签的名字"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span> = <span class="string">"目标形状"</span> <span class="attr">coord</span> = <span class="string">"坐标位置"</span> <span class="attr">href</span> = <span class="string">"链接地址"</span> <span class="attr">target</span> = <span class="string">"blank"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="多媒体元素"><a href="#多媒体元素" class="headerlink" title="多媒体元素"></a><strong>多媒体元素</strong></h3><p><strong>1.video：视频</strong></p>
+<p>​            属性autoplay：自动播放，muted：静音播放，controls：控制控件显示，loop：循环播放</p>
+<p><strong>2.audio：音频</strong></p>
+<p>​            属性autoplay：自动播放，muted：静音播放，controls：控制控件显示，loop：循环播放</p>
+<p><strong>3.兼容性</strong></p>
+<p>​            旧版本浏览器不支持这两个属性</p>
+<p>​            不同版本的浏览器支持的音频格式可能不同</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span> = <span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>多媒体元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"资源地址"</span> <span class="attr">autoplay</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"资源地址"</span> <span class="attr">autoplay</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">vedio</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--兼容性写法--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">audio</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span> = <span class="string">"资源地址"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>对不起你的浏览器不支持video元素<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"下载链接"</span>&gt;</span>请点击下载新版本浏览器<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表元素"><a href="#列表元素" class="headerlink" title="列表元素"></a><strong>列表元素</strong></h3><p><strong>1.有序列表</strong></p>
+<p>​            ol：ordered list</p>
+<p>​            li：list item</p>
+<p>​            ol的属性，type值为1时，按数字大小排列；为i时，按罗马数字排序，为A，a时，按大写小写排序</p>
+<p>​            不建议使用type属性，在css属性的list-style-type可以进行修改</p>
+<p><strong>2.无序列表</strong></p>
+<p>​            ul：unordered list</p>
+<p>​            li：list itme</p>
+<p>​            通常用于制作菜单</p>
+<p><strong>3.定义列表</strong></p>
+<p>​            用于一些专业术语的定义</p>
+<p>​            dl：definition list</p>
+<p>​            dt：definition title</p>
+<p>​            dd：definition description</p>
+<h3 id="容器元素"><a href="#容器元素" class="headerlink" title="容器元素"></a><strong>容器元素</strong></h3><p><strong>1.div元素</strong></p>
+<p>​            没有语义，用来定义块级元素</p>
+<p><strong>2.语义化元素</strong></p>
+<p>​            header：通常表示页头或者文章的头部</p>
+<p>​            article：通常表示整篇文章</p>
+<p>​            section：通常表示文章的章节</p>
+<p>​            footer：通常用于表示页尾，或表示文章的尾部</p>
+<p>​            aside：通常用于表示附加信息，侧边栏</p>
+<h3 id="元素的包含关系"><a href="#元素的包含关系" class="headerlink" title="元素的包含关系"></a><strong>元素的包含关系</strong></h3><p><strong>1.之前的说法</strong></p>
+<p>​            之前的说法是，会计元素可以包含行级元素，行级元素不能包含块级元素，a元素除外</p>
+<p>​            现在因为语义化的提出，上面的说法失效，因为html元素与它展现页面的效果无关</p>
+<p><strong>2.总结</strong></p>
+<p>​            1.容器元素中可以包含任何元素</p>
+<p>​            2.a元素中可以包含几乎所有元素</p>
+<p>​            3.某些元素有固定的子元素如：ul &gt; li…..</p>
+<p>​            4.标题元素和段落元素不能互相嵌套，且不能包含容器元素</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Java 学习路线</title>
     <url>/uncategorized/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.html</url>
     <content><![CDATA[<h1 id="Java学习的正确打开方式"><a href="#Java学习的正确打开方式" class="headerlink" title="Java学习的正确打开方式"></a>Java学习的正确打开方式</h1><h2 id="一、Java基础"><a href="#一、Java基础" class="headerlink" title="一、Java基础"></a>一、Java基础</h2><h4 id="1、Java基础教学视频"><a href="#1、Java基础教学视频" class="headerlink" title="1、Java基础教学视频"></a>1、Java基础教学视频</h4><p><a href="https://www.bilibili.com/video/av11361088/?p=106" target="_blank" rel="noopener">Java零基础教程视频（适合Java 0基础，Java初学入门）【推荐】</a></p>
@@ -141,88 +420,6 @@
 <h3 id="3、参阅博客文章、闲逛github"><a href="#3、参阅博客文章、闲逛github" class="headerlink" title="3、参阅博客文章、闲逛github"></a>3、参阅博客文章、闲逛github</h3><p>再次就是博客文章，不得不吐槽几句，网上的很大一部分文章都是非常浅显，再加上一些标题党的横行，简直不忍直视。这也是很多人抵制博客文章的原因，这里不得不提一下：每次百度或者谷歌一下知识点或者bug，我敢打包票出现最多的推荐靠前的都是CSDN，我相信很多人会认为CSDN很强大，实际上你错了，过段时间你就会慢慢抵制CSDN，看到简书或者博客园、知乎的文章你会优先去看。至于原因就是因为CSDN是国内最大的博客平台，同时一些“标题党.equal 烂人”随之衍生，为了所谓的点击量，博取眼球，自以为自己访问量高很nice？这里也不是说起博取眼球的标题是抵制，前提是你的这篇文章要有一定深度和见解，能够撑起整片文章知识点的架构，博取眼球的标题才是真正有意义的，当之无愧。</p>
 <p>总归来说，园子内还是有很多技术大牛，写的博客自然也是非常棒，非常具有学习价值。每次看都是一种享受，一种熏陶。当然还有github、社区、论坛、码云等等。这就是源码的朋友圈，我们从中也能获取到非常多关于源码的信息。但是针对某个知识点却特别的细，对彻底掌握非常有帮助。</p>
 <p>原文链接：<a href="https://blog.csdn.net/qq_44543508/article/details/102651841xu" target="_blank" rel="noopener">https://blog.csdn.net/qq_44543508/article/details/102651841xu</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我的Java学习之路</title>
-    <url>/uncategorized/%E6%88%91%E7%9A%84Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.html</url>
-    <content><![CDATA[<h1 id="java-day-1"><a href="#java-day-1" class="headerlink" title="java_day-1"></a>java_day-1</h1><h2 id="java的历史"><a href="#java的历史" class="headerlink" title="java的历史"></a>java的历史</h2><p><strong>java语言的创始人：</strong>James-Gosling</p>
-<p><strong>Java语言的创世公司：</strong>SUN –&gt; Standford University  Network —&gt;SUN Microsysytems</p>
-<p><strong>Java语言的重大事件：</strong></p>
-<p>​                            <strong>1995</strong>    正式发布</p>
-<p>​                            <strong>1996</strong>    正式发布了可以下载的JDK工具包</p>
-<p>​                            <strong>1999</strong>    发布了第二代Java平台    简称Java2    细分为了三个版本</p>
-<p>​                                                    标准版    Standard    Edition            J2SE</p>
-<p>​                                                    企业版    Enterprise    Edition          J2SE</p>
-<p>​                                                    微型办    Micro    Edition                  J2SE</p>
-<p>​                            <strong>2004</strong>    JDK1.5版本    添加了很多新的特性    Jvav5</p>
-<p>​                            <strong>2005</strong>    Java6版本</p>
-<p>​                            <strong>2009</strong>    Oracle公司收购74亿$    收购了SUN</p>
-<h2 id="java语言的特点"><a href="#java语言的特点" class="headerlink" title="java语言的特点"></a>java语言的特点</h2><p><strong>1.跨平台性</strong>                                 平台（不同厂商的芯片） 平台（不同版本的操作系统）</p>
-<p><strong>2.面向对象</strong>                                </p>
-<p><strong>3.简单性</strong>                                     省去了C++多继承，指针等等</p>
-<p><strong>4.健壮性</strong>                                     垃圾回收机制    异常处理机制</p>
-<p><strong>5.多线程性</strong>                                 并行操作 提高执行性能 线程安全</p>
-<p><strong>6.大数据开发</strong></p>
-<h2 id="java跨平台机制，环境搭建"><a href="#java跨平台机制，环境搭建" class="headerlink" title="java跨平台机制，环境搭建"></a>java跨平台机制，环境搭建</h2><p><strong>1.JDK、JRE和JVM的关系：</strong>、</p>
-<p>​                                    <strong>JDK</strong>(Java Development Kit)：Java语言开发工具包，包含JRE、编译器和调试器等用于程序开发的文件。抛开jRE不谈，他的功能主要能干编译和调试两件事。其中Javac.exe用来编译的程序java.exe用来执行的程序。</p>
-<p>​                                    <strong>JRE</strong>(Java Runtime Environment)：Java运行环境，包含了JVM及Java的核心类库。抛开JVM不谈，它主要的功能是提供一些必要的运行环境。</p>
-<p>​                                    <strong>JVM</strong>(Java Virtual Machine)：Java虚拟机，他是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。Java的解释器就包含在JVM中。JVM有自己完善的硬件结构，如处理器、堆栈（Stack)、寄存器等、还具有相应的指令系统（字节码就是一种指令格式）。他的主要功能就是，将字节码文件class文件解释成对应平台机器码并执行。不同的操作系统因为他们的机器码不同所以他们的JVM不同。</p>
-<p>​                                    <strong>它们的关系图为</strong></p>
-<p><img src="D:%5CMyblog%5Csource_posts%5CJDK&JRE&JVM%E5%85%B3%E7%B3%BB.png" alt=""></p>
-<p><strong>2.Java程序运行机制</strong>：先编译在解释执行</p>
-<p>​                            1).先通过“编译器”将Java源程序编译成Java字节码文件（.class）（字节码文件采用结构中立的中间文件格式）</p>
-<p>​                            2).通过不同的虚拟机(JVM)将字节码文件解释成为机器语言并执行</p>
-<p><strong>用图表示为：</strong></p>
-<p><img src="D:%5CMyblog%5Csource_posts%5CJava%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png" alt=""></p>
-<p><strong>3.Java 跨平台原理：</strong></p>
-<p>因为程序都需要编译生成字节码文件(.class)，而字节码文件生成后是结构中立的中间文件格式，即可看作是无关于源文件(.java)也无关于虚拟机（JVM）的文件，这样在不同机器上执行同一份.class文件他们的执行结果也相同。</p>
-<p><strong>用图表示为：</strong></p>
-<p><img src="D:%5CMyblog%5Csource_posts%5C%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%8E%9F%E7%90%86.png" alt=""></p>
-<p><strong>4.环境的搭建：</strong></p>
-<p>​                安装JDK，因为JDK中包含了JRE，JRE中包含了JVM，所以不用重新再次安装JRE，从官网下载JDK：开发者工具，在进行安装。</p>
-<p>​                JDK中有bin文件夹，include文件夹，jre文件夹，lib文件夹，src.zip压缩文件</p>
-<p>​                            <strong>bin文件夹</strong>                全是工具</p>
-<p>​                            <strong>include文件夹</strong>        包含了其他语言写的程序    native修饰符</p>
-<p>​                            <strong>jre文件夹</strong>                包含了运行环境</p>
-<p>​                            <strong>lib文件夹</strong>                包含了别人写好的所有Java类</p>
-<p>​                            <strong>src.zip压缩文件</strong>     源代码</p>
-<h2 id="java的编译与执行，环境变量"><a href="#java的编译与执行，环境变量" class="headerlink" title="java的编译与执行，环境变量"></a>java的编译与执行，环境变量</h2><p><strong>1.如何编写一段Java源代码    dos命令窗口</strong></p>
-<p>​            源代码—-&gt;一堆英文（按照某种规则来写）</p>
-<p>​            以文件形式储存在计算机的硬盘上</p>
-<p>​            源代码    以后后缀名.java结尾的</p>
-<p>​            文件打开里面的内容是一堆按照规律写的英文</p>
-<p>​            先写一个关键字class —–&gt; 表示类的意思</p>
-<p>​            类后面给它起一个名字—-&gt;理论上可以随便写</p>
-<p>​            命名规则和规约</p>
-<p>​                    规则：</p>
-<p>​                            可以包含字母、数字、符号、汉字（强烈不推荐）</p>
-<p>​                            字母：区分大小写，敏感52个</p>
-<p>​                            数字：0-9可以用，不能用做开头</p>
-<p>​                            符号：英文 _ $</p>
-<p>​                    规约：</p>
-<p>​                            类名字    首字母大写TestOne    如果两个以上的单词    每个单词的首字母都要大写</p>
-<p>​                            起名字的时候要见名知意    建议使用英文</p>
-<p><strong>2.利用JDK包中提供的工具    代码的编译及执行</strong></p>
-<p>​            dos命令窗口</p>
-<p>​            D:\Program Files\Java\jdk1.8.0_201\bin</p>
-<p>​            路径下存在一个javac.exe编译工具</p>
-<p>​            遇到了两个问题</p>
-<p>​                                1.编译工具双击是黑色的对话框一闪而过</p>
-<p>​                                            编译工具是在dos命令窗口中才能使用</p>
-<p>​                                2.想要利用编译工具去编译写好的Java源文件</p>
-<p>​                                            源文件所在路径于编译工具不在一起</p>
-<p>​                                            让工具在当前电脑所有目录都可以公同访问到的的位置</p>
-<p>​                                            相当于搭建环境的一个补充    安装JDK    配置环境变量</p>
-<p><strong>3.环境变量的配置：</strong></p>
-<p><strong>path：</strong>让工具可以在任意的位置都可以使用</p>
-<p><strong>classpath：</strong>不管源文件在哪儿    生成的class文件都统一的储存在配置的目录下</p>
-<p><strong>JAVA_HOME：</strong>目的是为了让路径（path）的写法变得简单</p>
-<p><strong>path：</strong>安装路径所在的目录 D:\Program Files\Java\jdk1.8.0_201\bin || %JAVA_HOME%\bin</p>
-<p><strong>JAVA_HOME：</strong>JDK安装路径</p>
-<p>问题：</p>
-<p>源文件和生成的字节码文件名字不一致</p>
-<p>​                                                                                                                            </p>
 ]]></content>
   </entry>
 </search>

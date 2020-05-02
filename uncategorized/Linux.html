@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/appleone-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/am-favicon-16%C3%9716.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/am-favicon-32%C3%9732.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bluesky.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+  <meta name="description" content="Linux   Linux背景介绍1.什么是Linux ​        linus编写的开源操作系统内核 ​        广义的操作系统 2.执行环境 ​        云主机 ​        无数据的PC（不推荐多系统） ​        虚拟机（推荐方式） 3.Linux版本 ​        内核版本 ​                主版本号、次版本号、末版本号 ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="http://bluesky.com/uncategorized/Linux.html">
+<meta property="og:site_name" content="Bulesky の Blog">
+<meta property="og:description" content="Linux   Linux背景介绍1.什么是Linux ​        linus编写的开源操作系统内核 ​        广义的操作系统 2.执行环境 ​        云主机 ​        无数据的PC（不推荐多系统） ​        虚拟机（推荐方式） 3.Linux版本 ​        内核版本 ​                主版本号、次版本号、末版本号 ​">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.jpg">
+<meta property="og:image" content="c:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%901.jpg">
+<meta property="article:published_time" content="2020-05-02T12:47:14.544Z">
+<meta property="article:modified_time" content="2020-05-02T13:02:30.711Z">
+<meta property="article:author" content="Bluesky0420">
+<meta property="article:tag" content="Web前端，js，Java，Mysql，Music，Anime">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.jpg">
+
+<link rel="canonical" href="http://bluesky.com/uncategorized/Linux.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux | Bulesky の Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Bulesky の Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bulesky の Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">为爱发电</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/Linux.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bluesky0420">
+      <meta itemprop="description" content="编程，学习，动漫，分享新鲜事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bulesky の Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-02 12:47:14 / 修改时间：13:02:30" itemprop="dateCreated datePublished" datetime="2020-05-02T12:47:14Z">2020-05-02</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <center style = "font-size:30px; font-weight: 600;">Linux</center>
+
+
+<h2 id="Linux背景介绍"><a href="#Linux背景介绍" class="headerlink" title="Linux背景介绍"></a><strong>Linux背景介绍</strong></h2><p><strong>1.什么是Linux</strong></p>
+<p>​        linus编写的开源操作系统内核</p>
+<p>​        广义的操作系统</p>
+<p><strong>2.执行环境</strong></p>
+<p>​        云主机</p>
+<p>​        无数据的PC（不推荐多系统）</p>
+<p>​        虚拟机（推荐方式）</p>
+<p><strong>3.Linux版本</strong></p>
+<p>​        内核版本</p>
+<p>​                主版本号、次版本号、末版本号</p>
+<p>​                次版本号是奇数位开发版本、偶数为稳定版本</p>
+<p>​        发行版本</p>
+<p>​                Redhat、fedora、CtenOS、</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><strong>操作系统</strong></h2><p><strong>1.终端的使用</strong></p>
+<p>​        图形终端</p>
+<p>​        命令行终端</p>
+<p>​        远程终端(ssh，vnc)</p>
+<p>​        init 0 ：关机命令</p>
+<p>​        init 3：命令行终端            </p>
+<p><strong>2.常用目录结构</strong></p>
+<p>​        ls命令查看目录</p>
+<p>​        / 根目录</p>
+<p>​        /root    root用户的家目录</p>
+<p>​        /home/username    普通用户的家目录</p>
+<p>​        /etc    配置文件</p>
+<p>​        /bin    命令目录</p>
+<p>​        /sbin    管理命令目录</p>
+<p>​        /usr/bin/usr/sbin    系统预装的其他命令</p>
+<p><strong>3.万能的帮助命令</strong></p>
+<p>​        man    帮助</p>
+<p>​                man是manual的缩写</p>
+<p>​                man帮助的用法</p>
+<p>​                        man 命令</p>
+<p>​                man也是一条命令，分为九章，可以使用命令获得man的帮助</p>
+<p>​                        man 7 man</p>
+<p>​                因为命令的帮助有不同的篇章所以可以使用man 章节 man进行查找对应章节的帮助</p>
+<p>​        help    帮助</p>
+<p>​                shell（命令解释器）自带的命令称为内部命令，其他命令就是外部命令</p>
+<p>​                内部命令使用help帮助：help 命令</p>
+<p>​                外部命令使用help帮助：命令 –help</p>
+<p>​                如何区分内部命令和外部命令：type 命令</p>
+<p>​        info     帮助</p>
+<p>​                info帮助比help帮助更详细，作为help帮助的补充</p>
+<p>​                info 命令</p>
+<p>​        使用网络资源（搜索引擎和官方文档）</p>
+<p><strong>4.文件管理（一切皆文件）</strong></p>
+<p>​        文件查看</p>
+<p>​                pwd    显示当前目录的名称</p>
+<p>​                cd    更改当前的操作目录</p>
+<p>​                    cd/path/to/ —- 绝对路径，从根目录开始</p>
+<p>​                    cd./path/to/ —-相对路径，从当前目录</p>
+<p>​                    cd../path/to/ —相对路径，从上级目录</p>
+<p>​                    cd - ：回到原来目录</p>
+<p>​                    cd：回到根目录</p>
+<p>​                ls    查看当前目录下的文件</p>
+<p>​                    ls -l .    显示详细文件文件夹</p>
+<p>​                    ls -a    显示隐藏文件文件夹</p>
+<p>​                    ls -R    递归显示，多级递归查看</p>
+<p>​                    ls -r    逆向显示</p>
+<p>​                    ls -t    按时间显示</p>
+<p>​                    ls -l -r  隐藏文件逆向显示</p>
+<p>​                    ls -l -r -t 隐藏文件按时间逆向显示</p>
+<p>​                    命令可以连起来用不用加空格    ls -altrR</p>
+<p>​                su -root切换为root用户</p>
+<p>​        目录文件的创建与删除</p>
+<p>​                mkdir 目录：创建目录，可创建多个目录</p>
+<p>​                mkdir -p：创建多级目录</p>
+<p>​                touch：创建文件默认文件是文本文件，可创建多个文件</p>
+<p>​                rmdir：删除目录</p>
+<p>​                rm -r：删除多个目录包括空目录，但是系统会确认你是否删除</p>
+<p>​                rm -f：不需要确认删除文件</p>
+<p>​        通配符</p>
+<p>​                *：当前目录的所有文件、？：匹配一个字符</p>
+<p>​        文件操作</p>
+<p>​                复制文件</p>
+<p>​                        cp：单独使用cp只能复制文件</p>
+<p>​                        cp -r：复制目录</p>
+<p>​                        cp - v：显示复制文件的内容</p>
+<p>​                        cp -p：保留文件原有时间的状态</p>
+<p>​                        cp -a：保留权限和时间状态</p>
+<p>​                移动文件，重命名：</p>
+<p>​                        mv  /tmp/filea /fileb</p>
+<p>​        文件内容查看</p>
+<p>​                文本查看命令</p>
+<p>​                        cat：文本内容显示到终端</p>
+<p>​                        head：查看文件开头    可以指定行数    默认10行</p>
+<p>​                        tail：查看文件结尾    默认10行    可以指定行数</p>
+<p>​                                常用参数 -f 文件内容更新，显示信息同步更新</p>
+<p>​                        wc：统计文件内容信息        </p>
+<p>​                                wc -l：统计文件行数信息</p>
+<p>​                        more：多行显示</p>
+<p>​                        less</p>
+<p><strong>5.打包与压缩</strong></p>
+<p>​        Linux的备份压缩</p>
+<p>​        最早的Linux的备份介质是磁带，使用的命令是tar    cf</p>
+<p>​        例如：在home/username目录下将Java文件打包成Javademo.tar的命令为tar cf Javademo.tar Java</p>
+<p>​        可以打包后的磁带文件进行解压存储，压缩命令是gzip和bzip2</p>
+<p>​        经常用到的扩展名是.tar.gz (tar czf)    .tar.bz2(tar cjf)    .tgz</p>
+<p>​            打包:</p>
+<p>​                    tar打包命令</p>
+<p>​                    常用参数：c打包，f指定操作类型为文件，x解包</p>
+<p>​            压缩：</p>
+<p>​                    tar czf    压缩文件名    需压缩的文件名</p>
+<p>​                    tar cjf    压缩文件名    需压缩的文件名</p>
+<p>​            解压：</p>
+<p>​                    tar zxf    解压文件    解压后的文件名</p>
+<p>​                    tar jxf    解压文件    解压后的文件名</p>
+<p><strong>6.文本编辑器</strong></p>
+<p>​        多模式文本编辑器</p>
+<p>​                多模式产生的原因</p>
+<p>​                四种模式</p>
+<p>​                        正常模式（Normal-mode）mode</p>
+<p>​                        插入模式（insert-mode）insert-mode</p>
+<p>​                                常用命令：</p>
+<p>​                                        ：wq    保存退出</p>
+<p>​                                        ：q!    不保存退出</p>
+<p>​                                        复制，粘贴：</p>
+<p>​                                                单行复制：yy    粘贴p    </p>
+<p>​                                                多行复制：行数yy    粘贴p    </p>
+<p>​                                                单行文本复制指定位置到结尾：y$</p>
+<p>​                                        剪切：dd 剪切指定位置到结尾d$</p>
+<p>​                                        撤销指令：u</p>
+<p>​                                        将撤销的指令进行重做    ctrl+r</p>
+<p>​                                        删除指定的字符：选择指定的字符按x</p>
+<p>​                                        更改指定的字符：选择指定的字符按r输入你想输入的字符</p>
+<p>​                                        显示当前所在的行数：set nu</p>
+<p>​                                        光标的移动：</p>
+<p>​                                                hjkl    hl左右jk上下p</p>
+<p>​                                                shift+6光标回到当行的第一位，shift+4回到当前行的最后一个位置    </p>
+<p>​                        命令模式（command-mode）</p>
+<p>​                                :命令</p>
+<p>​                                查找命令 :/需查找的字符    向下查找 n    向上查找shift + n</p>
+<p>​                                替换命令:s/old/new    整个文本进行替换：%s/old/new/g    指定行数之间替换 line，line  s/old/new</p>
+<p>​                                修改vim：set nu：行数</p>
+<p>​                        可视模式（visual-mode）</p>
+<p>​                                三种进行可视模式的方法</p>
+<p>​                                        v    字符可视模式</p>
+<p>​                                        V    行可视模式</p>
+<p>​                                        ctrl+v    块可视模式</p>
+<p>​                                                配合d和大写I命令可以进行块的便利操作</p>
+<p><strong>7.用户和权限管理</strong>（不熟，整体过一遍再回头学一遍）</p>
+<p>​            <strong>用户管理常用命令</strong></p>
+<p>​                    useradd    新建用户</p>
+<p>​                            只有使用管理员用户来创建新用户</p>
+<p>​                            id命令用来验证    是否具有这个用户</p>
+<p>​                            /etc/shadow存放用户的相关信息</p>
+<p>​                    userdel    删除用户</p>
+<p>​                            userdel -r删除用户家目录，如果没有-r选项就不会删除家目录，且只有root用户才具有对该目录的操作权限</p>
+<p>​                    passwd    修改用户密码</p>
+<p>​                    usermod    修改用户属性</p>
+<p>​                            usermod -d修改用户的家目录</p>
+<p>​                            usermod -g group user修改用户的用户组</p>
+<p>​                            具体选项请用man命令查看</p>
+<p>​                    chage    修改用户属性</p>
+<p>​                    groupadd：添加用户组</p>
+<p>​                    groupdel：删除用户组</p>
+<p>​            <strong>用户切换</strong>                </p>
+<p>​                    su：用户切换，临时切换</p>
+<p>​                            su - user    切换普通用户</p>
+<p>​                            su root       切换到root用户    </p>
+<p>​                    sudo：可以赋予非管理员用户一些执行权限</p>
+<p>​                            visudo    设置需要使用sudo的用户（组）            </p>
+<p>​            <strong>用户组和用户的配置文件介绍</strong></p>
+<p>​                    vim /etc/passwd    </p>
+<p>​                    vim /etc/shadow</p>
+<p>​                    vim/etc/group</p>
+<p>​            <strong>文件与目录权限</strong><img src="C:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.jpg" alt="文件权限"></p>
+<p>​                    文件类型</p>
+<p>​                            — 普通文件</p>
+<p>​                            d    目录文件</p>
+<p>​                            b    块特殊文件</p>
+<p>​                            c    字符特殊文件</p>
+<p>​                            l    符连接</p>
+<p>​                            f    命名管道</p>
+<p>​                            s    套接字文件</p>
+<p>​                    字符权限表示方法</p>
+<p>​                            r    读</p>
+<p>​                            w    写</p>
+<p>​                            x    执行</p>
+<p>​                    数字权限的表示方法</p>
+<p>​                            r    4</p>
+<p>​                            w    2</p>
+<p>​                            x    1</p>
+<p><img src="C:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%901.jpg" alt=""></p>
+<p>​                    修改权限命令</p>
+<p>​                            chmod    修改文件、目录权限</p>
+<p>​                                    chmod u+x/tmp/testfile：为属主添加权限</p>
+<p>​                                    chmod g-r    testfile：为属组减少权限</p>
+<p>​                                    chmod o=w testfile：为其他位置设置权限</p>
+<p>​                                    chmod a+r testfile：为所有位置添加权限</p>
+<p>​                                    chmod 755 /tmp/testfile：数字权限的使用方法</p>
+<p>​                            chown    更改属主、属组</p>
+<p>​                                    chown user /test</p>
+<p>​                                    chown :group /test</p>
+<p>​                            chgrp    可以单独更改属组，不常用</p>
+<p>​                    特殊权限</p>
+<p>​                            SUID    用于二进制可执行文件，执行命令时取得文件属主权限</p>
+<p>​                                    如/usr/bin/passwd</p>
+<p>​                            SGID    用于目录，在该目录下创建心得文件和目录，权限自动更改为该目录的属组</p>
+<p>​                            SBIT    用于目录，在该目录下的文件和目录，仅root和自己可以删除</p>
+<p>​                                    如：/tmp    </p>
+<h2 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a><strong>服务管理</strong></h2><h2 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a><strong>shell脚本</strong></h2><h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a><strong>文本操作</strong></h2><h2 id="常用服务搭建"><a href="#常用服务搭建" class="headerlink" title="常用服务搭建"></a><strong>常用服务搭建</strong></h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/uncategorized/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.html" rel="prev" title="Java 学习路线">
+      <i class="fa fa-chevron-left"></i> Java 学习路线
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/uncategorized/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.html" rel="next" title="计算机网络">
+      计算机网络 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+          <div>
+          	  <center>
+          	  	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1440648326&auto=1&height=66"></iframe>
+  			  </center>
+          </div>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux背景介绍"><span class="nav-number">1.</span> <span class="nav-text">Linux背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">2.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务管理"><span class="nav-number">3.</span> <span class="nav-text">服务管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell脚本"><span class="nav-number">4.</span> <span class="nav-text">shell脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本操作"><span class="nav-number">5.</span> <span class="nav-text">文本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用服务搭建"><span class="nav-number">6.</span> <span class="nav-text">常用服务搭建</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bluesky0420"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Bluesky0420</p>
+  <div class="site-description" itemprop="description">编程，学习，动漫，分享新鲜事</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bluesky0420" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bluesky0420" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1208219758@qq.com" title="E-Mail → mailto:1208219758@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/15610216" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;15610216" rel="noopener" target="_blank"><i class="fa-fa-bilibili fa-fw"></i>bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/yourname" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/yourname" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="skype:yourname?call|chat" title="Skype → skype:yourname?call|chat" rel="noopener" target="_blank"><i class="fab fa-skype fa-fw"></i>Skype</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://dp2px.com/" title="https:&#x2F;&#x2F;dp2px.com&#x2F;" rel="noopener" target="_blank">dp2px</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">bluesky</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">39k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">35 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="/js/src/wobblewindow.js"></script>
+  <script>
+    //只在桌面版网页启用特效
+    if (window.innerWidth > 768) {
+      $(document).ready(function () {
+        
+        // 根据类名获取，而不是id
+        $('.header').wobbleWindow({
+          radius: 50,
+          movementTop: false,
+          movementLeft: false,
+          movementRight: false,
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.sidebar').wobbleWindow({
+          radius: 50,
+          movementLeft: false,
+          movementTop: false,
+          movementBottom: false,
+          position: 'fixed',
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.footer').wobbleWindow({
+          radius: 50,
+          movementBottom: false,
+          movementLeft: false,
+          movementRight: false,
+          
+          position: 'absolute',
+          debug: false,
+        });
+        
+      });
+    }
+  </script>
+
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="/js/cursor/explosion.min.js"></script>
+
+
+
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+ 
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/ Relative","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacityDefault":0.6}});</script></body>
+</html>

@@ -218,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-02 16:23:39 / 修改时间：16:37:05" itemprop="dateCreated datePublished" datetime="2020-05-02T16:23:39Z">2020-05-02</time>
+              <time title="创建时间：2020-05-02 16:23:39" itemprop="dateCreated datePublished" datetime="2020-05-02T16:23:39Z">2020-05-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-03 17:12:24" itemprop="dateModified" datetime="2020-05-03T17:12:24Z">2020-05-03</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -229,14 +235,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>14k</span>
+              <span>21k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>13 分钟</span>
+              <span>19 分钟</span>
             </span>
 
         </div>
@@ -249,7 +255,6 @@
 
       
           <center style = "font-size:30px;font-weight:600;">HTML&CSS</center>
-
 
 
 
@@ -867,7 +872,294 @@
 <p>​        7）hr：用于添加线</p>
 <p>​        8）meta：name=”keyword”关键字用于搜索引擎优化（seo）name=”author”作者    <em>content</em>=”作者邮箱”，用于给浏览器看        的附加信息（元数据）</p>
 <p>​        9）link：链接外部资源    rel属性：relation，连接的资源与网页的关系    type属性：连接的资源MIME类型</p>
-<h2 id="CSS进阶"><a href="#CSS进阶" class="headerlink" title="CSS进阶"></a><strong>CSS进阶</strong></h2><h3 id="规则"><a href="#规则" class="headerlink" title="@规则"></a><strong>@规则</strong></h3><h3 id="web字体和图标"><a href="#web字体和图标" class="headerlink" title="web字体和图标"></a><strong>web字体和图标</strong></h3><h3 id="块级格式化上下文"><a href="#块级格式化上下文" class="headerlink" title="块级格式化上下文"></a><strong>块级格式化上下文</strong></h3><h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a><strong>布局</strong></h3><h3 id="浮动的细节规则"><a href="#浮动的细节规则" class="headerlink" title="浮动的细节规则"></a><strong>浮动的细节规则</strong></h3><h3 id="行高的取值"><a href="#行高的取值" class="headerlink" title="行高的取值"></a><strong>行高的取值</strong></h3><h3 id="body的背景"><a href="#body的背景" class="headerlink" title="body的背景"></a><strong>body的背景</strong></h3><h3 id="行盒垂直对其"><a href="#行盒垂直对其" class="headerlink" title="行盒垂直对其"></a><strong>行盒垂直对其</strong></h3><h3 id="参考线-深入理解字体"><a href="#参考线-深入理解字体" class="headerlink" title="参考线-深入理解字体"></a><strong>参考线-深入理解字体</strong></h3><h3 id="堆叠上下文"><a href="#堆叠上下文" class="headerlink" title="堆叠上下文"></a><strong>堆叠上下文</strong></h3><h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a><strong>svg</strong></h3><h3 id="数据连接"><a href="#数据连接" class="headerlink" title="数据连接"></a><strong>数据连接</strong></h3><h3 id="浏览器的兼容性"><a href="#浏览器的兼容性" class="headerlink" title="浏览器的兼容性"></a><strong>浏览器的兼容性</strong></h3><h3 id="居中总结"><a href="#居中总结" class="headerlink" title="居中总结"></a><strong>居中总结</strong></h3><h3 id="样式补充"><a href="#样式补充" class="headerlink" title="样式补充"></a><strong>样式补充</strong></h3>
+<h2 id="CSS进阶"><a href="#CSS进阶" class="headerlink" title="CSS进阶"></a><strong>CSS进阶</strong></h2><h3 id="规则"><a href="#规则" class="headerlink" title="@规则"></a><strong>@规则</strong></h3><p>​        at-rule：@规则、@语句、css指令</p>
+<p>​        1）import：@import”路径”;    引入另一个css文件</p>
+<p>​        2）charset：@charset”utf-8”;    告诉浏览器使用的是什么字符编码集    必须写到第一行</p>
+<h3 id="web字体和图标"><a href="#web字体和图标" class="headerlink" title="web字体和图标"></a><strong>web字体和图标</strong></h3><p><strong>1.web字体</strong></p>
+<p>​        解决用户电脑上没有安装相应字体的问题，当用户电脑没安装相应的字体，强制用户下载该字体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@font-face&#123;</span><br><span class="line">	font-family:字体名称;</span><br><span class="line">	src:yrl("字体文件位置");</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.字体图标</strong></p>
+<p>​        方式一：在线预览</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"文件地址"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"iconfont 图标的名字"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​        方式二：将图标文件下载下来引入到文件中</p>
+<p>​        因为是字体图标所以可以设置，字体相关的属性</p>
+<h3 id="块级格式化上下文"><a href="#块级格式化上下文" class="headerlink" title="块级格式化上下文"></a><strong>块级格式化上下文</strong></h3><p><strong>1.概念</strong></p>
+<p>​        块级格式化上下文：全称<strong>Block Fromatting Content</strong>，简称BFC，是一块<strong>独立的渲染区域</strong>，它规定了在<strong>该区域中</strong>，</p>
+<p>​        <strong>常规流块盒的布局</strong></p>
+<p><strong>2.块级格式化中常规流块盒的布局规则</strong></p>
+<p>​        1）常规流块盒在水平方向上，必须撑满包含块</p>
+<p>​        2）常规流块盒在垂直方向上依次摆放</p>
+<p>​        3）常规流块盒若外边距无缝相连，会进行合并</p>
+<p>​        4）常规流块盒的自动高度计算和摆放会无视浮动元素</p>
+<p><strong>3.BFC渲染区域</strong></p>
+<p>​        BFC渲染区域：这个区域由某个HTML元素创建</p>
+<p>​        1）根元素，html元素创建的BFC区域，覆盖了网页中的所有元素</p>
+<p>​        2）设置了浮动、绝对定位、固定定位的元素</p>
+<p>​        3）overflow不等于visible的块盒</p>
+<p><strong>4.BFC元素的规则</strong></p>
+<p>​        独立的：不同的BFC区域在渲染的时候互不影响，创建了BFC的元素，隔绝了内部和外部的联系，内部渲染不会影响到外部。</p>
+<p>​        创建了BFC的元素，会计算浮动元素的自动高度。</p>
+<p>​        创建了BFC的元素，他的边框不会和浮动元素重叠。</p>
+<p>​        创建了BFC的元素，不会和其他子元素进行外边距合并。</p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a><strong>布局</strong></h3><p><strong>1.多栏布局</strong></p>
+<p>​        两栏布局</p>
+<p>​        三栏布局</p>
+<p><strong>2.等高</strong></p>
+<p>​        CSS弹性盒子    </p>
+<p>​        JS控制</p>
+<p>​        伪等高</p>
+<p><strong>3.元素的书写顺序</strong></p>
+<p>​        一般公司开发都是将网页的主体区域书写到最前面的位置</p>
+<p>​        先写浮动元素</p>
+<p><strong>4.后台页面的布局</strong></p>
+<h3 id="浮动的细节规则"><a href="#浮动的细节规则" class="headerlink" title="浮动的细节规则"></a><strong>浮动的细节规则</strong></h3><p>​        左浮动盒子靠上靠左排列</p>
+<p>​        右浮动盒子靠上靠右排列</p>
+<p>​        浮动盒子的顶边不能高于上一个浮动盒子</p>
+<p>​        若剩余空间无法放下浮动盒子，则该盒子向下移动，知道具备足够的能够容纳盒子的空间，然后再向右移动</p>
+<h3 id="行高的取值"><a href="#行高的取值" class="headerlink" title="行高的取值"></a><strong>行高的取值</strong></h3><p>​        1）px，像素值    具体单位</p>
+<p>​        2）纯数字相对于父元素的字体（先继承，在计算）</p>
+<p>​        3）em单位（先计算再继承）</p>
+<p>​        4）百分比（先计算再继承）</p>
+<h3 id="body的背景"><a href="#body的背景" class="headerlink" title="body的背景"></a><strong>body的背景</strong></h3><p><strong>1.画布：一块区域</strong></p>
+<p>​        特点：1）最小宽度为视口宽度；2）最小高度为视口高度</p>
+<p><strong>2.HTML&amp;body元素的背景</strong></p>
+<p>​        如果html有背景，body元素正常（背景覆盖边框盒）</p>
+<p>​        如果html没有背景，body元素的背景覆盖画布</p>
+<p><strong>3.背景图</strong></p>
+<p>​        1）背景图的宽度百分比相对于视口宽度</p>
+<p>​        2）背景图的高度百分比相对于html元素</p>
+<p>​        3）背景图的横向位置百分比、预设值、相对于视口宽度</p>
+<p>​        4）背景图的纵向位置百分比、预设值、相对于网页高度</p>
+<h3 id="行盒垂直对齐"><a href="#行盒垂直对齐" class="headerlink" title="行盒垂直对齐"></a><strong>行盒垂直对齐</strong></h3><p><strong>1.多个行盒垂直方向上的对齐</strong></p>
+<p>​        给没有对齐的元素设置vertical-algin</p>
+<p>​        预设值：top，middle，bottom，super，sub，baseline</p>
+<p>​        数值</p>
+<p><strong>2.图片的底部白边</strong></p>
+<p>​        图片的父元素是一个块盒，块盒的高度自动，图片底部和父元素底边之间往往会出现白边</p>
+<p>​        解决方法：</p>
+<p>​                1）设置父元素的字体为0</p>
+<p>​                2）将图片设置为块盒</p>
+<h3 id="参考线-深入理解字体"><a href="#参考线-深入理解字体" class="headerlink" title="参考线-深入理解字体"></a><strong>参考线-深入理解字体</strong></h3><p><strong>1.相关元素</strong></p>
+<p>​        font-size，line-height，vertical-algin，font-family</p>
+<p><strong>2.文字</strong></p>
+<p>​        文字是通过文字制作软件制作的：font-forge</p>
+<p>​        制作文字时，会有几条参考线，不同的文字类型，参考线不一样，同一类型的文字参考线一样。</p>
+<p><strong>3.font-size</strong></p>
+<p>​        文字大小，设置的是文字的相对大小</p>
+<p>​        文字的相对大小：1000，2048，1024</p>
+<p>​        相对的文字大小与实际的文字大小存在一些偏差，计算机计算字体大小不能完全精确。</p>
+<p>​        文字顶线(text top,ascent)到底线(text bottom,descent)的距离，是文字的实际大小（content-area，内容区）行盒的背景覆盖        文字的内容区域（content-area）</p>
+<p><strong>4.line-height</strong></p>
+<p>​        顶线向上延伸的空间和底线向下延伸的空间，两个空间相等，该空间叫做gap（空隙）</p>
+<p>​        top→text top→super→baseline→sub→text bottom→bottom</p>
+<p>​        gap默认情况下由文字作者决定</p>
+<p>​        top到bootom，叫做virtual-area（虚拟区）</p>
+<p>​        行高就是virtual-area的距离</p>
+<p>​        line-height：normal，默认值，使用文字默认的gap</p>
+<p>​        文字是否在中间完全取决于文字作者</p>
+<p>​        content-area一定出现在virtual-area中间</p>
+<p><strong>5.vertical-algin</strong></p>
+<p>​        确定文字大小：font-sie，font-family，line-height</p>
+<p>​        一个元素如果子元素出现行盒，该元素内部也会产生参考线</p>
+<p>​        默认情况基线对齐，该元素的基线与父元素的基线对齐</p>
+<p>​        super：该元素的基线与父元素的上基线对齐</p>
+<p>​        sub：该元素的基线与父元素的下基线对齐</p>
+<p>​        text-top：该元素的顶边对齐父元素的text top</p>
+<p>​        text-bottom：该元素的底边对齐父元素的text bottom</p>
+<p>​        top：该元素的virtual-area的顶边，对齐父元素的顶变（该行中最高顶边），对齐的是line-box的顶边</p>
+<p>​        bottom：该元素的virtual-area底边，对齐父元素的底边（该行中最低的边），对齐的是line-box的底边</p>
+<p>​        middle：该元素的中线（content-area），与父元素的X字母高度一半的距离对齐</p>
+<p>​        行盒组合起来可以形成多行，每一行的区域叫做line-box，line-box顶边是该行所有盒子的最高顶边，底边是该行最低底边</p>
+<p>​        实际一个元素元素实际占用高度（自动高度），高度的计算通过line-box计算</p>
+<p>​        行盒：inline-box</p>
+<p>​        行框：line-box</p>
+<p>​        数值相对于基线的偏移量，向上为正数，向下为负数</p>
+<p>​        百分比也是相对于基线的偏移量，百分比是相对于virtual-area的高度</p>
+<p>​        line-box是承载内容必要条件，以下情况不生成行框：</p>
+<p>​                1）某元素内部没有任何行盒</p>
+<p>​                2）某元素字体大小为零</p>
+<p><strong>6.可替换元素和行块盒的基线</strong></p>
+<p>​        图片：图片的基线在图片的下右边距</p>
+<p>​        表单元素：基线位置在内容的底边</p>
+<p>​        行块盒：</p>
+<p>​                1）行块盒最后一行有行框（line-box），用最后一行的基线作为整个行块盒的基线</p>
+<p>​                2）如果行块盒内部最后一行没有行盒，则使用下外边距作为基线</p>
+<h3 id="堆叠上下文"><a href="#堆叠上下文" class="headerlink" title="堆叠上下文"></a><strong>堆叠上下文</strong></h3><p><strong>1.概念</strong></p>
+<p>​        堆叠上下文（stack context）：是一块区域，这块区域由某个元素创建，它规定了该区域中的内容在z轴上的先后顺序。</p>
+<p><strong>2.创建堆叠上下文的元素</strong></p>
+<p>​        1）html元素（根元素）</p>
+<p>​        2）设置了z-index数值（非auto）的定位元素</p>
+<p><strong>3.同一个堆叠上下文中的元素在z轴上的排列顺序</strong></p>
+<p>​        从后到前的顺序：</p>
+<p>​        1）创建堆叠上下文的元素的背景和边框</p>
+<p>​        2）堆叠级别为负值的堆叠上下文</p>
+<p>​        3）常规流非定位的块盒</p>
+<p>​        4）非定位的浮动盒子</p>
+<p>​        5）常规流非定位的行盒</p>
+<p>​        6）任何z-index是auto的定位子元素，以及z-index为0的堆叠上下文</p>
+<p>​        7）堆叠级别为正值的堆叠上下文    </p>
+<p><strong>4.特点</strong></p>
+<p>​        每个堆叠上下文，独立于其他堆叠上下文，他们之间不能互相穿插</p>
+<p>​        在同一个堆叠上下文元素中z-index值越大越靠前，值越小越靠后，值相等后面的覆盖前面的。</p>
+<p>​        不同的堆叠上下文，要把它当作一个整体，同级别中书写靠前的会覆盖书写靠后的</p>
+<h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a><strong>svg</strong></h3><p><strong>1.概念</strong></p>
+<p>​        svg：scalable vector graphics，可缩放的矢量图</p>
+<p><strong>2.特点</strong></p>
+<p>​        1）该图片由代码书写而成</p>
+<p>​        2）缩放不会失帧，图片是通过坐标来确定位置的，而普通图片是通过像素点组合而成的。</p>
+<p>​        3）内容轻量（占用内存小）</p>
+<p><strong>3.怎么使用</strong></p>
+<p>​        svg可以嵌入到浏览器中，也可以单独成为一个文件</p>
+<p>​        xml语言，可扩展的标记语言，svg使用该语言定义</p>
+<p>​        xml语言规定必须闭合元素</p>
+<p>​        embed，object书写方式src，data里面书写资源地址，type中书写资源类型，svg的资源类型是image/svg+xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;embed src&#x3D;&quot;资源地址&quot; type&#x3D;&quot;image&#x2F;svg+xml&quot;&gt;&lt;&#x2F;embed&gt;</span><br><span class="line">&lt;object data&#x3D;&quot;资源地址&quot; type&#x3D;&quot;image&#x2F;svg+xml&quot;&gt;</span><br><span class="line">	&lt;param name&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;&lt;&#x2F;param&gt;</span><br><span class="line">&lt;&#x2F;object&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​        如果是iframe元素需要在xml文件中设置一下svg的宽高</p>
+<p><strong>4.书写svg代码</strong></p>
+<p>​        svg可以设置宽高，style属性等，它默认的高度为300×100</p>
+<p>​        svg里面可书写的内容有</p>
+<p>​        1）矩形：rectangle</p>
+<p>​                width：宽；height：高；fill设置填充色，stoker：边框颜色，x，y：设置矩形右下角离原点x，y轴的距离</p>
+<p>​        2）圆形：circle</p>
+<p>​                fill：填充色，transparnet：透明色</p>
+<p>​                stroke：描边</p>
+<p>​                cx，cy，r分别表示圆心离原点x，y轴的距离和半径</p>
+<p>​        3）椭圆：ellipse</p>
+<p>​                rx，ry，cx，xy，rx：设置椭圆长的半径ry：设置椭圆高的半径，cx，cy设置圆形点到原点，x，y轴的距离</p>
+<p>​        4）线段：line</p>
+<p>​                x1,y1,x2,y2：x1，y1设置离原点的第一点，x2，y2设置离x1，y1的距离</p>
+<p>​                stroke：设置边框</p>
+<p>​                stroke-width：设置边框的粗细</p>
+<p>​        5）折线：polyline</p>
+<p>​                points：各个点的坐标，最后一个坐标和第一个坐标会连线</p>
+<p>​        6）多边形：polygon</p>
+<p>​                points：各个点的坐标</p>
+<p>​        7）路径：path </p>
+<p>​                <path d=""/></p>
+<p>​                M = moveto,</p>
+<p>​                L=lineto,</p>
+<p>​                H=horizontal lineto,</p>
+<p>​                V=vertical lineto,</p>
+<p>​                C=curveto,</p>
+<p>​                S=smooth curveto,</p>
+<p>​                Q=quadratic belzier curveto,</p>
+<p>​                T=smooth quadratic belzier curveto,</p>
+<p>​                A=elliptical arc</p>
+<p>​                A</p>
+<p>​                1：半径1</p>
+<p>​                2：半径2</p>
+<p>​                3：旋转的角度</p>
+<p>​                4：小弧度0大弧度1</p>
+<p>​                5：顺时针1逆时针0</p>
+<p>​                6：终点坐标x，y的坐标，相对于原点</p>
+<p>​                画圆的时候需要设置半径1和半径2的距离    顺时针旋转</p>
+<p>​                Z=closepath</p>
+<h3 id="数据连接data-url"><a href="#数据连接data-url" class="headerlink" title="数据连接data url"></a><strong>数据连接data url</strong></h3><p><strong>1.如何书写</strong></p>
+<p>​        数据链接：将目标文件的数据直接书写到路径中</p>
+<p>​        语法：data：MIME/base64，数据</p>
+<p><strong>2.意义</strong></p>
+<p>​        减少了浏览器的请求</p>
+<p>​        优点：</p>
+<p>​                1）减少了请求中浪费的时间    </p>
+<p>​                2）有利于数据的动态生成</p>
+<p>​        缺点：</p>
+<p>​                1）增加了资源的体积，导致传输内容增加，从而增加了单个资源的传输</p>
+<p>​                2）不利于浏览器缓存，浏览器通常会缓存图片文件，css文件，js文件。</p>
+<p>​                3）会增加原资源的体积到原来的四分之三</p>
+<p>​        应用场景：</p>
+<p>​                1）当请求单个图片前提小，并且该图片因为各种原因，不适合制作雪碧图，可以使用数据链接。</p>
+<p>​                2）图片由其他代码动态生成，并且图片较小。</p>
+<p><strong>3.base64</strong></p>
+<p>​        表示的是一种编码方式</p>
+<p>​        通常用于将一些二进制数据用一个可书写的字符串表示</p>
+<p>​        图片是一个二进制数据</p>
+<p>​        tip：css的数据类型是text，通常在数据链接中的图片资源的MIME后加一个分号后加一个base64</p>
+<h3 id="浏览器的兼容性"><a href="#浏览器的兼容性" class="headerlink" title="浏览器的兼容性"></a><strong>浏览器的兼容性</strong></h3><p><strong>1.问题产生原因</strong></p>
+<p>​        1）市场竞争导致不同浏览器为了市场竞争制定了不同的版本，但是官方定义的速度较慢导致了浏览器出现了兼容性问题</p>
+<p>​        2）标准版本更新变化导致浏览器出现了兼容性问题</p>
+<p>​        3）浏览器的不同版本也会出现一些兼容性问题，老版本的浏览器不支持新版本中的元素</p>
+<p><strong>2.厂商前缀</strong></p>
+<p>​        原因：</p>
+<p>​                1）市场竞争，标准文档还没有发布</p>
+<p>​                2）标准仍在讨论中，浏览器厂商希望先支持</p>
+<p>​        常见的厂商前缀</p>
+<p>​                IE：-ms-</p>
+<p>​                Chrome，safari：-webkit-</p>
+<p>​                firefox：-moz-</p>
+<p>​                opera：-o-</p>
+<p>​                为了兼容低版本浏览器可以将厂商前缀加上</p>
+<p>​        例子：</p>
+<p>​                box-sizzing，谷歌旧版本浏览器的书写形式是-webkit-box-sizzing：厂商前缀说明这个元素在当时官方还没有发布</p>
+<p>​                谷歌浏览器的滚动条样式</p>
+<p>​                        实际开发中往往是div+css+js来实现滚动条，例如一个div里面放置一个div用css设置来设置他的样式，js来控制滑动</p>
+<p>​                多背景中选择一个作为背景</p>
+<p><strong>3.css hack（补丁）</strong></p>
+<p>​        根据不同的浏览器（主要针对于IE浏览器）设置不同的样式和元素</p>
+<p>​        1）样式</p>
+<p>​                IE中，css的特殊前缀</p>
+<p>​                “*” 属性，兼容IE5,IE6,IE7</p>
+<p>​                “_”属性，兼容性IE5,IE6</p>
+<p>​                属性值后面加\9，兼容IE9,IE10</p>
+<p>​                属性值后面加\0，兼容IE-IE10</p>
+<p>​                属性之后面加\9\0，兼容IE9-IE10</p>
+<p>​                IE6的外边框bug，浮动元素的左边距会翻倍</p>
+<p>​        2）判断条件</p>
+<p>​            IE浏览器能识别注释内的一部分元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- [if IE] --&gt;</span><br><span class="line">&lt;!-- ![endif] --&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.渐进增强优雅降级</strong></p>
+<p>​        渐进增强：先适应大部分浏览器，然后针对新版本浏览器，加入新的样式，书写代码是会先尽量避免有兼容性问题的代码，完        成后，在逐步加入新标准中的代码</p>
+<p>​        优雅降级：先制作完成功能，然后针对低版本浏览器进行特殊处理，在解决兼容性问题，书写代码时，先不用特别在意兼容        性，完成整个功能，在针对低版本浏览器处理样式。</p>
+<p><strong>5.can i use</strong></p>
+<p>​        <a href="https://caniuse.com/" target="_blank" rel="noopener">caniuse</a></p>
+<p>​        tips：当遇到无法识别的代码时，直接略过，不会报错</p>
+<h3 id="居中总结"><a href="#居中总结" class="headerlink" title="居中总结"></a><strong>居中总结</strong></h3><p><strong>1.行盒水品居中</strong></p>
+<p>​        直接设置行盒（行块盒）父元素的text-algin：center；</p>
+<p><strong>2.常规流块盒水品居中</strong></p>
+<p>​        定宽，左右margin设置为auto</p>
+<p><strong>3.绝对（固定）定位元素的水平居中</strong></p>
+<p>​        定宽（高）设置rltb值为零，margin：auto</p>
+<p><strong>4.单行文本垂直居中</strong></p>
+<p>​        设置文本所在元素的行高，为整个区域的高度</p>
+<p><strong>5.行块盒或块盒内多行文本的垂直居中</strong></p>
+<p>​        没有完美的方案</p>
+<p>​        设置盒子上下内边距相等，达到类似的效果，但是缺点很明显</p>
+<p><strong>6.绝对定位中的垂直居中</strong></p>
+<p>​        定高，设置上下坐标为0（tb值为0）margin：auto；</p>
+<h3 id="样式补充"><a href="#样式补充" class="headerlink" title="样式补充"></a><strong>样式补充</strong></h3><p><strong>1.display：list-item</strong></p>
+<p>​        list-style-type</p>
+<p>​        list-style-position</p>
+<p>​        list-style：none；</p>
+<p><strong>2.图片失效时的高度问题</strong></p>
+<p>​        设置img元素为块盒或行块盒</p>
+<p><strong>3.行盒中包含行块盒或可替换元素</strong></p>
+<p>​        行盒的高度和它内部行块盒或可替换元素无关</p>
+<p><strong>4.text-algin：justify</strong></p>
+<p>​        text-algin：left；</p>
+<p>​        text-algin：right；</p>
+<p>​        text-algin：center；</p>
+<p>​        text-algin：justify；    除后一行外，分散对齐（将空白部分均分）如果如果要将最后一行分散对齐，可设置伪元素::</p>
+<p>​        after{content=””;display:inline-block;width:100%;}</p>
+<p><strong>5.制作一个三角形</strong>            </p>
+<p>​        1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;width:0px;height:0px;border:10px solid;boder-color:color1 color2 color3 color4&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        2)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;width:0px;height:0px;border:100px solid transparnet; border-left-color:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.文字方向</strong></p>
+<p>​        direction和writing-mode</p>
+<p>​        开始 start 结束 end</p>
+<p>​        左 left 右 right</p>
+<p>​        开始和结束是相对的但是左右是绝对的</p>
+<p>​        direction设置的是开始和结束的放向</p>
+<p>​        writing-mode：设置文字的书写方向</p>
+<p><strong>7.utf-8字符</strong><br>        &#x6211;&#x662F;&#x5927;&#x5E05;&#x54E5;</p>
+<p>​        html实体字符</p>
+
       
     </div>
 
@@ -2665,13 +2957,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">45k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">35 分钟</span>
+    <span title="站点阅读时长">41 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

@@ -23,9 +23,9 @@
 
   <meta name="description" content="编程，学习，动漫，分享新鲜事">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bulesky の Blog">
+<meta property="og:title" content="Bluesky の Blog">
 <meta property="og:url" content="http://bluesky.com/index.html">
-<meta property="og:site_name" content="Bulesky の Blog">
+<meta property="og:site_name" content="Bluesky の Blog">
 <meta property="og:description" content="编程，学习，动漫，分享新鲜事">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Bluesky0420">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Bulesky の Blog</title>
+  <title>Bluesky の Blog</title>
   
 
 
@@ -76,7 +76,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Bulesky の Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Bluesky の Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -97,7 +97,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Bulesky の Blog</h1>
+      <h1 class="site-title">Bluesky の Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">为爱发电</p>
@@ -137,7 +137,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-commonweal">
@@ -195,6 +195,213 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/MySQL.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bluesky0420">
+      <meta itemprop="description" content="编程，学习，动漫，分享新鲜事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bluesky の Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/MySQL.html" class="post-title-link" itemprop="url">MySQL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-11 18:20:29 / 修改时间：18:20:15" itemprop="dateCreated datePublished" datetime="2020-05-11T18:20:29Z">2020-05-11</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="单元一：基础部分"><a href="#单元一：基础部分" class="headerlink" title="单元一：基础部分"></a>单元一：基础部分</h2><h3 id="一、为什么学习数据库"><a href="#一、为什么学习数据库" class="headerlink" title="一、为什么学习数据库"></a>一、为什么学习数据库</h3><p>​        1）持久化数据到本地</p>
+<p>​        2）可以实现结构化查询，方便管理</p>
+<h3 id="二、数据库的相关概念"><a href="#二、数据库的相关概念" class="headerlink" title="二、数据库的相关概念"></a>二、数据库的相关概念</h3><p>​        1）DB：数据库（database）：存储数据的“仓库”。它保存了一系列有组织的数据。</p>
+<p>​        2）DBMS：数据库管理系统（Database Mangement Ststem）。数据库是通过DNMS创建和操作的容器</p>
+<p>​        3）SQL：结构化查询语言（Structure Query Language）：专门用来于数据库通信的语言</p>
+<p>​                SQL特点：</p>
+<p>​                        1.不是某个特定的数据库供应商专用语言，几乎所有DBMS都支持SQL</p>
+<p>​                        2.简单易学</p>
+<p>​                        3.灵活运用语言元素，可以进行非常复杂和高级的数据库操作。</p>
+<p>​        4）常见的数据库管理系统：MySQL，Oracle，DB2，SQL server</p>
+<h3 id="三、数据库存储数据特点"><a href="#三、数据库存储数据特点" class="headerlink" title="三、数据库存储数据特点"></a>三、数据库存储数据特点</h3><p>​        1）将数据放到表里面，再把表放到库里面。</p>
+<p>​        2）一个数据库中可以有多个表，每个表都有一个名字，用来标识自己。表名具有唯一性。</p>
+<p>​        3）表具有一些特性，这些特性定义了数据在表中如存储，类似Java中“类”的设计。</p>
+<p>​        4）表由列组成，我们也称为字段。所有表都是由一个或多个列组成，每一列类似于Java中的”属性“。</p>
+<p>​        5）表中的数据是按行存储的，每一行类似于Java中的”对象“。</p>
+<h3 id="四、初识MySQL"><a href="#四、初识MySQL" class="headerlink" title="四、初识MySQL"></a>四、初识MySQL</h3><h4 id="MySQL产品介绍"><a href="#MySQL产品介绍" class="headerlink" title="MySQL产品介绍"></a>MySQL产品介绍</h4><p>​        1）MySQL数据库隶属于MySQLAB公司，总部位于瑞典，后被Oracle收购</p>
+<p>​        2）优点：</p>
+<p>​                成本低：开放源代码，一般可以免费使用</p>
+<p>​                性能高：执行快</p>
+<p>​                简单：容易安装使用</p>
+<h4 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h4><p>​        1）DBMS分类：</p>
+<p>​                基于共享文件系统的SBMS（Access）</p>
+<p>​                基于客户机—服务器的DBMS（MySQL，SQLserver，Oracle）</p>
+<p>​        2）将所有软件终止进程</p>
+<h4 id="MySQL服务的启动和停止"><a href="#MySQL服务的启动和停止" class="headerlink" title="MySQL服务的启动和停止"></a>MySQL服务的启动和停止</h4><p>​        停止MySQL服务：net stop 对应的mysql的版本</p>
+<p>​        启动MySQL服务：net start 对应的mysql的版本</p>
+<h4 id="MySQL服务的登录和退出"><a href="#MySQL服务的登录和退出" class="headerlink" title="MySQL服务的登录和退出"></a>MySQL服务的登录和退出</h4><p>​        1）MySQL自带的客户端，输入root用户密码，exit/Ctrl+C退出（不建议使用，只能用于root用户，不够灵活）</p>
+<p>​        2）利用dos窗口输入mysql -h localhost -P 3306 -u root -p （h(host)：代表主机名,P(端口号)u(用户名)p(密码)）</p>
+<p>​        【注意】如果在dos窗口输入命令显示无效说明环境变量配置有误，将MySQL中的bin文件的目录添加到path的最前面</p>
+<h4 id="MySQL的常见命令和语法规范"><a href="#MySQL的常见命令和语法规范" class="headerlink" title="MySQL的常见命令和语法规范"></a>MySQL的常见命令和语法规范</h4><p><strong>1.常见命令</strong></p>
+<p>​        1）查看当前所有的数据库：show databases;</p>
+<p>​        2）打开指定的库：use 库名；</p>
+<p>​        3）查看当前库的所有表：show tables；</p>
+<p>​        4）查看其他库的所有表：show tables from 库名；</p>
+<p>​        5）创建表：create table 表名（</p>
+<p>​                                            列名 类型，</p>
+<p>​                                            列名 类型，</p>
+<p>​                                            …………….</p>
+<p>​            ）</p>
+<p>​        6）查看表结构：desc 表名；</p>
+<p>​        7）查看表的内容：select * from 表名；</p>
+<p>​        8）查看服务器版本：mysql：select version()；dos：mysql –version    </p>
+<p><strong>2.语法规范</strong></p>
+<p>​        1）不区分大小写，但建议关键字大写，表名，列名小写。</p>
+<p>​        2）每条命令最好用分号结尾</p>
+<p>​        3）每条命令根据需要，可以进行缩进或换行。</p>
+<p>​        4）注释：单行注释：#注释文字    – 注释文字    多行注释/* 注释文字 */</p>
+<h3 id="五、DQL语言学习-Data-Qeary-Language"><a href="#五、DQL语言学习-Data-Qeary-Language" class="headerlink" title="五、DQL语言学习(Data Qeary Language)"></a>五、DQL语言学习(Data Qeary Language)</h3><p><img src="./%E5%91%98%E5%B7%A5%E5%B7%A5%E8%B5%84%E8%A1%A8.jpg" alt=""></p>
+<h4 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h4><p>​        语法：<br>​                select    查询列表  from    表名;</p>
+<p>​                类似于：System.out.println(打印东西);</p>
+<p>​        特点：</p>
+<p>​                1、查询列表可以是：表中的字段、常量值、表达式、函数<br>​                2、查询的结果是一个虚拟的表格</p>
+<p><strong>1.查询表中的单个字段</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT last_name FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.查询表中的多个字段</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT last_name,salary,email FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.查询表中的所有字段</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1）方式一：SELECT &#96;first_name&#96;</span><br><span class="line">				&#96;last_name&#96;</span><br><span class="line">				&#96;email&#96;</span><br><span class="line">				&#96;phone_number&#96;</span><br><span class="line">				&#96;job_id&#96;&#96;salary&#96;</span><br><span class="line">				&#96;commission_pct&#96;</span><br><span class="line">				&#96;manager_id&#96;</span><br><span class="line">				&#96;department_id&#96;</span><br><span class="line">				&#96;hiredate&#96; </span><br><span class="line">FROM employees;</span><br><span class="line"></span><br><span class="line">2）方式二：SELECT * FROM employees;</span><br></pre></td></tr></table></figure>
+<p><strong>4.查询常量值</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT 100;</span><br><span class="line">SELECT &#39;john&#39;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.查询表达式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 100*98;</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.查询函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT VERSION();</span><br></pre></td></tr></table></figure>
+
+<p><strong>7.起别名</strong><br>        1）原因<br>                1.便于理解<br>                2.查询字段如果有别名，可以区分开来。</p>
+<p>​        2）方式</p>
+<p>​                方式一：使用AS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT 100*98 AS 结果;</span><br><span class="line">SELECT last_name AS 姓,first_name AS 名 FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p>​                方式二：使用空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT last_name 姓,first_name 名 FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p>​        3）注意：别名中如果有特殊符号需要加双引号</p>
+<p><strong>8.去重</strong><br>        案例：查询员工表中涉及到所有的部门编号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT &#96;department_id&#96; FROM employees;</span><br><span class="line">SELECT DISTINCT &#96;department_id&#96; FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p><strong>9.加号的作用</strong><br>        1）Java中的加号，运算符和连接符<br>        2）在MySQL中表示运算符<br>        SELECT 100+90;        两个操作数都为数值型，则作加法运算。<br>        SELECT ‘100’+90;        如果其中一方为字符性，会将字符型转换成数值型,如果成功，就继续做加法运算.<br>        SELECT ‘jhon’+90;        如果失败就将字符转换为0<br>        SELECT null+90;        如果一方为null，结果为null</p>
+<p>​        3）案例：查询员工名和员工姓连接成一个字段，并显示为 姓名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT CONCAT(last_name,first_name) AS 姓名 FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p><strong>10.测试</strong><br>        1）显示表departments的结构，并查询其中全部的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DESC departments;</span><br><span class="line">SELECT * FROM departments;</span><br></pre></td></tr></table></figure>
+
+<p>​        2）显示出表employees中全部的job_id(不能重复)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT job_id FROM employees;</span><br></pre></td></tr></table></figure>
+
+<p>​        3）显示出表employees的全部列，各个列之间用逗号连接，列头显示为OUT_PUT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">函数补充</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT(first_name,&#39;,&#39;,last_name,&#39;,&#39;,email,&#39;,&#39;,phone_number,&#39;,&#39;,job_id,&#39;,&#39;,salary) </span><br><span class="line">	AS OUT_PUT </span><br><span class="line">FROM employees;</span><br></pre></td></tr></table></figure>
+
+<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><p><strong>1.语法</strong><br>        select<br>                查询列表③<br>        from<br>                表名    ①<br>        where<br>                筛选条件;②</p>
+<p><strong>2.分类</strong><br>        1）按条件表达式筛选<br>                    条件运算：&gt; &lt; = !=/&lt;&gt; &gt;= &lt;=<br>        2）按逻辑表达式筛选<br>                    逻辑运算符：&amp; | ! and or not<br>                    作用：用于连接条件表达式<br>        3）模糊查询<br>                    like<br>                    between and<br>                    in<br>                    is null</p>
+<p><strong>3.按条件查询案例</strong><br>        案例1：查询工资&gt;12000的员工信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	* </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	salary &gt; 12000;</span><br></pre></td></tr></table></figure>
+
+<p>​        案例2：查询部门编号不等于90号的员工名和部门编号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">department_id,</span><br><span class="line">CONCAT(last_name,first_name)	AS 姓名 </span><br><span class="line">FROM</span><br><span class="line">employees </span><br><span class="line">WHERE</span><br><span class="line">department_id &lt;&gt; 90;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.按逻辑运算符筛选</strong><br>        案例1：查询工资在10000和20000之间的员工名、工资以及奖金</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名,</span><br><span class="line">	department_id,</span><br><span class="line">	salary</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	salary&gt;10000 </span><br><span class="line">AND </span><br><span class="line">	salary&lt;20000;</span><br></pre></td></tr></table></figure>
+
+<p>​        案例2：查询部门编号不是在90到110之间，或者工资高于15000员工信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	department_id&lt;90</span><br><span class="line">OR</span><br><span class="line">	department_id&gt;110</span><br><span class="line">OR</span><br><span class="line">	salary&gt;15000;</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.按模糊查询</strong><br>        1）like<br>                特点：<br>                        ①一般和通配符搭配使用<br>                        通配符：<br>                        %：多个字符<br>                        _：一个字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#案例一：查询员工名单中包含字符a的员工信息</span><br><span class="line">SELECT</span><br><span class="line">	* </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	last_name LIKE &#39;%a%&#39;;</span><br><span class="line">	</span><br><span class="line">#案例二：查询员工名单中第三个字符为n，第五个字符为l的员工和工资</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名,</span><br><span class="line">	salary	AS 工资</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	last_name LIKE &#39;__n_l%&#39;;</span><br><span class="line">	</span><br><span class="line">#案例三：查询员工中第二个字符为_的员工信息</span><br><span class="line">#可以使用\转义字符，还可以使用$</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE last_name LIKE&#39;_\_%&#39;;</span><br></pre></td></tr></table></figure>
+
+<p>​        2）between and<br>​                特点：<br>​                        ①语句更加简洁<br>​                        ②包括临界值<br>​                        ③两个临界值不能调换顺序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#案例一：查询员工编号在100-120之间的所有员工信息</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line"></span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	employee_id BETWEEN 100 AND 120;</span><br></pre></td></tr></table></figure>
+
+<p>​        3）in | not in<br>​                含义：用于判断某个字段是否属于in列表中的一项<br>​                特点：<br>​                        ①语句更加简单<br>​                        ②in列表的值类型必须统一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#案例一：查询员工工种编号是 IT_PROG、AD_VP、AD_PRES中的一个员工名和工种编号</span><br><span class="line"></span><br><span class="line">SELECT</span><br><span class="line">	CONCAT( last_name, first_name ) AS 姓名,</span><br><span class="line">	job_id AS 工种编号 </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	job_id IN ( &#39;IT_PROG&#39;, &#39;AD_VP&#39;, &#39;AD_PRES&#39; );</span><br></pre></td></tr></table></figure>
+
+<p>​        4）is null | not null<br>​                =或&lt;&gt;不能用来判断null值<br>​                is null或is not null 可以判断null的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#案例：查询没有奖金的员工名和奖金率</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT( last_name, first_name ) AS 员工姓名,</span><br><span class="line">	commission_pct </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	commission_pct IS NULL;</span><br></pre></td></tr></table></figure>
+
+<p>​        5）安全等于：&lt;=&gt;<br>​                is null 和 &lt;=&gt;的区别<br>​                        ①is null只能判断null值，可读性较高，建议使用<br>​                        ②&lt;=&gt;即可判断null值，右可判断普通的数值，可读性较低</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#案例一：查询没有奖金的员工名和奖金率</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT( last_name, first_name ) AS 员工姓名,</span><br><span class="line">	commission_pct </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	commission_pct &lt;&#x3D;&gt; NULL;</span><br><span class="line"></span><br><span class="line">#案例二：查询工资为12000的员工信息</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	salary &lt;&#x3D;&gt; 12000;</span><br></pre></td></tr></table></figure>
+
+<p>​        6）练习</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#例题：查询员工号为176的员工的姓名、部门和年薪</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT( last_name, first_name ) AS 姓名,</span><br><span class="line">	employee_id AS 员工号,</span><br><span class="line">	job_id AS 部门,</span><br><span class="line">	salary*12*(1+IFNULL(commission_pct,0)) AS 年薪 </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	employee_id &#x3D; &#39;176&#39;;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">#测试题一：</span><br><span class="line">SELECT</span><br><span class="line">	salary,</span><br><span class="line">	last_name</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	salary&lt;18000</span><br><span class="line">AND</span><br><span class="line">	commission_pct is null;</span><br><span class="line">	</span><br><span class="line">#测试题二：</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	job_id &lt;&gt;&#39;IT%&#39;</span><br><span class="line">OR</span><br><span class="line">	salary&#x3D;12000;</span><br><span class="line">#测试题三：</span><br><span class="line">DESC departments</span><br><span class="line">#测试题四</span><br><span class="line">SELECT DISTINCT</span><br><span class="line">	location_id </span><br><span class="line">FROM</span><br><span class="line">	departments</span><br></pre></td></tr></table></figure>
+
+<h4 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h4><p>​        1）语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	查询列表</span><br><span class="line">FROM</span><br><span class="line">	查询表</span><br><span class="line">[WHERE 条件]</span><br><span class="line">ORDER BY</span><br><span class="line">	排序列表	排序方式[asc&#x2F;desc]</span><br></pre></td></tr></table></figure>
+
+<p>​        2）特点：<br>​                ①asc是升序，desc是降序，默认是asc。<br>​                ②order by子句中支持单/多个字段、表达式、函数、别名<br>​                ③order by子句中一般放在查询语句的最后面，limit子句子句除外</p>
+<p>​        3）案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#案例1：查询员工信息，要求工资从高到低排序</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	salary ASC;</span><br><span class="line">	</span><br><span class="line">#案例2：查询部门编号&gt;&#x3D;90的员工信息，按入职时间的先后顺序进行排序【添加筛选条件】</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	department_id&gt;&#x3D;90</span><br><span class="line">ORDER BY</span><br><span class="line">	hiredate ASC;</span><br><span class="line">	</span><br><span class="line">#案例3：按年薪的高低显示员工信息和年薪【按表达式排序】</span><br><span class="line">SELECT</span><br><span class="line">	*,</span><br><span class="line">	salary*12*(1+IFNULL(commission_pct,0)) AS 年薪</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	salary*12*(1+IFNULL(commission_pct,0)) ASC;</span><br><span class="line">	</span><br><span class="line">#案例4：按年薪的高低显示员工的信息和年薪【按别名排序】</span><br><span class="line">SELECT</span><br><span class="line">	*,</span><br><span class="line">	salary*12*(1+IFNULL(commission_pct,0)) AS 年薪</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	年薪 ASC;</span><br><span class="line"></span><br><span class="line">#案例5：按姓名的长度显示员工的姓名和工资【按函数排序】</span><br><span class="line">SELECT</span><br><span class="line">	LENGTH(CONCAT(last_name,first_name)) AS 长度,</span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名,</span><br><span class="line">	salary AS 工资</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	长度 ASC;</span><br><span class="line">	</span><br><span class="line">#案例6：查询员工信息，要求先按工资排序，再按员工编号排序【多个字段排序】</span><br><span class="line">SELECT</span><br><span class="line">	*</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	salary ASC,employee_id DESC;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#例题</span><br><span class="line">#1.查询员工的姓名和部门号、年薪，按年薪降序，按姓名升序</span><br><span class="line">SELECT</span><br><span class="line">	LENGTH(</span><br><span class="line">	CONCAT( last_name, first_name )) AS 姓名长度,</span><br><span class="line">	CONCAT( last_name, first_name ) AS 姓名,</span><br><span class="line">	department_id AS 部门号,</span><br><span class="line">	salary * 12 *(</span><br><span class="line">		1+IFNULL (</span><br><span class="line">		commission_pct,0)) AS 年薪 </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">ORDER BY</span><br><span class="line">	姓名长度 ASC,年薪 DESC;</span><br><span class="line">#2.选择工资不在8000到17000的员工的姓名和工资，按工资降序</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名,</span><br><span class="line">	salary AS 工资</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">WHERE</span><br><span class="line">	salary NOT BETWEEN 8000 AND 17000</span><br><span class="line">ORDER BY</span><br><span class="line">	工资 DESC;</span><br><span class="line">#3.查询邮箱中包含e的员工信息，并按邮箱的字节数降序，再按部门号升序</span><br><span class="line">SELECT</span><br><span class="line">	*,</span><br><span class="line">	LENGTH( email ) AS 邮箱字节长度,</span><br><span class="line">	department_id AS 部门号 </span><br><span class="line">FROM</span><br><span class="line">	employees </span><br><span class="line">WHERE</span><br><span class="line">	email LIKE &#39;%e%&#39; </span><br><span class="line">ORDER BY</span><br><span class="line">	邮箱字节长度 DESC,部门号 ASC;</span><br></pre></td></tr></table></figure>
+
+<h4 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h4><h4 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h4><h4 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h4><h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h4><h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><h4 id="union联合查询"><a href="#union联合查询" class="headerlink" title="union联合查询"></a>union联合查询</h4><h3 id="六、DML语言学习-Data-Manigilation-Language"><a href="#六、DML语言学习-Data-Manigilation-Language" class="headerlink" title="六、DML语言学习(Data Manigilation Language)"></a>六、DML语言学习(Data Manigilation Language)</h3><h4 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h4><h4 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h4><h4 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h4><h3 id="七、DDL语言学习-Data-Defined-Language"><a href="#七、DDL语言学习-Data-Defined-Language" class="headerlink" title="七、DDL语言学习(Data Defined Language)"></a>七、DDL语言学习(Data Defined Language)</h3><h4 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h4><h4 id="常见的数据类型介绍"><a href="#常见的数据类型介绍" class="headerlink" title="常见的数据类型介绍"></a>常见的数据类型介绍</h4><h4 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h4><h3 id="八、TCL语言的学习-Transaction-Contrl-Language"><a href="#八、TCL语言的学习-Transaction-Contrl-Language" class="headerlink" title="八、TCL语言的学习(Transaction Contrl Language)"></a>八、TCL语言的学习(Transaction Contrl Language)</h3><h4 id="事务和事务处理"><a href="#事务和事务处理" class="headerlink" title="事务和事务处理"></a>事务和事务处理</h4><h3 id="九、视图讲解"><a href="#九、视图讲解" class="headerlink" title="九、视图讲解"></a>九、视图讲解</h3><h3 id="十、存储过程和函数"><a href="#十、存储过程和函数" class="headerlink" title="十、存储过程和函数"></a>十、存储过程和函数</h3><h3 id="十一、流程控制结构"><a href="#十一、流程控制结构" class="headerlink" title="十一、流程控制结构"></a>十一、流程控制结构</h3><h2 id="单元二：高级部分"><a href="#单元二：高级部分" class="headerlink" title="单元二：高级部分"></a>单元二：高级部分</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/HTML&CSS.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -204,7 +411,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1187,7 +1394,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1296,7 +1503,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1388,7 +1595,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2036,7 +2243,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2181,7 +2388,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2457,7 +2664,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2667,7 +2874,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bulesky の Blog">
+      <meta itemprop="name" content="Bluesky の Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2882,7 +3089,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2957,13 +3164,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">52k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

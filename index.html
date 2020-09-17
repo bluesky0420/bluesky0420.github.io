@@ -195,6 +195,963 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/Linux%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bluesky0420">
+      <meta itemprop="description" content="编程，学习，动漫，分享新鲜事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bluesky の Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/Linux%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html" class="post-title-link" itemprop="url">Linux基础入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-17 05:10:09 / 修改时间：03:58:36" itemprop="dateCreated datePublished" datetime="2020-09-17T05:10:09Z">2020-09-17</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>27k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>24 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Linux基础使用（RHEL8）"><a href="#Linux基础使用（RHEL8）" class="headerlink" title="Linux基础使用（RHEL8）"></a>Linux基础使用（RHEL8）</h1><p>[toc]</p>
+<h2 id="第一章、Linux介绍、虚拟机安装使用（初识Linux）"><a href="#第一章、Linux介绍、虚拟机安装使用（初识Linux）" class="headerlink" title="第一章、Linux介绍、虚拟机安装使用（初识Linux）"></a>第一章、Linux介绍、虚拟机安装使用（初识Linux）</h2><h3 id="1、Linux介绍"><a href="#1、Linux介绍" class="headerlink" title="1、Linux介绍"></a>1、Linux介绍</h3><h4 id="（1）计算机资源"><a href="#（1）计算机资源" class="headerlink" title="（1）计算机资源"></a>（1）计算机资源</h4><p>​                    1）硬件资源：计算机的物理设备（CPU、GPU、磁盘……）</p>
+<p>​                    2）软件资源：操作系统[内核空间]（特殊的软件资源），应用程序[用户空间]（根据特定的需求，使用计算机语言编写的程序，未启动的时候是一堆静态文件，保存在磁盘中，使用的时候从磁盘调入内存中）</p>
+<h4 id="（2）常见操作系统"><a href="#（2）常见操作系统" class="headerlink" title="（2）常见操作系统"></a>（2）常见操作系统</h4><p>​                1）Unix：多用户多任务的操作系统，支持多种架构</p>
+<p>​                2）Linux：多用于服务器，开源</p>
+<p>​                3）Windows：分个人用户[win7/8/10/xp]（个人计算机）和企业用户[Windows server2008/2012/2016/2019]（服务器）</p>
+<p>​                4）MacOS：苹果低通，底层实现良好，半开源</p>
+<p>​                5）IOS：苹果手机系统</p>
+<p>​                6）Android：安卓系统，Linux系统的分支</p>
+<h4 id="（3）Linux简单介绍"><a href="#（3）Linux简单介绍" class="headerlink" title="（3）Linux简单介绍"></a>（3）Linux简单介绍</h4><p>​                1）Linux特点</p>
+<p>​                        ①完全开源：Linux系统遵顼GPL协议，开放源代码</p>
+<p>​                        ②安全高效稳定：Linux用户权限管理严格</p>
+<p>​                        ③多用户多任务：Linux是一款多用户多任务实时性的操作系统</p>
+<p>​                        ④支持多种硬件平台：Linux系统遵循posix协议，支持Unix环境下运行的软件移植到Linux环境，兼容性良好的。</p>
+<p>​                2）Linux发行版</p>
+<p>​                        ①Redhat（企业）</p>
+<p>​                        ②CentOS（社区，国内用的最多）</p>
+<p>​                        ③Fedora</p>
+<p>​                        ④SUSE</p>
+<p>​                        ⑤Ubuntu</p>
+<p>​                        ⑥Kali</p>
+<p>​                        ⑦ArchLinux</p>
+<p>​                3）开源文化</p>
+<p>​                        ①GNU：一个自由软件项目工程，目的是为了创建一套完全自由（开源）的操作系统</p>
+<p>​                        ②GPL：GNU通用许可证，拥有该协议的程序是开源的，任何人可以根据源码进行修改，但经修改的代码也必须开源提供给任何人。</p>
+<p>​                        ③Linux：准确来说是Linux内核，Linux内核+GNU软件=GNU/Linux系统才是我们平时说的Linux内核</p>
+<h3 id="2、虚拟机安装使用"><a href="#2、虚拟机安装使用" class="headerlink" title="2、虚拟机安装使用"></a>2、虚拟机安装使用</h3><h4 id="（1）虚拟机介绍"><a href="#（1）虚拟机介绍" class="headerlink" title="（1）虚拟机介绍"></a>（1）虚拟机介绍</h4><p>​                1）虚拟机：根据当前主机虚拟出一台虚拟主机</p>
+<p>​                2）虚拟机架构</p>
+<p>​                        ①原生架构：硬件设备 —&gt; 虚拟机操作系统 —&gt; 操作系统(多台)</p>
+<p>​                        ②寄居架构：硬件设备 —&gt; 操作系统 —&gt; 虚拟机软件 —&gt; 操作系统(多台)</p>
+<h4 id="（2）虚拟机软件安装"><a href="#（2）虚拟机软件安装" class="headerlink" title="（2）虚拟机软件安装"></a>（2）虚拟机软件安装</h4><p>​                1）VMware workstation</p>
+<p>​                        下一步 - 下一步直至安装完成</p>
+<p>​                2）VitualBox</p>
+<p>​                        下一步 - 下一步直至安装完成</p>
+<h4 id="（3）虚拟机安装红帽系统"><a href="#（3）虚拟机安装红帽系统" class="headerlink" title="（3）虚拟机安装红帽系统"></a>（3）虚拟机安装红帽系统</h4><p>​                1）准备rhel8镜像文件</p>
+<p>​                2）虚拟机安装红帽系统</p>
+<h4 id="（4）虚拟机创建快照"><a href="#（4）虚拟机创建快照" class="headerlink" title="（4）虚拟机创建快照"></a>（4）虚拟机创建快照</h4><p>​                点击虚拟机，选择创建快照，按需求创建</p>
+<h4 id="（5）虚拟机克隆"><a href="#（5）虚拟机克隆" class="headerlink" title="（5）虚拟机克隆"></a>（5）虚拟机克隆</h4><p>​                点击虚拟机，选择管理，选择克隆（克隆有两种模式，一种是克隆链接，另一种是完全克隆），推荐完全克隆</p>
+<h3 id="3-关机重启命令"><a href="#3-关机重启命令" class="headerlink" title="3.关机重启命令"></a>3.关机重启命令</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、关机命令（shutdown，init）</span><br><span class="line">init <span class="number">0</span></span><br><span class="line">shutdown <span class="literal">-h</span> now（立即关机）</span><br><span class="line">shutdown <span class="literal">-h</span> <span class="number">60</span>（<span class="number">60</span>分钟后关机）</span><br><span class="line"><span class="number">2</span>、重启命令（reboot，shutdown）</span><br><span class="line">reboot</span><br><span class="line">shutdown <span class="literal">-r</span> now（立即重启）</span><br><span class="line">shutdown <span class="literal">-r</span> <span class="number">60</span>（<span class="number">60</span>分钟后重启）</span><br><span class="line"><span class="number">3</span>、取消关机重启命令</span><br><span class="line">shutdown <span class="literal">-c</span>（取消重启关机）</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二章、Linux桌面环境、文件系统、文件基础操作、重定向、shell标准输入、帮助命令（Linux基础操作）"><a href="#第二章、Linux桌面环境、文件系统、文件基础操作、重定向、shell标准输入、帮助命令（Linux基础操作）" class="headerlink" title="第二章、Linux桌面环境、文件系统、文件基础操作、重定向、shell标准输入、帮助命令（Linux基础操作）"></a>第二章、Linux桌面环境、文件系统、文件基础操作、重定向、shell标准输入、帮助命令（Linux基础操作）</h2><h3 id="1、Linux桌面环境"><a href="#1、Linux桌面环境" class="headerlink" title="1、Linux桌面环境"></a>1、Linux桌面环境</h3><p>​                （1）设置桌面快捷键</p>
+<p>​                （2）设置终端（字体、颜色、快捷键）</p>
+<h3 id="2、Linux文件系统"><a href="#2、Linux文件系统" class="headerlink" title="2、Linux文件系统"></a>2、Linux文件系统</h3><p><img src="https://i.loli.net/2020/09/14/floncPO1xGC6JVv.jpg" alt=""></p>
+<p>​                /                          Linux根目录</p>
+<p>​                /root                    root用户目录</p>
+<p>​                /home                 用户家目录</p>
+<p>​                /dev                    设备文件目录</p>
+<p>​                /boot                   开机和启动项</p>
+<p>​                /mnt                    手动挂载文件挂载点</p>
+<p>​                /media                移动设备挂载文件挂载点</p>
+<p>​                /etc                     配置文件</p>
+<p>​                /bin                    普通用户命令目录                /bin ——&gt; /usr/bin 软连接</p>
+<p>​                /sbin                   超级用户命令目录                /sbin——&gt;/usr/sbin 软连接</p>
+<p>​                /usr                    第三方源码软件包存放目录</p>
+<p>​                /opt                    第三方协力软件存放目录</p>
+<p>​                /proc                  虚拟文件系统</p>
+<p>​                /run                    程序运行相关的存放目录</p>
+<p>​                /var                    可变的数据文件、日志文件存放目录</p>
+<p>​                /sys                    </p>
+<p>​                /srv</p>
+<p>​                /tmp                    临时文件存放目录</p>
+<p>​                /lib                      软连接、库文件</p>
+<p>​                /lib64                  软连接、库文件</p>
+<h3 id="3、帮助命令"><a href="#3、帮助命令" class="headerlink" title="3、帮助命令"></a>3、帮助命令</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、type 命令（查看命令类型）</span><br><span class="line"><span class="number">2</span>、help 命令（内置命令） or 命令 -<span class="literal">-help</span>（外来命令）</span><br><span class="line"><span class="number">3</span>、info 命令（命令的信息，help命令的补充）</span><br><span class="line"><span class="number">4</span>、man 命令（查看命令的man手册）</span><br><span class="line"><span class="number">5</span>、man man（查看man命令的man手册）</span><br><span class="line"><span class="number">6</span>、man n 命令（按章节查看man手册，每一章都有不同的含义，n[<span class="number">1</span>-<span class="number">9</span>]）</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、文件基础操作"><a href="#4、文件基础操作" class="headerlink" title="4、文件基础操作"></a>4、文件基础操作</h3><p>（1）知识铺垫（Linux的理念，Linux下一切皆文件）</p>
+<p>​        1）路径</p>
+<p>​                ①绝对路径：从根目录开始定位到目标目录，表示方法为：/usr/local/</p>
+<p>​                ②相对路径：从当前目录开始定位到目标目录，表示方法为：./（当前目录） ../（上级目录）</p>
+<p>​        2）终端：执行命令的载体</p>
+<p>​        3）shell命令解释器：将终端中的命令通过解释，翻译成计算机能理解的指令，当命令输入错误时shell解释器会在终端中报错，CentOS/RadHat的shell解释器叫bash</p>
+<p>​        4）终端命令格式：命令 [选项] 参数</p>
+<p>​                命令：命令的主体</p>
+<p>​                选项：影响命令的行为</p>
+<p>​                参数：命令作用的对象    </p>
+<p>​        5）文件类型</p>
+<p>​                c（字符设备）输入输出设备</p>
+<p>​                b（块文件）设备文件</p>
+<p>​                d（目录文件）目录文件</p>
+<p>​                f/-（普通文件）普通文件</p>
+<p>​                l（链接文件）软连接</p>
+<p>​                p（管道文件）</p>
+<p>​                s（套接字文件）    </p>
+<p>（2）基础文件操作命令</p>
+<p>​            1）查看文件类型</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file 文件</span><br></pre></td></tr></table></figure>
+
+<p>​            2）显示当前路径（pwd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure>
+
+<p>​            3）切换工作目录（cd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd 切换到root目录</span><br><span class="line">cd - 切换到上一工作目录</span><br><span class="line">cd ./ 切换到当前目录下</span><br><span class="line">cd ../ 切换到上衣目录</span><br></pre></td></tr></table></figure>
+
+<p>​            4）列出目录内容（ls）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ls <span class="literal">-a</span> 列出所有文件包括隐藏文件</span><br><span class="line">ls <span class="literal">-l</span> 以列表的形式列出文件</span><br><span class="line">ls <span class="literal">-h</span> 以人性的方式列出文件及目录</span><br><span class="line">ls <span class="literal">-r</span> 逆序排序的方式列出文件及目录</span><br><span class="line">ls <span class="literal">-d</span> 按文件名</span><br><span class="line">ls <span class="literal">-m</span> 按分隔符</span><br><span class="line">ls <span class="literal">-R</span> 递归显示</span><br><span class="line">ls <span class="literal">-S</span> 按文件大小显示</span><br><span class="line">ls <span class="literal">-t</span> 按文件时间显示</span><br><span class="line">注意：选项可以按需求组合</span><br></pre></td></tr></table></figure>
+
+<p>​            5）创建目录（mkdir）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir 目录</span><br><span class="line">mkdir 目录，目录</span><br><span class="line">mkdir <span class="literal">-p</span> 多级目录</span><br></pre></td></tr></table></figure>
+
+<p>​            6）移除目录（rmdir）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir 目录</span><br></pre></td></tr></table></figure>
+
+<p>​            7）创建文件、修改文件日期（touch）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、创建文件</span><br><span class="line">touch file </span><br><span class="line">touch file&#123;<span class="number">1</span>..<span class="number">3</span>&#125;（创建多个文件）</span><br><span class="line"><span class="number">2</span>、修改文件日期</span><br><span class="line">stat file（查看文件详细信息）</span><br><span class="line">touch <span class="literal">-a</span> file <span class="literal">-t</span> <span class="string">""</span>（修改文件访问日期）</span><br><span class="line">touch <span class="literal">-m</span> file <span class="literal">-t</span> <span class="string">""</span>（修改文件修改日期）</span><br><span class="line">touch <span class="literal">-d</span> <span class="string">""</span> file（修改文件日期）</span><br></pre></td></tr></table></figure>
+
+<p>​            8）查看文件内容</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat/tac file（查看小文件，cat正序，tac倒序）</span><br><span class="line">more/less file（查看大文件）</span><br><span class="line">head file（查看文件前<span class="number">10</span>行）head <span class="literal">-n</span> <span class="number">15</span> file or head <span class="literal">-15</span> file（查看文件前<span class="number">15</span>行）</span><br><span class="line">tail（查看文件后<span class="number">10</span>行）tail <span class="literal">-n</span> <span class="number">15</span> file or tail <span class="literal">-15</span> file（查看文件后<span class="number">15</span>行）</span><br><span class="line">ldd /usr/bin/ls （查看二进制文件的命令）</span><br></pre></td></tr></table></figure>
+
+<p>​            9）移动文件、重命名文件（mv）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、移动文件（不同目录）</span><br><span class="line">mv /tmp/time.log /root/</span><br><span class="line"><span class="number">2</span>、重命名文件（同一目录）</span><br><span class="line">mv /root/time.log /root/file.log</span><br></pre></td></tr></table></figure>
+
+<p>​            10）拷贝文件、目录（cp）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cp <span class="literal">-r</span> （拷贝目录）</span><br><span class="line">cp <span class="literal">-v</span> （显示拷贝内容）</span><br><span class="line">cp <span class="literal">-p</span> （拷贝文件并拷贝文件权限）</span><br><span class="line">cp <span class="literal">-a</span> （拷贝目录及权限=cp <span class="literal">-pr</span>）</span><br><span class="line">注意：选项可以按需求组合</span><br></pre></td></tr></table></figure>
+
+<p>​            11）删除目录、文件（rm）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm <span class="literal">-r</span>（递归删除，提示是否删除）</span><br><span class="line">rm <span class="literal">-v</span>（显示删除内容）</span><br><span class="line">rm <span class="operator">-f</span>（直接删除，不提示）</span><br><span class="line">注意：该命令很危险，要注意使用方式</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：使用命令前一定要明白的三件事：==我是谁==（当前账户）==我在哪儿==（当前工作路径）==我在干什么==（我在进行什么操作）</strong></p>
+<h3 id="5、重定向"><a href="#5、重定向" class="headerlink" title="5、重定向"></a>5、重定向</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">重新学习</span><br><span class="line">echo <span class="string">"hello world!"</span> &gt; /tmp/temp/file.log</span><br><span class="line">./shell.sh &gt;&gt; /tmp/temp/file.log（重定向内容增加）</span><br><span class="line">&gt; &gt;&gt; <span class="number">1</span>&gt; <span class="number">2</span>&gt; &amp;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、shell标准输入"><a href="#6、shell标准输入" class="headerlink" title="6、shell标准输入"></a>6、shell标准输入</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shell标准输入：<span class="number">0</span></span><br><span class="line">shell标准输出：<span class="number">1</span></span><br><span class="line">shell标准错误：<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="第三章、Linux文件查找、打包压缩、时间相关命令"><a href="#第三章、Linux文件查找、打包压缩、时间相关命令" class="headerlink" title="第三章、Linux文件查找、打包压缩、时间相关命令"></a>第三章、Linux文件查找、打包压缩、时间相关命令</h2><h3 id="1、Linux文件查找"><a href="#1、Linux文件查找" class="headerlink" title="1、Linux文件查找"></a>1、Linux文件查找</h3><h4 id="（1）命令查找（which，whereis）"><a href="#（1）命令查找（which，whereis）" class="headerlink" title="（1）命令查找（which，whereis）"></a>（1）命令查找（which，whereis）</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、which 命令（查找命令存放位置）</span><br><span class="line"><span class="number">2</span>、whereis 命令（查看命令存放位置及其他信息）</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）文件查找（find）"><a href="#（2）文件查找（find）" class="headerlink" title="（2）文件查找（find）"></a>（2）文件查找（find）</h4><p>​            1）按需求查找文件</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">find 路径 [选项] 关键字</span><br><span class="line">find -<span class="literal">-help</span>（查看帮助信息）</span><br><span class="line">find 路径 <span class="literal">-name</span> <span class="string">"filename"</span>（按名字查找文件，区分大小写）</span><br><span class="line">find 路径 <span class="literal">-iname</span> <span class="string">"filename"</span>（按名字查找文件，不区分大小写）</span><br><span class="line">find 路径 <span class="literal">-size</span> +<span class="number">2</span>M（按文件大小查找文件，+<span class="number">2</span>M表示查找所有大于<span class="number">2</span>M和查找文件相匹配的文件）</span><br><span class="line">find 路径 <span class="literal">-type</span> b（按文件类型查找文件）</span><br><span class="line">find 路径 <span class="literal">-mtime</span> +<span class="number">2</span>（按文件时间查找文件，+<span class="number">2</span>表示<span class="number">2</span>天以前的所有和查找选项相匹配的文件，<span class="literal">-2</span>表示两天内，<span class="number">2</span>表示两天前当天）</span><br><span class="line">find 路径 <span class="literal">-user</span> username <span class="literal">-group</span> groupname （按文件的属主和属组查找文件）</span><br><span class="line">注意：选项可以按需求组合</span><br></pre></td></tr></table></figure>
+
+<p>​            2）按需求查找文件并执行shell命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">find 路径 [选项] 关键字 命令</span><br><span class="line">fing 路径 [选项] 关键字 <span class="literal">-ls</span>（列出查询目录列表）</span><br><span class="line">fing 路径 [选项] 关键字 <span class="literal">-delete</span>（删除查询文件）</span><br><span class="line">find 路径 [选项] 关键字 <span class="literal">-print</span>(打印查询文件，默认命令，可不写)</span><br><span class="line">find 路径 [选项] 关键字 <span class="literal">-ok</span> shell命令 &#123;&#125; \;（询问是否执行该命令）</span><br><span class="line">find 路径 [选项] 关键字 <span class="literal">-exeo</span> shell命令 &#123;&#125; \;（不询问直接执行命令）</span><br><span class="line">注意：选项可以按需求组合</span><br></pre></td></tr></table></figure>
+
+<p>###　2、Linux下打包压缩</p>
+<h4 id="（1）Linux下文件打包（tar）"><a href="#（1）Linux下文件打包（tar）" class="headerlink" title="（1）Linux下文件打包（tar）"></a>（1）Linux下文件打包（tar）</h4><p>​                1）tar工具介绍：在Linux系统下，某些情况下需要把多个文件或目录整理成一个进行管理，tar可以将多个文件进行打包</p>
+<p>​                2）tar工具使用</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] filename.tar filename</span><br><span class="line">tar <span class="literal">-c</span>（创建包）</span><br><span class="line">tar <span class="literal">-v</span>（打包显示详细内容）</span><br><span class="line">tar <span class="operator">-f</span>（选择打包文件）</span><br><span class="line">tar <span class="literal">-x</span>（将打包文件进行还原）</span><br><span class="line">tar <span class="literal">-t</span>（查看打包文件内容）</span><br><span class="line">tar <span class="literal">-r</span>（追加打包文件，压缩后不能再进行追加）</span><br><span class="line">创建包：tar <span class="literal">-cvf</span> file.tar file</span><br><span class="line">还原包：tar xvf file.tar</span><br><span class="line">查看包内容：tar <span class="literal">-tf</span> file.tar</span><br><span class="line">追加包文件：tar <span class="literal">-Pf</span> file.tar <span class="literal">-r</span> <span class="number">1</span>.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）Linux下压缩工具及其使用（zip、gzip、bzip2、xz）"><a href="#（2）Linux下压缩工具及其使用（zip、gzip、bzip2、xz）" class="headerlink" title="（2）Linux下压缩工具及其使用（zip、gzip、bzip2、xz）"></a>（2）Linux下压缩工具及其使用（zip、gzip、bzip2、xz）</h4><p>​                1）Linux下压缩工具介绍</p>
+<p>​                </p>
+<table>
+<thead>
+<tr>
+<th align="left">压缩工具</th>
+<th>特点</th>
+<th>解压工具</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">zip</td>
+<td>支持多个文件压缩，兼容Unix和Windows</td>
+<td>unzip</td>
+</tr>
+<tr>
+<td align="left">gzip</td>
+<td>压缩单个文件，压缩率较低，CPU开销小</td>
+<td>gunzip</td>
+</tr>
+<tr>
+<td align="left">bzip2</td>
+<td>压缩单个文件，压缩率高，CPU开销高</td>
+<td>bunzip2</td>
+</tr>
+<tr>
+<td align="left">xz</td>
+<td>压缩单个文件，压缩率高，压缩时间长，解压速度快，CPU开销高</td>
+<td>unxz</td>
+</tr>
+</tbody></table>
+<p>​                2）Linux下压缩工具使用</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、zip工具压缩及解压</span><br><span class="line">压缩：zip <span class="literal">-r</span>(显示压缩内容) file.zip file</span><br><span class="line">解压：unzip file.zip <span class="literal">-d</span> /path(指定解压路径)</span><br><span class="line"><span class="number">2</span>、gzip工具压缩及解压</span><br><span class="line">压缩：gzip <span class="literal">-r</span>(递归压缩目录下所有文件) file.gz file</span><br><span class="line">解压：gzip <span class="literal">-d</span> file.gz or gunzip file.gz</span><br><span class="line"><span class="number">3</span>、bzip2工具压缩及解压</span><br><span class="line">压缩：bzip2 <span class="literal">-r</span>(递归压缩目录下所有文件) file.bz2 file</span><br><span class="line">解压：bzip2 <span class="literal">-d</span> file.bz2 or bunzip2 file.bz2</span><br><span class="line"><span class="number">4</span>、xz工具压缩及解压</span><br><span class="line">压缩：xz <span class="literal">-r</span>(递归压缩目录下所有文件) file.xz file</span><br><span class="line">解压：xz <span class="literal">-d</span> file.xz or unxz file.xz</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="（3）Linux下文件打包压缩（tar）"><a href="#（3）Linux下文件打包压缩（tar）" class="headerlink" title="（3）Linux下文件打包压缩（tar）"></a>（3）Linux下文件打包压缩（tar）</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、使用gzip工具进行打包压缩并解压</span><br><span class="line">打包压缩：tar <span class="literal">-zcvf</span> file.tar.gz file</span><br><span class="line">解压：tar <span class="literal">-zxvf</span> file.tar.gz <span class="literal">-C</span>(指定解压目录)</span><br><span class="line"><span class="number">2</span>、使用bzip2工具进行打包压缩并解压</span><br><span class="line">打包压缩：tar <span class="literal">-jcvf</span> file.tar.bz2 file</span><br><span class="line">解压：tar <span class="literal">-jxvf</span> file.tar.bz2 <span class="literal">-C</span>(指定解压目录)</span><br><span class="line"><span class="number">3</span>、使用xz工具进行打包压缩并解压</span><br><span class="line">打包压缩：tar <span class="literal">-Jcvf</span> file.tar.xz file</span><br><span class="line">解压：tar <span class="literal">-Jxvf</span> file.tar.xz <span class="literal">-C</span>(指定解压目录)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、时间相关命令"><a href="#3、时间相关命令" class="headerlink" title="3、时间相关命令"></a>3、时间相关命令</h3><h4 id="（1）date"><a href="#（1）date" class="headerlink" title="（1）date"></a>（1）date</h4><p>​            1）打印系统时间</p>
+<p>​            2）设置系统时间</p>
+<h4 id="（2）hwclock（系统时间同步硬件时间）"><a href="#（2）hwclock（系统时间同步硬件时间）" class="headerlink" title="（2）hwclock（系统时间同步硬件时间）"></a>（2）hwclock（系统时间同步硬件时间）</h4><h4 id="（3）timedatectl"><a href="#（3）timedatectl" class="headerlink" title="（3）timedatectl"></a>（3）timedatectl</h4><h4 id="（4）cal日历命令"><a href="#（4）cal日历命令" class="headerlink" title="（4）cal日历命令"></a>（4）cal日历命令</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cal / cal <span class="literal">-1</span>  打印当月日历</span><br><span class="line">cal <span class="literal">-3</span> 打印前三个月日历</span><br><span class="line">cal <span class="literal">-n</span> number 打印前n月的日历</span><br><span class="line">cal <span class="literal">-y</span> 打印一整年的日历</span><br></pre></td></tr></table></figure>
+
+<h4 id="（5）时间相关命令使用"><a href="#（5）时间相关命令使用" class="headerlink" title="（5）时间相关命令使用"></a>（5）时间相关命令使用</h4><h2 id="第四章、Linux用户管理、vim编辑器、可执行文件"><a href="#第四章、Linux用户管理、vim编辑器、可执行文件" class="headerlink" title="第四章、Linux用户管理、vim编辑器、可执行文件"></a>第四章、Linux用户管理、vim编辑器、可执行文件</h2><h3 id="1、用户管理"><a href="#1、用户管理" class="headerlink" title="1、用户管理"></a>1、用户管理</h3><h4 id="（1）Linux下用户管理"><a href="#（1）Linux下用户管理" class="headerlink" title="（1）Linux下用户管理"></a>（1）Linux下用户管理</h4><p>​                1）用户概念和作用</p>
+<p>​                        ①什么是用户：用户就是管理系统和服务的人。</p>
+<p>​                        ②用户管理管理的是什么：Linux下一切皆文件，所以用户管理的是文件。</p>
+<p>​                        ③用户怎样进行管理：</p>
+<p>​                                a、基础管理：对文件进行管理，文件的创建、查看、复制、粘贴、移动、拷贝、用户管理、权限。</p>
+<p>​                                b、高级管理：对软件包进行管理，软件包的配置、安装、删除，目的是对外提供稳定的服务。</p>
+<p>​                2）用户分类</p>
+<p>​                        ①超级用户：root用户，对系统具有完全操作权限，UID=0并永远会为0</p>
+<p>​                        ②系统用户：程序用户，一般由程序创建，程序或服务运行是需要的身份，默认不能登陆系统。1&lt;= UID &lt;=499,Redhat/CentOS 1&lt;=UID&lt;=1000</p>
+<p>​                        ③普通用户：超级用户创建的用户，具有系统的部分操作权限，默认可以登录系统，500&lt;UID&lt;60000，Redhat/CentOS 1000&lt;UID&lt;60000</p>
+<p>​                3）用户基本管理</p>
+<p>​                        ①创建用户（useradd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">useradd [选项] username</span><br><span class="line">useradd <span class="literal">-u</span> username UID（创建用户指定UID）</span><br><span class="line">useradd <span class="literal">-g</span> groupname username（创建用户添加到指定用户组）</span><br><span class="line">useradd <span class="literal">-G</span> groupname username（创建用户并为用户添加附属组，一个用户可以有一个主组和多个附属组）</span><br><span class="line">useradd <span class="literal">-d</span> username /path（创建用户及目录到指定位置）</span><br><span class="line">useradd <span class="literal">-m</span> username（创建用户并在/home目录创建其用户目录）</span><br><span class="line">useradd <span class="literal">-s</span> /usr/bin/sh username（创建用户并指定用户默认的shell）</span><br><span class="line"></span><br><span class="line">注意：选项可以连用</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②设置用户密码（passwd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、passwd（为当前用户创建密码）</span><br><span class="line"><span class="number">2</span>、passwd username（为指定用户创建密码）</span><br><span class="line"><span class="number">3</span>、echo <span class="string">"123456"</span> &gt; passwd -<span class="literal">-stdin</span> username（使用管道方式为用户添加密码）</span><br><span class="line"><span class="number">4</span>、touch passwd.sh vim passwd.sh echo password | passwd -<span class="literal">-stdin</span> username （使用shell脚本+管道批量为用户添加密码）</span><br><span class="line"></span><br><span class="line">注意：由root用户身份创建的密码可不遵从密码创建规则，普通用户创建密码需要遵循密码创建规则</span><br></pre></td></tr></table></figure>
+
+<p>​                        ③修改用户账号信息（chage）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chage -<span class="literal">-help</span>（查看chage命令帮助信息）</span><br><span class="line">chage <span class="literal">-d</span> username（修改最后一次修改密码时间）</span><br><span class="line">chage <span class="literal">-E</span> <span class="keyword">data</span> username（修改账号过期时间的）</span><br><span class="line">chage <span class="literal">-l</span> username（列出用户账号信息）</span><br></pre></td></tr></table></figure>
+
+<p>​                        ④修改用户信息（usermod）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">usermod [选项] username</span><br><span class="line">usermod <span class="literal">-u</span> UID username（修改用户UID）</span><br><span class="line">usermod <span class="literal">-G</span> groupname username（修改用户的附属组）</span><br><span class="line">usermod <span class="literal">-g</span> groupname username（修改用户的主组）</span><br><span class="line">usermod <span class="literal">-m</span> username（将家目录的文件移到另外的指定目录，仅与<span class="literal">-d</span>选项连用，只用<span class="literal">-m</span>的话用户对目录没有操作权限）</span><br><span class="line">usermod <span class="literal">-d</span> /path/username username（修改用户目录，但要保证用户目录的上级目录存在，通常和<span class="literal">-m</span>选项连用）</span><br><span class="line">usermod <span class="literal">-s</span> /sbin/nologin username（修改用户的默认shell）</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑤删除用户（userdel）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">userdel [选项] username</span><br><span class="line">userdel <span class="literal">-r</span> username（删除用户并移除其用户目录和用户邮箱）用户邮箱：/var/mail</span><br><span class="line">userdel <span class="operator">-f</span> username（强制删除当前以登录的用户）</span><br></pre></td></tr></table></figure>
+
+<p>​                4）用户信息文件存放路径及系统支持的shell</p>
+<p>​                        ①用户信息存放位置：tail /etc/passwd</p>
+<p>​                        ②用户密码保存位置：tail /etc/shadow</p>
+<p>​                        ③系统支持的shell位置：cat /etc/shells</p>
+<h4 id="（2）Linux下用户组管理"><a href="#（2）Linux下用户组管理" class="headerlink" title="（2）Linux下用户组管理"></a>（2）Linux下用户组管理</h4><p>​                1）用户：管理系统或服务的人</p>
+<p>​                2）用户组：用户组是用户的一个属性，一个用户只有一个主组，可以有多个附属组</p>
+<p>​                3）用户的作用：方便管理用户</p>
+<p>​                4）用户组管理</p>
+<p>​                        ①创建用户组（groupadd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd groupname</span><br><span class="line">groupadd <span class="literal">-g</span> groupname（为用户指定GID）</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②新建用户并添加到用户组（useradd，groupadd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd <span class="literal">-m</span> <span class="literal">-g</span> groupname username</span><br></pre></td></tr></table></figure>
+
+<p>​                        ③修改原有用户的用户组（usermod，groupadd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod <span class="literal">-g</span> groupname username</span><br></pre></td></tr></table></figure>
+
+<p>​                        ④用户组密码及用户组管理（gpasswd）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gpasswd [选项] username groupname</span><br><span class="line"><span class="number">1</span>、gpasswd groupname（为用户组添加密码）</span><br><span class="line"><span class="number">2</span>、gpasswd <span class="literal">-a</span> username groupname（添加用户到指定用户组）</span><br><span class="line"><span class="number">3</span>、gpasswd <span class="literal">-M</span> username01,username02,... groupname（同时添加多个用户到用户组）</span><br><span class="line"><span class="number">4</span>、gpasswd <span class="literal">-A</span> username groupname（将指定用户修改为用户组中的管理员）</span><br><span class="line"><span class="number">5</span>、gpasswd <span class="literal">-d</span> username groupname（将用户从组中删除）</span><br><span class="line"><span class="number">6</span>、gpasswd <span class="literal">-r</span> groupname（删除用户组密码）</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑤删除用户组（groupdel）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupdel groupname（删除用户组，当用户组是其他用户的主组的时候不能被删除）</span><br></pre></td></tr></table></figure>
+
+<p>​                5）用户组相关文件存放位置</p>
+<p>​                        ①用户组信息文件存放位置：tail /etc/group</p>
+<p>​                        ②用户组密码文件存放位置：tail /etc/gshadow</p>
+<h3 id="2、vim编辑器"><a href="#2、vim编辑器" class="headerlink" title="2、vim编辑器"></a>2、vim编辑器</h3><h4 id="（1）vim编辑器特点"><a href="#（1）vim编辑器特点" class="headerlink" title="（1）vim编辑器特点"></a>（1）vim编辑器特点</h4><p>​                1）无图形化界面</p>
+<p>​                2）只能通过键盘操作，不能利用鼠标</p>
+<p>​                3）没有菜单，只有命名</p>
+<p>​                4）只能编辑文本文件</p>
+<h4 id="（2）vim编辑器打开新建文件"><a href="#（2）vim编辑器打开新建文件" class="headerlink" title="（2）vim编辑器打开新建文件"></a>（2）vim编辑器打开新建文件</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim filename</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）vim编辑器打开文件定位到指定位置"><a href="#（3）vim编辑器打开文件定位到指定位置" class="headerlink" title="（3）vim编辑器打开文件定位到指定位置"></a>（3）vim编辑器打开文件定位到指定位置</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim filename +lines</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）vim编辑器删除编辑后产生的交换文件"><a href="#（4）vim编辑器删除编辑后产生的交换文件" class="headerlink" title="（4）vim编辑器删除编辑后产生的交换文件"></a>（4）vim编辑器删除编辑后产生的交换文件</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进入vim界面后按提示操作，按“d”键，或回到当前文件目录，使用rm命令删除.开头的文件</span><br></pre></td></tr></table></figure>
+
+<h4 id="（5）vim编辑器三种基本模式"><a href="#（5）vim编辑器三种基本模式" class="headerlink" title="（5）vim编辑器三种基本模式"></a>（5）vim编辑器三种基本模式</h4><p>​                1）命令模式：vim编辑的入口，可以使用命令文件进行操作，移动、选择、复制、删除（剪切）、撤回、恢复等</p>
+<p>​                2）编辑模式：在此模式下可以对文本进行编辑</p>
+<p>​                3）末行模式：vim编辑器的出口，可通过该模式对文本进行保存，退出等操作。</p>
+<p>​                4）模式之间的切换</p>
+<table>
+<thead>
+<tr>
+<th>模式转换</th>
+<th>转换方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令 → 编辑</td>
+<td>a/A/i/I/o/O/S</td>
+</tr>
+<tr>
+<td>命令 → 末行</td>
+<td>:</td>
+</tr>
+<tr>
+<td>编辑、末行 → 命令</td>
+<td>ESC</td>
+</tr>
+<tr>
+<td>编辑  &lt;—&gt; 末行</td>
+<td>ESC，a/A/i/I/o/O/S，:</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="（6）vim编辑器常用命令"><a href="#（6）vim编辑器常用命令" class="headerlink" title="（6）vim编辑器常用命令"></a>（6）vim编辑器常用命令</h4><p>​                1）重复执行</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number + x（执行）</span><br></pre></td></tr></table></figure>
+
+<p>​                2）移动和选择</p>
+<p>​                        ①上、下、左、右</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h 左</span><br><span class="line">j 下</span><br><span class="line">k 上</span><br><span class="line">l 右</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②行内移动</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">w	向后移动一个单词</span><br><span class="line">b	向前移动一个单词</span><br><span class="line"><span class="variable">$</span>	移动到当行最后一个字符</span><br><span class="line"><span class="number">0</span>	移动到当行最前</span><br><span class="line">^	移动到当行最前一个字符的位置</span><br></pre></td></tr></table></figure>
+
+<p>​                        ③行数移动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gg	移动到第一行</span><br><span class="line">G	移动到最后一行</span><br><span class="line">行数+gg	移动到指定行数</span><br><span class="line">行数+G	移动到指定行数</span><br><span class="line">:+行数	移动到指定行数</span><br></pre></td></tr></table></figure>
+
+<p>​                        ④翻页移动</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+f	向下翻页</span><br><span class="line">Ctrl+b	向上翻页</span><br><span class="line">H	    回到顶部</span><br><span class="line">M	    回到中间位置</span><br><span class="line">L	    回到底部</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑤段落移动    </p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;	移动到上一个段落	</span><br><span class="line">&#125;	移动大下一个段落</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑥括号匹配</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%	匹配与当前光标对应的括号</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑦标记回跳</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m &#123;mask&#125;	标记&#123;mask&#125;</span><br><span class="line">` &#123;mask&#125;	回跳到&#123;mask&#125;位置</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑧可视模式</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v		可视模式（选中光标所经过的文本）</span><br><span class="line">V		可视行模式（选中光标所经过的行的文本）</span><br><span class="line">Ctrl+v	可视块模式（选中垂直方向上的文本）</span><br></pre></td></tr></table></figure>
+
+<p>​                3）编辑操作</p>
+<p>​                        ①撤销和恢复撤销</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">u		撤销上一操作</span><br><span class="line">Ctrl+r	恢复上次撤销操作</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②删除（剪切）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x	删除光标处字符</span><br><span class="line">d	删除文本和移动命令连用</span><br><span class="line">dd	删除当前光标所在行，ndd删除当前光标及其后n<span class="literal">-1</span>行</span><br><span class="line">D	删除至行尾</span><br></pre></td></tr></table></figure>
+
+<p>​                        ③复制、粘贴</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y	复制文本，和移动命令连用</span><br><span class="line">yy	复制当行，nyy复制当行包括其后的n行</span><br><span class="line">p	粘贴</span><br></pre></td></tr></table></figure>
+
+<p>​                        ④替换文本</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r	替换光标所在字符</span><br><span class="line">R	替换光标所在单词</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑤缩排、重复执行</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;	向左缩进（<span class="number">4</span>个字符）</span><br><span class="line">&gt;&gt;	向右所经</span><br><span class="line">.	重复执行</span><br></pre></td></tr></table></figure>
+
+<p>​                4）查找和替换</p>
+<p>​                        ①查找</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/str	查找str</span><br><span class="line">n		向下匹配str</span><br><span class="line">N		向上匹配str</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②匹配单词</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*	向下匹配单词</span><br><span class="line"><span class="comment">#	向上匹配单词</span></span><br></pre></td></tr></table></figure>
+
+<p>​                        ③替换格式</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s///g</span><br></pre></td></tr></table></figure>
+
+<p>​                        ④全局替换</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/oldstr/newstr/g</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑤可视区域替换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、通过可视模式选中文件</span><br><span class="line">2、:s&#x2F;oldstr&#x2F;newstr&#x2F;g</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑥确认替换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s&#x2F;oldstr&#x2F;newstr&#x2F;gc0</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑦转义符替换</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/\/sbin\/nologin/\/bin\/sh/g</span><br></pre></td></tr></table></figure>
+
+<p>​                        ⑧指定行数替换</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="number">7</span>s/oldstr/newstr/g</span><br></pre></td></tr></table></figure>
+
+<p>​                5）插入文本</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a	当前字符后插入</span><br><span class="line">A	当行最后插入</span><br><span class="line">o	当行下添加空行插入</span><br><span class="line">O	当行上添加空行插入</span><br><span class="line">i	当前字符前插入</span><br><span class="line">I	当行最前方插入</span><br><span class="line">s	删除当前字符插入</span><br><span class="line">S	删除当前行插入</span><br></pre></td></tr></table></figure>
+
+<p>​                6）末行模式</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">:w	保存文本</span><br><span class="line">:q	退出当前编辑</span><br><span class="line">:wq	保存并退出</span><br><span class="line">:q!	强制退出</span><br><span class="line">:x	保存并退出</span><br><span class="line">:e	file 不退出vim编辑界面编辑其他文件（常用：:e ./）</span><br><span class="line">:n	file 在当前编辑界面新建文件并编辑</span><br><span class="line">:w	filename 另存为其他文件</span><br><span class="line">:set number	显示vim界面行数</span><br><span class="line">:set list	显示控制符</span><br><span class="line">:noh	取消高亮</span><br><span class="line">:vp	file 竖向分屏（sp ./）</span><br><span class="line">:vsp file 横向分屏（常用：vsp ./）</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、可执行文件"><a href="#3、可执行文件" class="headerlink" title="3、可执行文件"></a>3、可执行文件</h3><h4 id="（1）可执行文件概述"><a href="#（1）可执行文件概述" class="headerlink" title="（1）可执行文件概述"></a>（1）可执行文件概述</h4><h4 id="（2）shell可执行文件"><a href="#（2）shell可执行文件" class="headerlink" title="（2）shell可执行文件"></a>（2）shell可执行文件</h4><h4 id="（3）Python可执行文件"><a href="#（3）Python可执行文件" class="headerlink" title="（3）Python可执行文件"></a>（3）Python可执行文件</h4><h2 id="第五章、Linux权限管理"><a href="#第五章、Linux权限管理" class="headerlink" title="第五章、Linux权限管理"></a>第五章、Linux权限管理</h2><h3 id="1、权限概述"><a href="#1、权限概述" class="headerlink" title="1、权限概述"></a>1、权限概述</h3><h4 id="（1）权限是什么"><a href="#（1）权限是什么" class="headerlink" title="（1）权限是什么"></a>（1）权限是什么</h4><p>​                1）权限：在计算机系统中，权限就是计算机给指定用户对指定软件资源的操作权力</p>
+<p>​                2）软件资源：操作系统（特殊的软件资源）、应用程序、当应用程序为启动时就是一堆静态文件，存放在磁盘中。</p>
+<p>​                3）文件资源：Linux下一切皆文件，所以软件资源就是文件资源</p>
+<h4 id="（2）权限的作用"><a href="#（2）权限的作用" class="headerlink" title="（2）权限的作用"></a>（2）权限的作用</h4><p>​                作用：权限给指定用户操作指定文件的权力，可以更好的管理软件资源，为计算机提供了更高的安全保障。</p>
+<h4 id="（3）权限的分类"><a href="#（3）权限的分类" class="headerlink" title="（3）权限的分类"></a>（3）权限的分类</h4><p>​                1）普通权限：用户正常对文件操作的操作权限</p>
+<p>​                2）高级权限：用户需要对文件进行一些特殊的操作，但是普通权限不能满时的权限</p>
+<p>​                3）默认权限：文件创建时就有的权限</p>
+<h3 id="2、普通权限"><a href="#2、普通权限" class="headerlink" title="2、普通权限"></a>2、普通权限</h3><h4 id="（1）了解rwx-的含义"><a href="#（1）了解rwx-的含义" class="headerlink" title="（1）了解rwx-的含义"></a>（1）了解rwx-的含义</h4><p>​                1）r（读权限）</p>
+<p>​                        对目录：可以进入目录，查看目录内文件信息</p>
+<p>​                        对文件：可以查看文件内容</p>
+<p>​                        数字表示：4</p>
+<p>​                2）w（写权限）</p>
+<p>​                        对目录：可以在目录内创建，删除，移动等文件操作权限</p>
+<p>​                        对文件：可以编辑文件内容</p>
+<p>​                        数字表示：2</p>
+<p>​                3）x（可执行权限）</p>
+<p>​                        一般针对可执行文件，添加该权限可以对文件进行执行操作</p>
+<p>​                        数字表示：1</p>
+<p>​                4）-（没有权限）</p>
+<p>​                        对文件没有任何操作权限</p>
+<p>​                        数字表示：0</p>
+<h4 id="（2）uoga的含义"><a href="#（2）uoga的含义" class="headerlink" title="（2）uoga的含义"></a>（2）uoga的含义</h4><p>​                1）u：当前文件属主</p>
+<p>​                2）o：除当前文件属主和其属组成员的其他用户</p>
+<p>​                3）g：当前文件属主的同组成员用户</p>
+<p>​                4）a：所有用户</p>
+<h4 id="（3）修改普通权限（chmod）"><a href="#（3）修改普通权限（chmod）" class="headerlink" title="（3）修改普通权限（chmod）"></a>（3）修改普通权限（chmod）</h4><p>​                1）字母方式修改权限</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod (a/u/o/g)(+/=/-)(r/w/x) file</span><br></pre></td></tr></table></figure>
+
+<p>​                2）数字方式修改权限</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">777</span> file</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、文件属主和属组"><a href="#3、文件属主和属组" class="headerlink" title="3、文件属主和属组"></a>3、文件属主和属组</h3><h4 id="（1）文件属主和属组"><a href="#（1）文件属主和属组" class="headerlink" title="（1）文件属主和属组"></a>（1）文件属主和属组</h4><p>​                1）属主：创建文件的用户</p>
+<p>​                2）属组：创建文件的用户的同组成员用户</p>
+<h4 id="（2）修改文件属主和属组（chown，chgrp）"><a href="#（2）修改文件属主和属组（chown，chgrp）" class="headerlink" title="（2）修改文件属主和属组（chown，chgrp）"></a>（2）修改文件属主和属组（chown，chgrp）</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chown [选项] username:groupname filename</span><br><span class="line">chown <span class="literal">-R</span> username（递归修改文件属组）</span><br><span class="line">chown <span class="literal">-R</span> username:groupname filename or chown <span class="literal">-R</span> username.groupname filename（递归修改文件的属主和属组）</span><br><span class="line">chown <span class="literal">-R</span> :groupname filename or chown <span class="literal">-R</span> .groupname filename（递归修改文件的属组）</span><br><span class="line">chgrp groupname filename（修改文件属组）</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、高级权限"><a href="#4、高级权限" class="headerlink" title="4、高级权限"></a>4、高级权限</h3><h4 id="（1）冒险位"><a href="#（1）冒险位" class="headerlink" title="（1）冒险位"></a>（1）冒险位</h4><p>​                1）什么是冒险位：冒险位是指文件操作者临时拥有文件所有者的权限</p>
+<p>​                2）冒险位的作用对象：冒险位一般作用在命令或脚本文件上</p>
+<p>​                3）冒险位的表示方式：冒险位用字母s/S表示，用数字4表示</p>
+<p>​                4）冒险位的设置方法（chmod）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、字母方法</span><br><span class="line">chmod u+s/S usr/bin/touch</span><br><span class="line"><span class="number">2</span>、数字方法</span><br><span class="line">chmod <span class="number">4</span>xxx /usr/bin//touch</span><br><span class="line"><span class="number">3</span>、关闭权限</span><br><span class="line">chmod u<span class="literal">-s</span>/S usr/bin/touch</span><br><span class="line">chmod <span class="number">0</span>xxx /usr/bin/touch</span><br><span class="line">注意：冒险位使用很危险。在临时使用后要记得关闭权限</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）强制位"><a href="#（2）强制位" class="headerlink" title="（2）强制位"></a>（2）强制位</h4><p>​                1）什么是强制位：设置了强制位的目录，不论是哪个用户在目录内创建文件的属组都强制继承该目录的属组</p>
+<p>​                2）强制为的作用对象：针对文件</p>
+<p>​                3）强制位的表示方法：字母s/S表示，数字2表示</p>
+<p>​                4）强制位的设置方法（chmod）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、字母方法</span><br><span class="line">chmod g+s/S filename</span><br><span class="line"><span class="number">2</span>、数字方法</span><br><span class="line">chmod <span class="number">2</span>xxx filename</span><br><span class="line"><span class="number">3</span>、关闭权限</span><br><span class="line">chmod g<span class="literal">-s</span>/S filename</span><br><span class="line">chmod <span class="number">0</span>xxx filename</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）粘滞位"><a href="#（3）粘滞位" class="headerlink" title="（3）粘滞位"></a>（3）粘滞位</h4><p>​                1）什么是粘滞位：设置了粘滞位的目录，其目录下的文件操作权限只为root用户和文件创建者所有</p>
+<p>​                2）粘滞位的作用对象：针对公共目录</p>
+<p>​                3）粘滞位的表示方法：字母t/T表示，数字1表示</p>
+<p>​                4）粘滞位的设方法（chmod）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、字母设置</span><br><span class="line">chmod o+t/T filename</span><br><span class="line"><span class="number">2</span>、数字设置</span><br><span class="line">chmod <span class="number">1</span>xxx filename</span><br><span class="line"><span class="number">3</span>、关闭权限</span><br><span class="line">chmod o<span class="literal">-t</span>/T filename</span><br><span class="line">chmod <span class="number">0</span>xxx filename</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、默认权限"><a href="#5、默认权限" class="headerlink" title="5、默认权限"></a>5、默认权限</h3><h4 id="（1）什么是文件的默认权限"><a href="#（1）什么是文件的默认权限" class="headerlink" title="（1）什么是文件的默认权限"></a>（1）什么是文件的默认权限</h4><p>​                1）文件的默认权限：文件创建时的权限，文件一创建就有的权限</p>
+<p>​                2）目录的最高权限为0777，文件的最高权限为0666</p>
+<h4 id="（2）文件的默认权限由谁控制"><a href="#（2）文件的默认权限由谁控制" class="headerlink" title="（2）文件的默认权限由谁控制"></a>（2）文件的默认权限由谁控制</h4><p>​                1）文件的默认权限由umask控制</p>
+<p>​                2）文件默认权限的计算方式：默认权限=最高权限-umask值</p>
+<h4 id="（3）文件默认权限查看和设置"><a href="#（3）文件默认权限查看和设置" class="headerlink" title="（3）文件默认权限查看和设置"></a>（3）文件默认权限查看和设置</h4><p>​                1）查看文件的默认权限：umask </p>
+<p>​                2）设置文件的默认权限</p>
+<p>​                        ①临时修改</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">用户user01设置umask值为<span class="number">0005</span></span><br><span class="line">切换到user01：su - user01</span><br><span class="line">设置umask值为<span class="number">0003</span>：umask <span class="number">0005</span></span><br><span class="line">创建文件：touch /tmp/test</span><br><span class="line">查看文件权限：ll /tmp/test 会发现其他用户的权限为读权限</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">①临时设置的umask只对当前终端的当前用户生效</span><br><span class="line">②权限用数字表示不能为负数，当权限为负数时用<span class="number">0</span>表示</span><br><span class="line">③文件的默认权限遵循Linux下权限最小化原则</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②永久修改</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、针对所有用户设置umask</span><br><span class="line">编辑配置文件：vim /etc/bashrc</span><br><span class="line">最后一行添加：umask=指定数值</span><br><span class="line">重载配置文件：source /etc/bashrc</span><br><span class="line"><span class="number">2</span>、针对指定用户设置umask</span><br><span class="line">切换到指定用户：su - username</span><br><span class="line">修改配置文件：vim ~/.bashrc</span><br><span class="line">最后一行加：umask=指定数值</span><br><span class="line">重载配置文件：source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、ACL访问控制策略"><a href="#6、ACL访问控制策略" class="headerlink" title="6、ACL访问控制策略"></a>6、ACL访问控制策略</h3><h4 id="（1）ACL策略的作用"><a href="#（1）ACL策略的作用" class="headerlink" title="（1）ACL策略的作用"></a>（1）ACL策略的作用</h4><p>​                1）ACL策略能够更加精细的控制文件权限</p>
+<p>​                2）ACL策略可以设置指定用户字指定文件上的权限</p>
+<p>​                3）ACL策略可以设置指定用户组在指定文件上的权限</p>
+<h4 id="（2）ACL策略相关命令"><a href="#（2）ACL策略相关命令" class="headerlink" title="（2）ACL策略相关命令"></a>（2）ACL策略相关命令</h4><p>​                1）查看文件的acl策略：getfacl</p>
+<p>​                2）设置文件的acl策略：setfacl</p>
+<h4 id="（3）设置文件的ACL策略"><a href="#（3）设置文件的ACL策略" class="headerlink" title="（3）设置文件的ACL策略"></a>（3）设置文件的ACL策略</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">setfacl [选项] u:username:权限 filename（修改指定用户对文件的操作权限）</span><br><span class="line">setfacl [选项] g:groupname:权限 filename（修改指定用户组对指定文件的操作权限）</span><br><span class="line">setfacl [选项] mask::权限 filename（修改除其他人（o）和其文件属主以外的其他用户（同组成员）的最高权限）</span><br><span class="line">setfacl <span class="literal">-b</span> filename（删除当前文件的所有acl策略）</span><br><span class="line">setfacl <span class="literal">-m</span>（修改或设置acl策略）</span><br><span class="line">setfacl <span class="literal">-mR</span>（递归授权，包括当前目录和其子文件（不包括新建文件）在内的所有文件都享有所设置的acl策略）</span><br><span class="line">setfacl <span class="literal">-md</span>（默认acl，当前目录下（不包括当前目录）的子文件（包括新建文件）享有所设置的acl策略）</span><br><span class="line">setfacl <span class="literal">-x</span>（删除某个用户或用户组的acl策略）</span><br><span class="line">setfacl <span class="literal">-b</span>（删除当前文件的所有acl策略）</span><br></pre></td></tr></table></figure>
+
+<h2 id="第六章、Linux基础环境配置"><a href="#第六章、Linux基础环境配置" class="headerlink" title="第六章、Linux基础环境配置"></a>第六章、Linux基础环境配置</h2><h3 id="1、RHEL8web控制台"><a href="#1、RHEL8web控制台" class="headerlink" title="1、RHEL8web控制台"></a>1、RHEL8web控制台</h3><h4 id="（1）RHEL8web控制台介绍"><a href="#（1）RHEL8web控制台介绍" class="headerlink" title="（1）RHEL8web控制台介绍"></a>（1）RHEL8web控制台介绍</h4><p>​                1）RHEL8web控制台是什么</p>
+<p>​                        基于RHEL8系统的web管理界面，用来管理本地或处在网络环境的Linux服务器。</p>
+<p>​                        RHEL8web控制台是交互式服务器管理界面，可以实现浏览器和服务器之间的交互。</p>
+<p>​                2）RHEL8web控制台能干什么</p>
+<p>​                        监控基本系统功能，例如硬件信息、时间配置、性能配置等。</p>
+<p>​                        检查系统日志</p>
+<p>​                        管理网络接口和配置防火墙</p>
+<p>​                        管理虚拟机</p>
+<p>​                        管理用户账号</p>
+<p>​                        监视和配置系统服务</p>
+<p>​                        管理软件包</p>
+<p>​                        配置SELinux</p>
+<p>​                        更新软件</p>
+<p>​                        访问终端</p>
+<h4 id="（2）安装RHEL8web控制台"><a href="#（2）安装RHEL8web控制台" class="headerlink" title="（2）安装RHEL8web控制台"></a>（2）安装RHEL8web控制台</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="literal">-y</span> install cockpit</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）启动服务并登录RHEL8web控制台"><a href="#（3）启动服务并登录RHEL8web控制台" class="headerlink" title="（3）启动服务并登录RHEL8web控制台"></a>（3）启动服务并登录RHEL8web控制台</h4><p>​                1）启动服务并设置开机自启</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、启动服务</span><br><span class="line">systemctl start cockpit.service</span><br><span class="line"><span class="number">2</span>、设置开机自启</span><br><span class="line">systemctl enable -<span class="literal">-now</span> cockpit.scoket</span><br></pre></td></tr></table></figure>
+
+<p>​                2）查看服务是否启动</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status cockpit.service</span><br></pre></td></tr></table></figure>
+
+<p>​                3）查看服务是否开机自启</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl list<span class="literal">-unit</span><span class="literal">-files</span> | grep cockpit.service</span><br></pre></td></tr></table></figure>
+
+<p>​                4）查看服务端口是否监听</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、使用netstat命令</span><br><span class="line">netstat <span class="literal">-nltp</span> | grep :<span class="number">9090</span>（port/servername）</span><br><span class="line"><span class="number">2</span>、使用lsof命令</span><br><span class="line">lsof <span class="literal">-i</span> :<span class="number">9090</span>（port / servername）</span><br></pre></td></tr></table></figure>
+
+<p>​                5）关闭防火墙SELinux或者设置防火墙开放端口</p>
+<p>​                        ①关闭防火墙和SELinux</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、关闭防火墙</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line"><span class="number">2</span>、设置开机关闭防火墙</span><br><span class="line">systemctl disable -<span class="literal">-now</span> firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②开放防火墙端口</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、临时开放</span><br><span class="line">firewall<span class="literal">-cmd</span> -<span class="literal">-add</span><span class="literal">-server</span>=cockpit.service</span><br><span class="line"><span class="number">2</span>、永久开放</span><br><span class="line">firewall<span class="literal">-cmd</span> -<span class="literal">-add</span><span class="literal">-server</span>=cockpit.service -<span class="literal">-permanent</span></span><br><span class="line"><span class="number">3</span>、永久开放<span class="number">80</span>端口</span><br><span class="line">firewall<span class="literal">-cmd</span> -<span class="literal">-zone</span>=public -<span class="literal">-add</span><span class="literal">-port</span>=<span class="number">80</span>/tcp -<span class="literal">-permanent</span></span><br><span class="line"><span class="number">4</span>、重启加载端口信息</span><br><span class="line">firewall<span class="literal">-cmd</span> -<span class="literal">-reload</span></span><br></pre></td></tr></table></figure>
+
+<p>​                6）在浏览器中登录RHEL8web控制台</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">浏览器中输入:http://ip:<span class="number">9090</span></span><br><span class="line">在本机中输入:http://localhost:<span class="number">9090</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）利用RHEL8web控制台对系统进行管理"><a href="#（4）利用RHEL8web控制台对系统进行管理" class="headerlink" title="（4）利用RHEL8web控制台对系统进行管理"></a>（4）利用RHEL8web控制台对系统进行管理</h4><p>​                1）修改主机名</p>
+<p>​                2）关闭防火墙和SELinux</p>
+<p>​                3）按需求进行网络配置</p>
+<h3 id="2、使用终端命令管理系统"><a href="#2、使用终端命令管理系统" class="headerlink" title="2、使用终端命令管理系统"></a>2、使用终端命令管理系统</h3><h4 id="（1）修改主机名"><a href="#（1）修改主机名" class="headerlink" title="（1）修改主机名"></a>（1）修改主机名</h4><p>​                1）命令修改</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl <span class="built_in">set-hostname</span> hostname</span><br></pre></td></tr></table></figure>
+
+<p>​                2）修改配置文件</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hostname</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）配置网络"><a href="#（2）配置网络" class="headerlink" title="（2）配置网络"></a>（2）配置网络</h4><p>​                1）VMware workstation的三种网络模式</p>
+<p>​                        ①桥接模式：</p>
+<p>​                                本地物理网卡和虚拟机网卡桥接，并给创建的虚拟机分配ip</p>
+<p>​                                设置桥接模式的虚拟机和本地网卡处于同一网段</p>
+<p>​                                设置了桥接模式的多台虚拟机可以和主机、以及主机同一网段设备、进行相互通信</p>
+<p>​                                若主机能访问外部网络，则设置桥接模式的虚拟机也可以访问外部网络，但外部网络不能访问虚拟机</p>
+<p>​                        ②nat模式：</p>
+<p>​                                使用本地的VMnet0网卡作为交换机网卡，可以给设置了该模式的虚拟机分配ip</p>
+<p>​                                nat模式下可以自定义ip地址</p>
+<p>​                                nat模式下的ip与主机不在同一网段，通过nat路由转换技术将虚拟机ip转换为主机同一网段ip</p>
+<p>​                                nat模式下的虚拟机可以访问主机和同主机处于同一网段的设备，但同主机同一网段的设备不能访问虚拟机</p>
+<p>​                                当主机能访问外部网络的时候，设置了nat模式的虚拟机也可以访问外部网络，但外部网络不能访问虚拟机</p>
+<p>​                        ③仅主机模式：</p>
+<p>​                                使用本地的VMnet8网卡作为交换机网卡，可以给设置了该模式的虚拟机分配ip</p>
+<p>​                                仅主机模式下可以自定义ip地址</p>
+<p>​                                仅主机模式下的ip和主机不在同一网段</p>
+<p>​                                仅主机模式下的虚拟机只能和主机进行相互通信，不能和同主机处于同一网段的设置和外部网络进行通信</p>
+<p>​                2）VMware workstation自定义网络设置</p>
+<p>​                        ①修改桥接模式下桥接的物理网卡</p>
+<p>​                        ②修改nat模式下的网段</p>
+<p>​                        ③修改仅主机模式下的网段</p>
+<p>​                        ④添加网卡</p>
+<p>​                3）配置静态IP</p>
+<p>​                        ①修改配置文件</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network<span class="literal">-scripts</span>/ifcfg<span class="literal">-ens160</span></span><br><span class="line">IPADDR=xxx.xxx.x.x</span><br><span class="line">GATEWAY=xxx.xxx.x.x</span><br><span class="line">DNS1=<span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line"></span><br><span class="line">重新加载网卡配置文件</span><br><span class="line">nmcli connection reload ens160 </span><br><span class="line">重新激活网卡连接</span><br><span class="line">nmcli connection up ens160</span><br></pre></td></tr></table></figure>
+
+<p>​                        ②使用nmcli命令配置网络</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、查看当前网卡</span><br><span class="line">nmcli connection show</span><br><span class="line"><span class="number">2</span>、查看当前已激活的网卡</span><br><span class="line">nmcli c s -<span class="literal">-active</span></span><br><span class="line"><span class="number">3</span>、修改ip地址</span><br><span class="line">nmcli c modify ens160 ipv4.address xxx.xxx.x.x</span><br><span class="line"><span class="number">4</span>、添加、删除IP地址（子接口）</span><br><span class="line">nmcli c m ens160 +/<span class="literal">-ipv4</span>.address xxx.xxx.x.x</span><br><span class="line"><span class="number">5</span>、修改网关地址</span><br><span class="line">nmcli c m ens160 ipv4.gateway xxx.xxx.xxx.x</span><br><span class="line"><span class="number">6</span>、修改dns服务器</span><br><span class="line">nmcli c m ens160 ipv4.dns <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line"><span class="number">7</span>、添加、删除dns服务器</span><br><span class="line">nmcli c m ens160 +/<span class="literal">-ipv4</span>.dns <span class="number">114.114</span>.<span class="number">114.114</span></span><br><span class="line"><span class="number">8</span>、同时修改一块网卡的多个属性</span><br><span class="line">nmcli c m ens160 ipv4.address xxx.xxx.x.x ipv4.gateway xxx.xxx.x.x ipv4.dns <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line"><span class="number">9</span>、重载网卡配置信息</span><br><span class="line">nmcli c reload ens160</span><br><span class="line"><span class="number">10</span>、重新激活网卡连接</span><br><span class="line">nmcli c up ens160</span><br></pre></td></tr></table></figure>
+
+<p>​                        ③使用nmtui文本图形化工具配置网络</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmtui	命令进行文本图形化界面</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）软件包管理"><a href="#（3）软件包管理" class="headerlink" title="（3）软件包管理"></a>（3）软件包管理</h4><p>​                1）Linux软件包的分类</p>
+<p>​                            ①二进制包</p>
+<p>​                                    a、二进制包是已经编译后的软件包，可以直接安装使用</p>
+<p>​                                    b、二进制包不需要编译，可以直接安装使用</p>
+<p>​                                    c、二进制包的选择要根据系统版本，CPU架构，进行合理的选择</p>
+<p>​                                    d、二进制包的命名格式：example-5.1.3-42.el6.x86_64.rpm 软件名-版本.系统版本.CPU架构.二进制包后缀</p>
+<p>​                                    e、二进制包功能不能定制</p>
+<p>​                            ②源码包</p>
+<p>​                                    a、源码包是程序员写的原始代码，需要经过编译后才能安装使用</p>
+<p>​                                    b、源码包可在任何计算机上安装，且经编译安装的软件非常适合当前机器</p>
+<p>​                                    c、源码包功能可以根据实际需求进行定制</p>
+<p>​                                    d、源码包常用格式 .tar.gz .tar.xz . tar.bz2 .zip</p>
+<p>​                            ③二进制源码包</p>
+<p>​                                    a、二进制源码包是半成品的安装包，安装后不能直接使用</p>
+<p>​                                    b、要经过rpmbuild工具重构成二进制包，或者重构成源码包才能安装使用。</p>
+<p>​                                    c、命名方式：mysql-community-5.7.52-1.el7.src.rpm</p>
+<p>​                            ④常见二进制包                                    </p>
+<table>
+<thead>
+<tr>
+<th>Linux发行版</th>
+<th>包类型</th>
+<th>工具</th>
+<th>安装工具</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RedHat、CentOS、Fedora</td>
+<td>rpm</td>
+<td>rpm</td>
+<td>yum(dnf)</td>
+</tr>
+<tr>
+<td>Ubuntu、Debian</td>
+<td>deb</td>
+<td>dpkg</td>
+<td>apt</td>
+</tr>
+</tbody></table>
+<p>​                            ⑤二进制包和源码包的区别</p>
+<table>
+<thead>
+<tr>
+<th>包类型</th>
+<th>是否需要编译</th>
+<th>安装难易程度</th>
+<th>可定制性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制包</td>
+<td>否</td>
+<td>易（直接安装）</td>
+<td>弱</td>
+</tr>
+<tr>
+<td>源码包</td>
+<td>是，按需求配置后编译</td>
+<td>难（配置、编译、安装）</td>
+<td>强</td>
+</tr>
+</tbody></table>
+<p>​                2）Linux软件包的安装</p>
+<p>​                            ①二进制包安装</p>
+<p>​                                    a、获取rpm包，直接通过rpm包进行安装</p>
+<p>​                                    b、配置yum仓库（本地，远程【保证网络良好】），使用yum（dnf）工具进行安装</p>
+<p>​                            ②源码包安装</p>
+<p>​                                    a、按实际需求配置文件（定制功能）</p>
+<p>​                                    b、编译配置后的文件（经过编译器将源码包编译成二进制文件）</p>
+<p>​                                    c、正式安装（安装到指定位置）</p>
+<p>​                                    d、源码包可以在任何平台下编译安装，源码包安装后非常适合当前机器</p>
+<p>​                                    e、源码包可以按需求配置相关文件，对某些功能进行定制，开启或关闭某些服务</p>
+<p>​                3）使用rpm工具管理二进制包（rpm工具需要手动解决依赖）</p>
+<p>​                            ①安装</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="literal">-ivh</span> software（安装软件包）</span><br></pre></td></tr></table></figure>
+
+<p>​                            ②查看</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="literal">-q</span> software（查看软件包是否安装）</span><br></pre></td></tr></table></figure>
+
+<p>​                            ③卸载</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="literal">-e</span> software（移除已安装的软件包）</span><br></pre></td></tr></table></figure>
+
+<p>​                            ④升级</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、未安装情况下升级软件</span><br><span class="line">rpm <span class="literal">-Uvh</span> software</span><br><span class="line"><span class="number">2</span>、已安装情况下升级软件</span><br><span class="line">rpm <span class="literal">-Fvh</span> software</span><br></pre></td></tr></table></figure>
+
+<p>​                            ⑤查看软件包内容</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="literal">-q</span> software（查看软件包是否安装）</span><br><span class="line">rpm <span class="literal">-qa</span> software（查看已安装的所有软件包，通常用法：rpm <span class="literal">-qa</span> | grep xxx【查询xxx软件包安装信息】）</span><br><span class="line">rpm <span class="literal">-ql</span> software（列出已安装软件包的详细内容）</span><br><span class="line">rpm <span class="literal">-qlp</span> software（列出未安装软件包的详细内容）</span><br><span class="line">rpm <span class="literal">-qc</span> software（列出软件包的配置文件位置）</span><br><span class="line">rpm <span class="literal">-qd</span> software（列出软件包文档文件位置信息）</span><br><span class="line">rpm <span class="literal">-qi</span> software（查看已安装软件包的详细信息）</span><br><span class="line">rpm <span class="literal">-qf</span> file（查看某个文件属于哪个软件包）</span><br></pre></td></tr></table></figure>
+
+<p>​                            ⑥其他选项</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、-<span class="literal">-force</span>（强制命令）</span><br><span class="line">强制安装：rpm <span class="literal">-ivh</span> software -<span class="literal">-force</span></span><br><span class="line">强制删除：rpm <span class="literal">-e</span> software -<span class="literal">-force</span></span><br><span class="line"><span class="number">2</span>、-<span class="literal">-nodeps</span>（忽略依赖）</span><br><span class="line">安装时忽略依赖：rpm <span class="literal">-ivh</span> software -<span class="literal">-nodeps</span>（不建议使用，忽略依赖安装软件可能造成某些服务不能正常运行）</span><br><span class="line">删除时忽略依赖：rpm <span class="literal">-e</span> software -<span class="literal">-nodeps</span></span><br></pre></td></tr></table></figure>
+
+<p>​                            ⑦建议</p>
+<p>​                                    a、如何获取rpm包</p>
+<p>​                                            RHEL/CentOS光盘自带的rpm包</p>
+<p>​                                            推荐网站：findrpm.net、rpm.phone.net</p>
+<p>​                                    b、如何选择合适的rpm包</p>
+<p>​                                            要根据自己系统版本和CPU架构选择合适的rpm包</p>
+<p>​                                            建议不要跨大版本安装rpm包</p>
+<p>​                4）yum（dnf）工具管理</p>
+<p>​                            ①介绍yum（dnf）工具</p>
+<p>​                                    a、yum工具的有点：不需要手动解决依赖</p>
+<p>​                                    b、核心：使用yum（dnf）工具需要一个软件仓库，仓库里存放的是软件包和软件包的依赖关系</p>
+<p>​                                    c、软件仓库：本地仓库（本地yum源），远程仓库（保证网络联通信良好）</p>
+<p>​                                    d、yum源：告诉yum工具软件仓库的位置</p>
+<p>​                            ②配置本地yum源</p>
+<p>​                                    a、本地仓库分类</p>
+<p>​                                            aa、BaseOS存储库：提供一套核心的底层操作系统功能，为基础软件安装库</p>
+<p>​                                            ab、Appstream存储库：用户空间应用程序，运行时的语言程序、数据库管理系统</p>
+<p>​                                    b、配置本地仓库</p>
+<p>​                                            ba、挂载镜像到指定挂载点，并设置开机自动挂载</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、显示文件系统信息</span><br><span class="line">df <span class="literal">-h</span></span><br><span class="line"><span class="number">2</span>、显示所有文件系统信息</span><br><span class="line">df <span class="literal">-a</span></span><br><span class="line"><span class="number">3</span>、将镜像文件挂载到/mnt</span><br><span class="line">mount <span class="literal">-o</span> ro /dev/sr0 /mnt（挂载到/mnt） </span><br><span class="line">ls /mnt（查看是否挂载成功）</span><br><span class="line"><span class="number">4</span>、设置开机自动将镜像文件挂载到/mnt</span><br><span class="line">echo <span class="string">"mount -o ro /dev/sr0 /mnt"</span> &gt; /etc/rc.local</span><br><span class="line">chmod +x /etc/rc.d/rc.local</span><br></pre></td></tr></table></figure>
+
+<p>​                                            bb、修改yum配置文件指定本地存储库</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.d.repos/local.repo</span><br><span class="line">编辑内容：</span><br><span class="line">[<span class="type">BaseOS</span>]（仓库标识）</span><br><span class="line">name=baseos yum（仓库名称）</span><br><span class="line">baseusrl=file:///mnt/BaseOS/（基础软件库）</span><br><span class="line">enabled=<span class="number">1</span>（是否开启软件仓库）</span><br><span class="line">gpgcheck=<span class="number">0</span>（不需要校验软件签名）</span><br><span class="line"></span><br><span class="line">[<span class="type">AppStream</span>]</span><br><span class="line">name=app yum </span><br><span class="line">baseurl=file:///mnt/AppStream/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>​                                    c、验证是否配置成功</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum clean all（清空yum仓库）</span><br><span class="line">yum makecache（创建yum缓存）</span><br><span class="line">yum repolist（查看yum源）</span><br><span class="line">yum list（查看yum列表）</span><br></pre></td></tr></table></figure>
+
+<p>​                            ③yum（dnf）工具的使用</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="literal">-y</span> install（安装软件包）</span><br><span class="line">yum <span class="literal">-y</span> groupinstall <span class="string">"包组名"</span>（包组：大型软件包，包含很多字软件包，例如桌面环境）</span><br><span class="line">yum <span class="literal">-y</span> remove（移除软件包）</span><br><span class="line">yum <span class="literal">-y</span> groupremove <span class="string">"包组名"</span></span><br><span class="line">yum search（查询软件包）</span><br><span class="line">yum list | grep xxx（查看已安装的xxxx软件）</span><br><span class="line">yum <span class="literal">-y</span> update（升级软件包）</span><br></pre></td></tr></table></figure>
+
+<p>​                5）源码包的安装</p>
+<h2 id="第七章、Linux程序进程、自带服务"><a href="#第七章、Linux程序进程、自带服务" class="headerlink" title="第七章、Linux程序进程、自带服务"></a>第七章、Linux程序进程、自带服务</h2><h3 id="1、Linux进程检测控制"><a href="#1、Linux进程检测控制" class="headerlink" title="1、Linux进程检测控制"></a>1、Linux进程检测控制</h3><h4 id="（1）认识管道（-）"><a href="#（1）认识管道（-）" class="headerlink" title="（1）认识管道（|）"></a>（1）认识管道（|）</h4><p>​            1）管道的概念</p>
+<p>​                    ①是一种特殊的文件 </p>
+<p>​                    ②在Unix系统中管道文件是实现进程之间通信的一种方式或机制</p>
+<p>​            2）管道的分类</p>
+<p>​                    ①匿名管道</p>
+<p>​                            a、表示方式：在bash中用“|”表示</p>
+<p>​                            b、作用对象：在同一终端下，用于父子进程之间通讯的一种方式</p>
+<p>​                            c、作用：将上一命令的执行结果（标准输出）作为下一命令的标准输入，匿名管道没有数量限制</p>
+<p>​                            d、用法：将上一命令的执行结果通过下一命令进行筛选：rpm -qa | grep xxx /yum list | grep xxx </p>
+<p>​                    ②命名管道（mkfifo）</p>
+<p>​                            a、作用对象：作用在不同终端下，可用于任何进程之间通讯</p>
+<p>​                            b、作用：将通过mkfifo创建的管道文件可以在其他终端利用grep命令按需求取出该文件内容，取出文件内容后，源mkfifo文件内容清空</p>
+<p>​                            c、用法</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、利用mkfifo命令在/tmp目录下创建p_file.log文件</span><br><span class="line">mkfifo /tmp/p_file.log</span><br><span class="line"><span class="number">2</span>、将系统当前安装的全部软件包重定向到p_file.log文件</span><br><span class="line">rpm <span class="literal">-qa</span> &gt; /tmp/p_file.log</span><br><span class="line"><span class="number">3</span>、新建终端并利用grep查看openshh文件信息</span><br><span class="line">grep openssh /tmp/p_file.log</span><br><span class="line"><span class="number">4</span>、使用echo命令将<span class="string">"hello world!"</span>写入p_file.log文件中</span><br><span class="line">echo <span class="string">"hello world!"</span> &gt; /tmp/p_file.log</span><br><span class="line"><span class="number">5</span>、在另一终端中查看p_file.log文件内容</span><br></pre></td></tr></table></figure>
+
+<p>​            3）引申（xagrs）：将上条命令的执行结果作为下条命令的参数</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、/tmp/dir1目录下有一个目录文件aaa和file1,file2,file3,file4,file5，要求删除dir下的所有文件</span><br><span class="line">方法<span class="number">1</span>：find /tmp/dir1/ <span class="literal">-type</span> f <span class="literal">-delete</span></span><br><span class="line">方法<span class="number">2</span>：find /tmp/dir1/ <span class="literal">-type</span> f <span class="literal">-ok</span>/exec rm <span class="literal">-rvf</span></span><br><span class="line">方法<span class="number">3</span>：find /tmp/dir1/ <span class="literal">-type</span> f | xargs rm <span class="literal">-rvf</span></span><br><span class="line"><span class="number">2</span>、将系统中以安装的httpd软件删除</span><br><span class="line">yum list | grep httpd | xargs yum <span class="literal">-y</span> remove</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）进程概述"><a href="#（2）进程概述" class="headerlink" title="（2）进程概述"></a>（2）进程概述</h4><p>​            1）什么是进程</p>
+<p>​                    ①程序（静态）：没有运行的程序就是一堆静态文件存储在磁盘中</p>
+<p>​                    ②进程（动态）：正在运行的程序，已启动的可执行文件</p>
+<p>​                    ③线程：轻量级的进程，一个进程可以有多个线程，线程不具有资源他和进程共享资源，线程的执行是抢占式的，谁执行快谁就先执行。</p>
+<p>​                    ④例子：盖大楼（进程），贴瓷砖，砌墙，安装水电气（线程）</p>
+<p>​            2）进程的特点</p>
+<p>​                    ①独立性：每个进程都是计算机上都是独立的实体，都拥有独立的地址空间和独立的资源。</p>
+<p>​                    ②动态性：程序是一个静态的指令集和，进程是运行的程序是在系统中活动的指令集合。</p>
+<p>​                    ③并发性：多个进程可以在单个CPU上运行，但是多个进程不会相互影响。</p>
+<p>​            3）进程的生命周期</p>
+<p>​                    ①父进程</p>
+<p>​                            复制自己的地址空间创建一个新的子进程，每个继承都分配一个Id，用以保证其安全性</p>
+<p>​                            父进程是子进程的环境元素，任何进程都可以创建子进程，所有进程都是第一个进程的后代</p>
+<p>​                    ②子进程</p>
+<p>​                            继承父进程的环境变量、文件描述符、端口、安全身份、资源、程序代码。</p>
+<p>​                            子进程exec自己的程序代码的时候父进程处于睡眠状态。</p>
+<p>​                            子进程在发出exit状态后，丢弃其环境资源，剩余的环境资源被称为僵停。</p>
+<p>​                            父进程在受到子进程的信号后被唤醒，清理剩余资源，并执行自己的程序代码。</p>
+<h4 id="（3）进程信息查看"><a href="#（3）进程信息查看" class="headerlink" title="（3）进程信息查看"></a>（3）进程信息查看</h4><p>​            1）静态查看（ps）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ps <span class="literal">-ef</span>（显示所有进程及其父子进程的关系,通常用法：ps <span class="literal">-ef</span> | grep xxx）</span><br><span class="line">ps <span class="literal">-eF</span>（显示所有进程及其父子进程的关系）</span><br><span class="line">ps <span class="literal">-elf</span>（详细显示所有进程何其父子进程的关系）</span><br><span class="line">ps aux（显示当前终端所有进程+没有控制终端的所有进程，并显示出当前进程拥有者、状态、资源占用等详细信息）</span><br><span class="line">ps auxf（显示当前终端所有进程+没有控制终端的所有进程，并显示出当前进程拥有者、状态、资源占用及其进程父子关系等详细信息）</span><br><span class="line">ps auo pid ,nice（指定查看进程信息）</span><br></pre></td></tr></table></figure>
+
+<p>​            2）动态查看（top）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">top <span class="number">1</span>（显示所有进程以及逻辑CPU个数）</span><br><span class="line">top <span class="literal">-p</span> PID（查看指定进程信息）</span><br><span class="line">top <span class="literal">-u</span> UID（查看指定用户进程信息）</span><br><span class="line">平均负载 <span class="number">1</span> <span class="number">5</span> <span class="number">15</span></span><br><span class="line">CPU负载=平均负载/CPU逻辑个数</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）管理控制进程"><a href="#（4）管理控制进程" class="headerlink" title="（4）管理控制进程"></a>（4）管理控制进程</h4><p>​            1）控制进程优先级</p>
+<p>​                    ①控制正在运行时的进程优先级（renice）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、创建一个sleep进程并设置<span class="number">3000</span>s后在后台运行</span><br><span class="line">sleep <span class="number">3000</span> &amp;</span><br><span class="line"><span class="number">2</span>、调整sleep进程优先级</span><br><span class="line">renice 优先级 PID </span><br><span class="line">优先级分为：<span class="literal">-20</span><span class="literal">-19</span>，数字越小优先级越高</span><br></pre></td></tr></table></figure>
+
+<p>​                    ②控制进程启动时的优先级（nice）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nice <span class="literal">-n</span> 优先级 PID/进程名 [&amp;]（是否后台运行）</span><br><span class="line">nice <span class="literal">-n</span> <span class="literal">-5</span> sleep &amp;</span><br></pre></td></tr></table></figure>
+
+<p>​            2）控制进程状态</p>
+<p>​                    ①如何控制进程状态：用户通过给进程发送信号来控制进程状态</p>
+<p>​                    ②常见信号有哪些</p>
+<table>
+<thead>
+<tr>
+<th>信号</th>
+<th>含义</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>SIGHUP</td>
+<td>默认终止控制终端进程（可用来重新加载文件）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SIGINT</td>
+<td>键盘中断（Ctrl+C）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SIGQUIT</td>
+<td>键盘退出（Ctrl+\）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>SIGKILL</td>
+<td>杀死进程</td>
+</tr>
+<tr>
+<td>15</td>
+<td>SIGTERM</td>
+<td>正常的结束进程，默认信号</td>
+</tr>
+<tr>
+<td>18</td>
+<td>SIGCONT</td>
+<td>继续</td>
+</tr>
+<tr>
+<td>19</td>
+<td>SIGSTOP</td>
+<td>停止</td>
+</tr>
+<tr>
+<td>20</td>
+<td>SIGTSTP</td>
+<td>暂停（Ctrl+z）</td>
+</tr>
+</tbody></table>
+<p>​                    ③如何给进程发送信号</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、kill</span><br><span class="line">给vsftpd进程发送<span class="number">9</span>信号：kill <span class="literal">-9</span> vaftpd_PID</span><br><span class="line"><span class="number">2</span>、pkill</span><br><span class="line">给当前终端所有进程发送<span class="number">9</span>信号：pkill <span class="literal">-9</span> <span class="literal">-t</span> pts/<span class="number">0</span></span><br><span class="line"><span class="number">3</span>、killall</span><br><span class="line">给用户所有进程发送<span class="number">9</span>信号：killall <span class="literal">-9</span> <span class="literal">-u</span> username</span><br></pre></td></tr></table></figure>
+
+<p>​            3）其他控制进程命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、jobs（查看后台进程）</span><br><span class="line"><span class="number">2</span>、bg（将暂停的后台进程依旧运行在后台）</span><br><span class="line">bg PId将PID的对应进程放到后台运行</span><br><span class="line">bg %n将后台编号为n的进程放在后台继续运行</span><br><span class="line"><span class="number">3</span>、fg（将后台进程放到前台来运行）</span><br><span class="line">fg PID将PID对应的进程放到前台运行</span><br><span class="line">fg %n将后台编号为n的进程放到前台来运行</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、Linux自带服务"><a href="#2、Linux自带服务" class="headerlink" title="2、Linux自带服务"></a>2、Linux自带服务</h3><h4 id="（1）ssh服务"><a href="#（1）ssh服务" class="headerlink" title="（1）ssh服务"></a>（1）ssh服务</h4><p>​                1）只是铺垫</p>
+<p>​                        ①客户端和服务端</p>
+<p>​                                a、客户端：享受服务</p>
+<p>​                                b、服务端：提供服务</p>
+<p>​                                c、B/S架构：Bowser → Server</p>
+<p>​                                d、C/S架构：Client → Server</p>
+<p>​                                e、客户端如何通过网络找到服务端：客户端通过ip（小区）+端口（门牌号）找到对应的服务端</p>
+<p>​                        ②IP端口的设定</p>
+<p>​                                a、IP端口号只有整数，范围在：0-65535</p>
+<p>​                                b、端口号范围和其作用</p>
+<table>
+<thead>
+<tr>
+<th>端口号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1-255</td>
+<td>一般是知名的端口号，ftp21 ssh22 web80 telnet23</td>
+</tr>
+<tr>
+<td>256-1023</td>
+<td>Unix占用用来提供特殊服务</td>
+</tr>
+<tr>
+<td>1023-5000</td>
+<td>客户端临时端口，随机产生</td>
+</tr>
+<tr>
+<td>5001-65535</td>
+<td>为互联网其他服务预留的端口</td>
+</tr>
+</tbody></table>
+<p>​                2）ssh服务概述</p>
+<p>​                            ①ssh服务：ssh服务是Linux下远程连接管理服务器的安全协议</p>
+<p>​                            ②ssh服务功能：远程连接管理服务器</p>
+<p>​                            ③ssh服务默认端口：默认端口22</p>
+<p>​                            ④ssh服务架构：ssh服务是C/S架构，客户端（Windows：secuerCrt fianlshell Linux：openssh-client）服务端：openssh-server</p>
+<p>​                3）ssh服务启动</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、查看sshd服务是否启动</span><br><span class="line">systemctl status sshd.service</span><br><span class="line"><span class="number">2</span>、启动sshd服务</span><br><span class="line">systemctl start sshd.service </span><br><span class="line"><span class="number">3</span>、设置sshd服务开机自启</span><br><span class="line">systemctl enable -<span class="literal">-now</span> sshd.service</span><br><span class="line"><span class="number">4</span>、重启sshd服务</span><br><span class="line">systemctl restart sshd.service</span><br><span class="line"><span class="number">5</span>、关闭sshd服务</span><br><span class="line">systemctl stop sshd.service</span><br><span class="line"><span class="number">6</span>、关闭sshd服务开机自启</span><br><span class="line">systemctl disable -<span class="literal">-now</span> sshd.service</span><br><span class="line"><span class="number">7</span>、查看sshd服务端口是否被监听</span><br><span class="line">netstat <span class="literal">-nltp</span> | grep sshd</span><br><span class="line">lsof <span class="literal">-i</span> :<span class="number">22</span></span><br></pre></td></tr></table></figure>
+
+<p>​                4）修改ssh服务端口</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、查看openssh<span class="literal">-server</span>软件包的配置文件位置</span><br><span class="line">rpm <span class="literal">-qc</span> openssh<span class="literal">-server</span></span><br><span class="line"><span class="number">2</span>、查看配置文件修改方法</span><br><span class="line">man <span class="number">5</span> openssh</span><br><span class="line"><span class="number">3</span>、修改配置文件</span><br><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">port xxxx</span><br><span class="line"><span class="number">4</span>、重启sshd服务</span><br><span class="line">systemctl restart sshd.service</span><br><span class="line"><span class="number">5</span>、验证查看端口是否改变</span><br><span class="line">netstat <span class="literal">-nltp</span> | grep sshd</span><br></pre></td></tr></table></figure>
+
+<p>​                5）Linux下远程连接工具（ssh）</p>
+<p>​                            ①功能一：远程连接服务器</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh [选项] [<span class="type">username</span><span class="selector-tag">@</span>]远程IP</span><br><span class="line">ssh <span class="literal">-p</span> <span class="number">22</span> <span class="literal">-l</span> username 远程IP</span><br><span class="line">ssh <span class="literal">-p</span> <span class="number">22</span> username<span class="selector-tag">@</span>远程IP</span><br></pre></td></tr></table></figure>
+
+<p>​                            ②功能二：未登录情况下访问远程服务器执行命令</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh [选项] [<span class="type">username</span><span class="selector-tag">@</span>]远程IP 命令</span><br><span class="line">ssh <span class="literal">-p</span> <span class="number">22</span> username<span class="selector-tag">@</span>远程IP ls /root/</span><br></pre></td></tr></table></figure>
+
+<p>​                6）Linux下远程拷贝工具（scp）</p>
+<p>​                            ①功能一：将本地文件拷贝到远程服务器（push）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp [选项] 本地文件地址 远程IP:存放路径</span><br><span class="line">拷贝文件到远程服务器：scp <span class="literal">-P</span> port /tmp/test.sh 远程IP:/tmp/</span><br><span class="line">拷贝目录到远程服务器：scp <span class="literal">-P</span> port <span class="literal">-r</span> /tmp/test 远程IP:/tmp/</span><br></pre></td></tr></table></figure>
+
+<p>​                            ②功能二：将远程服务器拷贝到本地（pull）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp [选项] 远程IP:文件路径 本地路径</span><br><span class="line">将远程服务器文件拷贝到本地：scp <span class="literal">-P</span> port 远程服务器:/tmp/test.txt /tmp/</span><br><span class="line">将远程服务器文件拷贝到本地并改名：scp <span class="literal">-P</span> port 远程服务器:/tmp/test.txt /tmp/file.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）ftp服务"><a href="#（2）ftp服务" class="headerlink" title="（2）ftp服务"></a>（2）ftp服务</h4><h4 id="（3）ntp时间同步服务"><a href="#（3）ntp时间同步服务" class="headerlink" title="（3）ntp时间同步服务"></a>（3）ntp时间同步服务</h4><p>​                1）时间同步服务的重要性</p>
+<p>​                            ①it系统中，准确的时间很重要，很多原因都要准确的时间</p>
+<p>​                                    a、网络传输中，数据包和事务日志需要准确的时间戳</p>
+<p>​                                    b、各种应用程序中，如订单信息和交易信息都需要准确的时间</p>
+<p>​                            ②Linux系统中，Network Time Protocol（NTP）NTP协议有在用户空间中运行的守护程序ntp和chrony实现，CentOS7（ntp/chrony）RedHat8（chrony）</p>
+<p>​                2）时间同步服务器：自己的服务器 → 上一级别的时间服务器 → 上上一级别的时间服务器 → 根时间服务器，推荐网站：<a href="http://www.ntp.org.cn" target="_blank" rel="noopener">www.ntp.org.cn</a></p>
+<p>​                3）同步当前系统时间</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、修改配置文件指定ntp服务器同步系统时间</span><br><span class="line">查看chrony的配置文件：rpm <span class="literal">-qc</span> chrony</span><br><span class="line">修改chrony的配置文件：vim /etc/chrony.conf</span><br><span class="line">pool cn.ntp.org.cn iburst</span><br><span class="line">server ip地址</span><br><span class="line">重启服务：systemctl restart chronyd.service</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、临时指定ntp服务器同步系统时间</span><br><span class="line">chronyd <span class="literal">-q</span> <span class="string">"server cn.ntp.org.cn iburst"</span></span><br></pre></td></tr></table></figure>
+
+<p>​                4）搭建时间同步服务器</p>
+<p>​                            ①RHEL7和RHEL8时间同步服务的区别</p>
+<p>​                                    a、RHEL7支持ntp和chrony工具</p>
+<p>​                                    b、RHEL8不再支持ntp工具，使用chrony守护程序工具代替ntp实现NTP时间同步</p>
+<p>​                            ②ntp和chrony程序的区别</p>
+<p>​                                    a、ntpd服务器在控制客户端访问方式上响应来自任何地址的请求，相对不安全</p>
+<p>​                                    b、chrony默认情况下不允许客户端访问，只有在allow中指定的ip才能进行访问</p>
+<p>​                                    c、chrony在各种条件下表现良好</p>
+<p>​                            ③RHEL8配置时间同步服务</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">服务器端</span><br><span class="line">关闭防火墙和SELinux（实验环境）</span><br><span class="line">systemctl <span class="literal">-stop</span> firewalld.service</span><br><span class="line">systemctl disable -<span class="literal">-now</span> firewalld.service</span><br><span class="line">setenforce <span class="number">0</span></span><br><span class="line">配置软件仓库</span><br><span class="line">df <span class="literal">-h</span></span><br><span class="line">mount <span class="literal">-o</span> ro /dev/sr0 /mnt</span><br><span class="line">echo <span class="string">"mount -o ro /dev/sr0 /mnt"</span> &gt; /etc/rc.local</span><br><span class="line">chmod +x /etc/rc.d/rc.local</span><br><span class="line">ls /mnt</span><br><span class="line">vim /yum.d.repos/local.repo</span><br><span class="line">[<span class="type">BaseOS</span>]</span><br><span class="line">name=baseos yum </span><br><span class="line">baseurl=fiel:///mnt/BaseOs/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line">yum repolist</span><br><span class="line">查看是否安装chrony软件包</span><br><span class="line">rpm <span class="literal">-q</span> chrony</span><br><span class="line">安装chrony、确认是否安装成功、查看软件配置信息</span><br><span class="line">yum <span class="literal">-y</span> install chrony</span><br><span class="line">rpm <span class="literal">-q</span> chrony </span><br><span class="line">rpm <span class="literal">-qc</span> chrony</span><br><span class="line">查看man手册如何对配置信息进行修改</span><br><span class="line">man <span class="number">5</span> /etc/chrony.conf</span><br><span class="line">修改配置信息</span><br><span class="line">vim /etc/chrony.conf</span><br><span class="line">allow 允许的ip/子网掩码</span><br><span class="line">重启服务器并设置开机自启</span><br><span class="line">systemctl restart chronyd.service</span><br><span class="line">systemctl enable -<span class="literal">-now</span> chronyd.service</span><br><span class="line">测试验证服务</span><br><span class="line"></span><br><span class="line">客户端</span><br><span class="line">修改配置文件：vim /etc/chrony.conf </span><br><span class="line">pool cn.ntp.org.cn iburst</span><br><span class="line">server ip地址</span><br><span class="line">重启chronyd服务：systemctl restart chronyd.service</span><br><span class="line">显示当前ntp服务器配置源：chronyc source</span><br><span class="line">手动同步时间：chronyc makestep（不建议使用，会造成时间同步服务冲突）</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）计划任务服务（crond）"><a href="#（4）计划任务服务（crond）" class="headerlink" title="（4）计划任务服务（crond）"></a>（4）计划任务服务（crond）</h4><p>​            1）计划任务服务crond的作用</p>
+<p>​                    ①作用：解放双数，解放时间</p>
+<p>​                    ②计划任何，让系统在未来指定时间执行指定的某些任务（程序），可以周期性的执行也可只执行一次</p>
+<p>​                    ③crond属于Linux内置服务，默认情况下是安装好的                            </p>
+<p>​            2）相关文件</p>
+<p>​                        /etc/cron.d/    </p>
+<p>​                        /etc/cron.d/Ohourly    系统每小时需要执行的任务</p>
+<p>​                        /etc/cron.d/raid-check    </p>
+<p>​                        /etc/cron.deny        用户拒绝列表（在该文件中的用户不能使用cron服务）</p>
+<p>​                        /etc/crontab        可定义系统计划服务</p>
+<p>​                        /etc/cron.monthly/    存放系统每个月需要执行的脚本</p>
+<p>​                        /etc/cron.weekly/    存放系统每周需要执行的脚本</p>
+<p>​                        /etc/cron.hourly/    存放系统每小时需要执行的脚本</p>
+<p>​                        /etc/cron.daily/    存放系统每天需要执行的脚本</p>
+<p>​                        /var/spool/cron        存放各个用户自己设定的定时任务，普通用户无法访问</p>
+<p>​                        /var/log/cron            计划任务信息的日志文件</p>
+<p>​            3）创建、查看、修改、删除计划任务</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、用户创建、查看、修改、删除计划任务</span><br><span class="line">crontab <span class="literal">-e</span>（用户创建、修改计划任务）</span><br><span class="line">crontab <span class="literal">-l</span>（用户查看计划任务）</span><br><span class="line">crontab <span class="literal">-r</span>（用户删除计划任务）</span><br><span class="line">/var/spool/cron/（用户创建的计划任务的路径）</span><br><span class="line"><span class="number">2</span>、管理员用户给其他用户创建、修改、删除计划任务</span><br><span class="line">crontab <span class="literal">-e</span> <span class="literal">-u</span> username（管理员用户给指定用户创建、修改计划任务）</span><br><span class="line">crontab <span class="literal">-l</span> <span class="literal">-u</span> username（管理员用户查看指定用户的计划任务）</span><br><span class="line">crontab <span class="literal">-r</span> <span class="literal">-u</span> username（管理员用户删除指定用户的计划任务）</span><br></pre></td></tr></table></figure>
+
+<p>​            4）编写简单的计划任务    </p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/crontab（查看计划任务规则）</span><br><span class="line">* * * * * 分别表示 分（<span class="number">0</span><span class="literal">-59</span>） 时（<span class="number">0</span><span class="literal">-23</span>） 日（<span class="number">1</span><span class="literal">-31</span>） 月（<span class="number">1</span><span class="literal">-12</span>） 周（<span class="number">1</span><span class="literal">-7</span>） </span><br><span class="line">特殊字符：，（分隔，间隔）-（表示一个段）/n（表示n的单位执行一次）</span><br><span class="line">例如：</span><br><span class="line"><span class="number">1</span>、礼拜一和礼拜三每两小时执行一次任务：<span class="number">00</span> */<span class="number">2</span> * * <span class="number">1</span>,<span class="number">3</span></span><br><span class="line"><span class="number">2</span>、每个月<span class="number">1</span><span class="literal">-15</span>号和<span class="number">25</span>号的早上<span class="number">8</span>：<span class="number">00</span><span class="literal">-18</span>：<span class="number">00</span>每隔两个小时执行一个任务：<span class="number">00</span> <span class="number">08</span><span class="literal">-18</span>/<span class="number">2</span> <span class="number">1</span><span class="literal">-15</span>,<span class="number">25</span> * *</span><br></pre></td></tr></table></figure>
+
+<h2 id="第八章、Linux实战（LAMP架构环境搭建-项目上线）"><a href="#第八章、Linux实战（LAMP架构环境搭建-项目上线）" class="headerlink" title="第八章、Linux实战（LAMP架构环境搭建+项目上线）"></a>第八章、Linux实战（LAMP架构环境搭建+项目上线）</h2><h3 id="1、LAMP架构介绍"><a href="#1、LAMP架构介绍" class="headerlink" title="1、LAMP架构介绍"></a>1、LAMP架构介绍</h3><h4 id="（1）什么是LAMP架构"><a href="#（1）什么是LAMP架构" class="headerlink" title="（1）什么是LAMP架构"></a>（1）什么是LAMP架构</h4><p>​                1）L：Linux操作系统</p>
+<p>​                2）A：Apache web服务器</p>
+<p>​                3）M：MySQL数据库管理系统</p>
+<p>​                4）P：PHP语言环境</p>
+<h4 id="（2）Apache、PHP、MySQL各自的作用"><a href="#（2）Apache、PHP、MySQL各自的作用" class="headerlink" title="（2）Apache、PHP、MySQL各自的作用"></a>（2）Apache、PHP、MySQL各自的作用</h4><p>​                1）APache web服务器：处理用户的访问请求，解析网站静态页面，并将网站的静态资源反送给客户端。</p>
+<p>​                2）PHP：调用libphpx（x是版本号）.so模块对网站的静态资源进行解析，如果需要后台数据，php程序会连接数据库，最终PHP将解析好的资源发送给Apache（httpd）服务器,Apache再将数据返回给用户。</p>
+<p>​                3）MySQL：关系型数据库管理系统，用于永久的数据存储。</p>
+<h4 id="（3）搭建LAMP环境"><a href="#（3）搭建LAMP环境" class="headerlink" title="（3）搭建LAMP环境"></a>（3）搭建LAMP环境</h4><p>​                1）准备Linux环境</p>
+<p>​                2）安装web服务器httpd</p>
+<p>​                3）安装PHP语言环境</p>
+<p>​                4）安装mysql数据库管理系统</p>
+<h3 id="2、部署LAMP环境"><a href="#2、部署LAMP环境" class="headerlink" title="2、部署LAMP环境"></a>2、部署LAMP环境</h3><h4 id="（1）关闭防火墙和SELinux"><a href="#（1）关闭防火墙和SELinux" class="headerlink" title="（1）关闭防火墙和SELinux"></a>（1）关闭防火墙和SELinux</h4><p>​                1）关闭防火墙</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl disable -<span class="literal">-now</span> firewall.service</span><br><span class="line">或者使用web控制台关闭防火墙</span><br></pre></td></tr></table></figure>
+
+<p>​                2）关闭SELinux安全策略</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setenforce <span class="number">0</span>（使用命令）</span><br><span class="line">vim /etc/selinux/config（修改配置文件）</span><br><span class="line">web控制台</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）配置本地yum仓库"><a href="#（2）配置本地yum仓库" class="headerlink" title="（2）配置本地yum仓库"></a>（2）配置本地yum仓库</h4><p>​                1）显示文件系统信息：df -h</p>
+<p>​                2）挂在镜像到/mnt目录</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount <span class="literal">-o</span> ro /dev/sr0 /mnt </span><br><span class="line">echo <span class="string">"mount -o ro /dev/sr0 /mnt "</span> &gt; /etc/rc.local</span><br><span class="line">chmod +x /etc/rc.d/rc.local</span><br></pre></td></tr></table></figure>
+
+<p>​                3）修改yum配置文件指定本地储存库    </p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.d.repos/local.repo</span><br><span class="line">[<span class="type">BaseOS</span>]</span><br><span class="line">name=baseos yum</span><br><span class="line">baseurl=file:///mnt/BaseOS/</span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgcheck=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>​                4）验证yum源是否配置完成</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line">yum repolist</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）部署LAMP环境"><a href="#（3）部署LAMP环境" class="headerlink" title="（3）部署LAMP环境"></a>（3）部署LAMP环境</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、安装httpd软件包</span><br><span class="line">yum <span class="literal">-y</span> install httpd</span><br><span class="line"><span class="number">2</span>、安装PHP语言环境</span><br><span class="line">yum <span class="literal">-y</span> install php<span class="literal">-xml</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-json</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-mysqlnd</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-common</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-fpm</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-bcmath</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-cli</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \</span><br><span class="line">php<span class="literal">-gd</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \</span><br><span class="line">php<span class="literal">-pdo</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64 \ </span><br><span class="line">php<span class="literal">-devel</span><span class="literal">-7</span>.<span class="number">2.11</span><span class="literal">-1</span>.module+el8+<span class="number">2561</span>+<span class="number">1</span>aca3413.x86_64</span><br><span class="line"><span class="number">3</span>、安装MySQL数据库管理系统</span><br><span class="line">yum <span class="literal">-y</span> install mariadb<span class="literal">-server</span> mariadb</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）启动相关服务"><a href="#（4）启动相关服务" class="headerlink" title="（4）启动相关服务"></a>（4）启动相关服务</h4><p>​                1）启动前端web服务</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl start httpd.service（开启httpd服务）</span><br><span class="line">systemctl enable -<span class="literal">-noe</span> httpd.service（设置httpd服务开机自启）</span><br><span class="line">web服务配置文件：/etc/httpd/conf/httpd.conf</span><br><span class="line">网站存放位置：/var/www/html/</span><br><span class="line">在浏览器中输入：http://ip地址:<span class="number">80</span>,查看服务是否开启</span><br></pre></td></tr></table></figure>
+
+<p>​                2）启动后台数据库服务</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mariadb.service（开启MySQL服务）</span><br><span class="line">systemctl enable -<span class="literal">-now</span> mariadb.service（设置服务开机自启）</span><br><span class="line">mysql（验证服务是否开启）</span><br><span class="line">mysqladmin <span class="literal">-u</span> root password <span class="string">'xxxxxx'</span>（给root用户设置密码）</span><br><span class="line">mysql <span class="literal">-u</span> root <span class="literal">-p</span>（用root用户登录到MySQL）</span><br></pre></td></tr></table></figure>
+
+<h4 id="（5）验证部署环境"><a href="#（5）验证部署环境" class="headerlink" title="（5）验证部署环境"></a>（5）验证部署环境</h4><p>​                1）验证MySQL服务是否开启</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat <span class="literal">-nltp</span> | grep :<span class="number">3306</span>（查看mysql默认端口是否被监听）</span><br><span class="line">systemctl status mariadb.service</span><br></pre></td></tr></table></figure>
+
+<p>​                2）验证web服务是否开启且PHP页面是否可解析</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在/var/www/html/目录下新建文件index.php：touch /var/www/html/index.php</span><br><span class="line">编辑index.php文件：vim /var/www/html/index.php</span><br><span class="line">编辑内容：</span><br><span class="line">&lt;?php</span><br><span class="line">	phpinfo();</span><br><span class="line">?&gt;</span><br><span class="line">打开浏览器对网站进行访问：firefox http://IP地址[:<span class="number">80</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、上线商城项目"><a href="#3、上线商城项目" class="headerlink" title="3、上线商城项目"></a>3、上线商城项目</h3><h4 id="（1）上传源码到服务器"><a href="#（1）上传源码到服务器" class="headerlink" title="（1）上传源码到服务器"></a>（1）上传源码到服务器</h4><p>​                1）使用远程连接工具连接到虚拟机</p>
+<p>​                2）在/root/目录西创建一个lamp目录用来存放网站源码压缩包</p>
+<p>​                3）将网站源码包上传到lamp目录下</p>
+<h4 id="（2）将源码解压到指定文件"><a href="#（2）将源码解压到指定文件" class="headerlink" title="（2）将源码解压到指定文件"></a>（2）将源码解压到指定文件</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip <span class="literal">-r</span> /root/lamp/phpshe.zip <span class="literal">-d</span> /var/www/html/</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）查看源码文档按需求进行配置"><a href="#（3）查看源码文档按需求进行配置" class="headerlink" title="（3）查看源码文档按需求进行配置"></a>（3）查看源码文档按需求进行配置</h4><p>​                1）查看源码文档：ls /var/www/html/</p>
+<p>​                2）查看apache是否有权对网站文件进行操作，如果没有权限就给apache添加权限</p>
+<p>​                3）重启网站服务</p>
+<h4 id="（4）安装网站"><a href="#（4）安装网站" class="headerlink" title="（4）安装网站"></a>（4）安装网站</h4><p>​                1）每个网站的安装方式不同，需要根据网站的说明文档进行对应的操作</p>
+<p>​                2）当前网站项目安装方式为：ip地址/install</p>
+<h4 id="（5）验证网站是否上线成功"><a href="#（5）验证网站是否上线成功" class="headerlink" title="（5）验证网站是否上线成功"></a>（5）验证网站是否上线成功</h4><p>​                1）打开浏览器输入：ip/index.php查看网站前台是否安装成功</p>
+<p>​                2）打开浏览器输入：ip/admin.php查看网站后台是否安装成功</p>
+<h4 id="（6）注意点"><a href="#（6）注意点" class="headerlink" title="（6）注意点"></a>（6）注意点</h4><p>​                1）上线一个网站前，应该先了解网站的架构，再进行对应的环境配置</p>
+<p>​                2）网站上线前一定要事先进过验证配置环境的可用性和完整性</p>
+<p>​                3）上线网站的时候一定要根据网站的说明文档进行操作</p>
+<h2 id="第九章、阿里云服务器、宝塔面板、网站建设"><a href="#第九章、阿里云服务器、宝塔面板、网站建设" class="headerlink" title="第九章、阿里云服务器、宝塔面板、网站建设"></a>第九章、阿里云服务器、宝塔面板、网站建设</h2><h4 id="（1）购买阿里云服务器"><a href="#（1）购买阿里云服务器" class="headerlink" title="（1）购买阿里云服务器"></a>（1）购买阿里云服务器</h4><h4 id="（2）安装宝塔面板"><a href="#（2）安装宝塔面板" class="headerlink" title="（2）安装宝塔面板"></a>（2）安装宝塔面板</h4><h4 id="（3）在阿里云服务器上部署网站"><a href="#（3）在阿里云服务器上部署网站" class="headerlink" title="（3）在阿里云服务器上部署网站"></a>（3）在阿里云服务器上部署网站</h4><h2 id="第十章、环境变量、Linux开发环境搭建、可执行脚本"><a href="#第十章、环境变量、Linux开发环境搭建、可执行脚本" class="headerlink" title="第十章、环境变量、Linux开发环境搭建、可执行脚本"></a>第十章、环境变量、Linux开发环境搭建、可执行脚本</h2><h3 id="1、环境变量配置"><a href="#1、环境变量配置" class="headerlink" title="1、环境变量配置"></a>1、环境变量配置</h3><h4 id="（1）环境变量概述"><a href="#（1）环境变量概述" class="headerlink" title="（1）环境变量概述"></a>（1）环境变量概述</h4><h4 id="（2）用户环境变量"><a href="#（2）用户环境变量" class="headerlink" title="（2）用户环境变量"></a>（2）用户环境变量</h4><h4 id="（3）系统环境变量"><a href="#（3）系统环境变量" class="headerlink" title="（3）系统环境变量"></a>（3）系统环境变量</h4><h3 id="2、Linux基础开发环境搭建"><a href="#2、Linux基础开发环境搭建" class="headerlink" title="2、Linux基础开发环境搭建"></a>2、Linux基础开发环境搭建</h3><h4 id="（1）Git项目管理工具环境安装"><a href="#（1）Git项目管理工具环境安装" class="headerlink" title="（1）Git项目管理工具环境安装"></a>（1）Git项目管理工具环境安装</h4><h4 id="（2）JDK环境安装"><a href="#（2）JDK环境安装" class="headerlink" title="（2）JDK环境安装"></a>（2）JDK环境安装</h4><h4 id="（3）Node环境安装"><a href="#（3）Node环境安装" class="headerlink" title="（3）Node环境安装"></a>（3）Node环境安装</h4><h4 id="（4）Python环境安装"><a href="#（4）Python环境安装" class="headerlink" title="（4）Python环境安装"></a>（4）Python环境安装</h4><h4 id="（5）Maven项目构建和管理工具部署"><a href="#（5）Maven项目构建和管理工具部署" class="headerlink" title="（5）Maven项目构建和管理工具部署"></a>（5）Maven项目构建和管理工具部署</h4><h4 id="（6）MySQL数据库安装部署"><a href="#（6）MySQL数据库安装部署" class="headerlink" title="（6）MySQL数据库安装部署"></a>（6）MySQL数据库安装部署</h4><h4 id="（7）Redis缓存安装部署"><a href="#（7）Redis缓存安装部署" class="headerlink" title="（7）Redis缓存安装部署"></a>（7）Redis缓存安装部署</h4><h4 id="（8）Nginx-web服务器安装"><a href="#（8）Nginx-web服务器安装" class="headerlink" title="（8）Nginx web服务器安装"></a>（8）Nginx web服务器安装</h4><h4 id="（9）消息队列Rabbit-MQ安装"><a href="#（9）消息队列Rabbit-MQ安装" class="headerlink" title="（9）消息队列Rabbit MQ安装"></a>（9）消息队列Rabbit MQ安装</h4><h4 id="（10）Tomcat-应用服务器安装"><a href="#（10）Tomcat-应用服务器安装" class="headerlink" title="（10）Tomcat 应用服务器安装"></a>（10）Tomcat 应用服务器安装</h4><h4 id="（11）Docker环境安装"><a href="#（11）Docker环境安装" class="headerlink" title="（11）Docker环境安装"></a>（11）Docker环境安装</h4><h4 id="（12）Kubernetes集群安装部署"><a href="#（12）Kubernetes集群安装部署" class="headerlink" title="（12）Kubernetes集群安装部署"></a>（12）Kubernetes集群安装部署</h4><h4 id="（13）Elasticsearch集群安装部署"><a href="#（13）Elasticsearch集群安装部署" class="headerlink" title="（13）Elasticsearch集群安装部署"></a>（13）Elasticsearch集群安装部署</h4><h4 id="（14）ZooKeeper安装部署"><a href="#（14）ZooKeeper安装部署" class="headerlink" title="（14）ZooKeeper安装部署"></a>（14）ZooKeeper安装部署</h4><h4 id="（15）消息队列kafka安装部署"><a href="#（15）消息队列kafka安装部署" class="headerlink" title="（15）消息队列kafka安装部署"></a>（15）消息队列kafka安装部署</h4><h2 id="第十一章、前后端分离项目ruoyi部署"><a href="#第十一章、前后端分离项目ruoyi部署" class="headerlink" title="第十一章、前后端分离项目ruoyi部署"></a>第十一章、前后端分离项目ruoyi部署</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/JavaScript.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -615,7 +1572,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-12 18:03:38" itemprop="dateModified" datetime="2020-05-12T18:03:38Z">2020-05-12</time>
+                <time title="修改时间：2020-05-25 03:15:30" itemprop="dateModified" datetime="2020-05-25T03:15:30Z">2020-05-25</time>
               </span>
 
           <br>
@@ -702,7 +1659,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT last_name,salary,email FROM employees;</span><br></pre></td></tr></table></figure>
 
 <p><strong>3.查询表中的所有字段</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1）方式一：SELECT &#96;first_name&#96;</span><br><span class="line">				&#96;last_name&#96;</span><br><span class="line">				&#96;email&#96;</span><br><span class="line">				&#96;phone_number&#96;</span><br><span class="line">				&#96;job_id&#96;&#96;salary&#96;</span><br><span class="line">				&#96;commission_pct&#96;</span><br><span class="line">				&#96;manager_id&#96;</span><br><span class="line">				&#96;department_id&#96;</span><br><span class="line">				&#96;hiredate&#96; </span><br><span class="line">FROM employees;</span><br><span class="line"></span><br><span class="line">2）方式二：SELECT * FROM employees;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1）方式一：</span><br><span class="line">SELECT &#96;first_name&#96;</span><br><span class="line">		&#96;last_name&#96;</span><br><span class="line">		&#96;email&#96;</span><br><span class="line">		&#96;phone_number&#96;</span><br><span class="line">		&#96;job_id&#96;&#96;salary&#96;</span><br><span class="line">		&#96;commission_pct&#96;</span><br><span class="line">		&#96;manager_id&#96;</span><br><span class="line">		&#96;department_id&#96;</span><br><span class="line">		&#96;hiredate&#96; </span><br><span class="line">FROM employees;</span><br><span class="line"></span><br><span class="line">2）方式二：SELECT * FROM employees;</span><br></pre></td></tr></table></figure>
 <p><strong>4.查询常量值</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT 100;</span><br><span class="line">SELECT &#39;john&#39;;</span><br></pre></td></tr></table></figure>
 
@@ -794,34 +1751,6 @@
 
 <p>​                （5）流程控制函数[补充]</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">switch(变量或表达式)&#123;</span><br><span class="line">		case 常量1:语句;break;</span><br><span class="line">		...</span><br><span class="line">		default:语句;break;</span><br><span class="line">&#125;</span><br><span class="line">mysql中</span><br><span class="line">		case 要判断的字段或表达式</span><br><span class="line">		when 常量1	then要显示的值1或表达式1</span><br><span class="line">		when 常量2	then要显示的值2或表达式2</span><br><span class="line">		...</span><br><span class="line">		else	</span><br><span class="line">		end case	</span><br><span class="line">#1.if函数：if else 的效果，类似于三元运算符 判断? 表达式1:表达式2</span><br><span class="line">SELECT</span><br><span class="line">	IF(10&gt;5,&#39;大&#39;,&#39;小&#39;);</span><br><span class="line"></span><br><span class="line">#查询员工奖金状态</span><br><span class="line">SELECT</span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名,</span><br><span class="line">	commission_pct,</span><br><span class="line">IF(commission_pct IS NOT NULL,&#39;有奖金&#39;,&#39;无奖金&#39;) AS 奖金状态</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	commission_pct ASC</span><br><span class="line"></span><br><span class="line">#2.case函数</span><br><span class="line">#使用一： switch case</span><br><span class="line">#案例1：查询员工工资，要求：</span><br><span class="line">#部门号&#x3D;30，显示工资为1.1倍</span><br><span class="line">#部门号&#x3D;40，显示工资为1.2倍</span><br><span class="line">#部门号&#x3D;50，显示工资为1.3倍</span><br><span class="line">#其他部门		显示工资为原工资</span><br><span class="line">SELECT</span><br><span class="line">	salary AS 原始工资,</span><br><span class="line">	department_id AS 部门号,</span><br><span class="line">	CASE department_id</span><br><span class="line">	WHEN  30 THEN salary*1.1</span><br><span class="line">	WHEN  40 THEN salary*1.2</span><br><span class="line">	WHEN  50 THEN salary*1.3</span><br><span class="line">	ELSE</span><br><span class="line">		salary</span><br><span class="line">END AS 显示工资</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	部门号 asc,显示工资 asc</span><br><span class="line">#使用二：多重if	if()&#123;&#125;else if()&#123;&#125; else&#123;&#125;</span><br><span class="line">#case</span><br><span class="line">#when	条件1	then</span><br><span class="line">#when 条件2	then</span><br><span class="line">#else</span><br><span class="line">#end</span><br><span class="line">#案例2：查询员工工资的情况</span><br><span class="line">#工资&gt;20000，A级</span><br><span class="line">#工资&gt;15000，B级</span><br><span class="line">#工资&gt;10000，C级</span><br><span class="line">#否则，D级</span><br><span class="line">SELECT</span><br><span class="line">	salary AS 工资,</span><br><span class="line">	last_name AS 姓氏,</span><br><span class="line">CASE </span><br><span class="line">	WHEN salary&gt;20000 THEN</span><br><span class="line">		&#39;A级&#39;</span><br><span class="line">	WHEN salary&gt;15000 THEN</span><br><span class="line">		&#39;B级&#39;</span><br><span class="line">	WHEN salary&gt;10000 THEN</span><br><span class="line">		&#39;C级&#39;</span><br><span class="line">	ELSE</span><br><span class="line">		&#39;D级&#39;</span><br><span class="line">END AS 级别</span><br><span class="line">FROM</span><br><span class="line">	employees</span><br><span class="line">ORDER BY</span><br><span class="line">	salary desc;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4032,282 +4961,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/Linux.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bluesky0420">
-      <meta itemprop="description" content="编程，学习，动漫，分享新鲜事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bluesky の Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/uncategorized/Linux.html" class="post-title-link" itemprop="url">Linux</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-02 12:47:14 / 修改时间：13:02:30" itemprop="dateCreated datePublished" datetime="2020-05-02T12:47:14Z">2020-05-02</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <center style = "font-size:30px; font-weight: 600;">Linux</center>
-
-
-<h2 id="Linux背景介绍"><a href="#Linux背景介绍" class="headerlink" title="Linux背景介绍"></a><strong>Linux背景介绍</strong></h2><p><strong>1.什么是Linux</strong></p>
-<p>​        linus编写的开源操作系统内核</p>
-<p>​        广义的操作系统</p>
-<p><strong>2.执行环境</strong></p>
-<p>​        云主机</p>
-<p>​        无数据的PC（不推荐多系统）</p>
-<p>​        虚拟机（推荐方式）</p>
-<p><strong>3.Linux版本</strong></p>
-<p>​        内核版本</p>
-<p>​                主版本号、次版本号、末版本号</p>
-<p>​                次版本号是奇数位开发版本、偶数为稳定版本</p>
-<p>​        发行版本</p>
-<p>​                Redhat、fedora、CtenOS、</p>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><strong>操作系统</strong></h2><p><strong>1.终端的使用</strong></p>
-<p>​        图形终端</p>
-<p>​        命令行终端</p>
-<p>​        远程终端(ssh，vnc)</p>
-<p>​        init 0 ：关机命令</p>
-<p>​        init 3：命令行终端            </p>
-<p><strong>2.常用目录结构</strong></p>
-<p>​        ls命令查看目录</p>
-<p>​        / 根目录</p>
-<p>​        /root    root用户的家目录</p>
-<p>​        /home/username    普通用户的家目录</p>
-<p>​        /etc    配置文件</p>
-<p>​        /bin    命令目录</p>
-<p>​        /sbin    管理命令目录</p>
-<p>​        /usr/bin/usr/sbin    系统预装的其他命令</p>
-<p><strong>3.万能的帮助命令</strong></p>
-<p>​        man    帮助</p>
-<p>​                man是manual的缩写</p>
-<p>​                man帮助的用法</p>
-<p>​                        man 命令</p>
-<p>​                man也是一条命令，分为九章，可以使用命令获得man的帮助</p>
-<p>​                        man 7 man</p>
-<p>​                因为命令的帮助有不同的篇章所以可以使用man 章节 man进行查找对应章节的帮助</p>
-<p>​        help    帮助</p>
-<p>​                shell（命令解释器）自带的命令称为内部命令，其他命令就是外部命令</p>
-<p>​                内部命令使用help帮助：help 命令</p>
-<p>​                外部命令使用help帮助：命令 –help</p>
-<p>​                如何区分内部命令和外部命令：type 命令</p>
-<p>​        info     帮助</p>
-<p>​                info帮助比help帮助更详细，作为help帮助的补充</p>
-<p>​                info 命令</p>
-<p>​        使用网络资源（搜索引擎和官方文档）</p>
-<p><strong>4.文件管理（一切皆文件）</strong></p>
-<p>​        文件查看</p>
-<p>​                pwd    显示当前目录的名称</p>
-<p>​                cd    更改当前的操作目录</p>
-<p>​                    cd/path/to/ —- 绝对路径，从根目录开始</p>
-<p>​                    cd./path/to/ —-相对路径，从当前目录</p>
-<p>​                    cd../path/to/ —相对路径，从上级目录</p>
-<p>​                    cd - ：回到原来目录</p>
-<p>​                    cd：回到根目录</p>
-<p>​                ls    查看当前目录下的文件</p>
-<p>​                    ls -l .    显示详细文件文件夹</p>
-<p>​                    ls -a    显示隐藏文件文件夹</p>
-<p>​                    ls -R    递归显示，多级递归查看</p>
-<p>​                    ls -r    逆向显示</p>
-<p>​                    ls -t    按时间显示</p>
-<p>​                    ls -l -r  隐藏文件逆向显示</p>
-<p>​                    ls -l -r -t 隐藏文件按时间逆向显示</p>
-<p>​                    命令可以连起来用不用加空格    ls -altrR</p>
-<p>​                su -root切换为root用户</p>
-<p>​        目录文件的创建与删除</p>
-<p>​                mkdir 目录：创建目录，可创建多个目录</p>
-<p>​                mkdir -p：创建多级目录</p>
-<p>​                touch：创建文件默认文件是文本文件，可创建多个文件</p>
-<p>​                rmdir：删除目录</p>
-<p>​                rm -r：删除多个目录包括空目录，但是系统会确认你是否删除</p>
-<p>​                rm -f：不需要确认删除文件</p>
-<p>​        通配符</p>
-<p>​                *：当前目录的所有文件、？：匹配一个字符</p>
-<p>​        文件操作</p>
-<p>​                复制文件</p>
-<p>​                        cp：单独使用cp只能复制文件</p>
-<p>​                        cp -r：复制目录</p>
-<p>​                        cp - v：显示复制文件的内容</p>
-<p>​                        cp -p：保留文件原有时间的状态</p>
-<p>​                        cp -a：保留权限和时间状态</p>
-<p>​                移动文件，重命名：</p>
-<p>​                        mv  /tmp/filea /fileb</p>
-<p>​        文件内容查看</p>
-<p>​                文本查看命令</p>
-<p>​                        cat：文本内容显示到终端</p>
-<p>​                        head：查看文件开头    可以指定行数    默认10行</p>
-<p>​                        tail：查看文件结尾    默认10行    可以指定行数</p>
-<p>​                                常用参数 -f 文件内容更新，显示信息同步更新</p>
-<p>​                        wc：统计文件内容信息        </p>
-<p>​                                wc -l：统计文件行数信息</p>
-<p>​                        more：多行显示</p>
-<p>​                        less</p>
-<p><strong>5.打包与压缩</strong></p>
-<p>​        Linux的备份压缩</p>
-<p>​        最早的Linux的备份介质是磁带，使用的命令是tar    cf</p>
-<p>​        例如：在home/username目录下将Java文件打包成Javademo.tar的命令为tar cf Javademo.tar Java</p>
-<p>​        可以打包后的磁带文件进行解压存储，压缩命令是gzip和bzip2</p>
-<p>​        经常用到的扩展名是.tar.gz (tar czf)    .tar.bz2(tar cjf)    .tgz</p>
-<p>​            打包:</p>
-<p>​                    tar打包命令</p>
-<p>​                    常用参数：c打包，f指定操作类型为文件，x解包</p>
-<p>​            压缩：</p>
-<p>​                    tar czf    压缩文件名    需压缩的文件名</p>
-<p>​                    tar cjf    压缩文件名    需压缩的文件名</p>
-<p>​            解压：</p>
-<p>​                    tar zxf    解压文件    解压后的文件名</p>
-<p>​                    tar jxf    解压文件    解压后的文件名</p>
-<p><strong>6.文本编辑器</strong></p>
-<p>​        多模式文本编辑器</p>
-<p>​                多模式产生的原因</p>
-<p>​                四种模式</p>
-<p>​                        正常模式（Normal-mode）mode</p>
-<p>​                        插入模式（insert-mode）insert-mode</p>
-<p>​                                常用命令：</p>
-<p>​                                        ：wq    保存退出</p>
-<p>​                                        ：q!    不保存退出</p>
-<p>​                                        复制，粘贴：</p>
-<p>​                                                单行复制：yy    粘贴p    </p>
-<p>​                                                多行复制：行数yy    粘贴p    </p>
-<p>​                                                单行文本复制指定位置到结尾：y$</p>
-<p>​                                        剪切：dd 剪切指定位置到结尾d$</p>
-<p>​                                        撤销指令：u</p>
-<p>​                                        将撤销的指令进行重做    ctrl+r</p>
-<p>​                                        删除指定的字符：选择指定的字符按x</p>
-<p>​                                        更改指定的字符：选择指定的字符按r输入你想输入的字符</p>
-<p>​                                        显示当前所在的行数：set nu</p>
-<p>​                                        光标的移动：</p>
-<p>​                                                hjkl    hl左右jk上下p</p>
-<p>​                                                shift+6光标回到当行的第一位，shift+4回到当前行的最后一个位置    </p>
-<p>​                        命令模式（command-mode）</p>
-<p>​                                :命令</p>
-<p>​                                查找命令 :/需查找的字符    向下查找 n    向上查找shift + n</p>
-<p>​                                替换命令:s/old/new    整个文本进行替换：%s/old/new/g    指定行数之间替换 line，line  s/old/new</p>
-<p>​                                修改vim：set nu：行数</p>
-<p>​                        可视模式（visual-mode）</p>
-<p>​                                三种进行可视模式的方法</p>
-<p>​                                        v    字符可视模式</p>
-<p>​                                        V    行可视模式</p>
-<p>​                                        ctrl+v    块可视模式</p>
-<p>​                                                配合d和大写I命令可以进行块的便利操作</p>
-<p><strong>7.用户和权限管理</strong>（不熟，整体过一遍再回头学一遍）</p>
-<p>​            <strong>用户管理常用命令</strong></p>
-<p>​                    useradd    新建用户</p>
-<p>​                            只有使用管理员用户来创建新用户</p>
-<p>​                            id命令用来验证    是否具有这个用户</p>
-<p>​                            /etc/shadow存放用户的相关信息</p>
-<p>​                    userdel    删除用户</p>
-<p>​                            userdel -r删除用户家目录，如果没有-r选项就不会删除家目录，且只有root用户才具有对该目录的操作权限</p>
-<p>​                    passwd    修改用户密码</p>
-<p>​                    usermod    修改用户属性</p>
-<p>​                            usermod -d修改用户的家目录</p>
-<p>​                            usermod -g group user修改用户的用户组</p>
-<p>​                            具体选项请用man命令查看</p>
-<p>​                    chage    修改用户属性</p>
-<p>​                    groupadd：添加用户组</p>
-<p>​                    groupdel：删除用户组</p>
-<p>​            <strong>用户切换</strong>                </p>
-<p>​                    su：用户切换，临时切换</p>
-<p>​                            su - user    切换普通用户</p>
-<p>​                            su root       切换到root用户    </p>
-<p>​                    sudo：可以赋予非管理员用户一些执行权限</p>
-<p>​                            visudo    设置需要使用sudo的用户（组）            </p>
-<p>​            <strong>用户组和用户的配置文件介绍</strong></p>
-<p>​                    vim /etc/passwd    </p>
-<p>​                    vim /etc/shadow</p>
-<p>​                    vim/etc/group</p>
-<p>​            <strong>文件与目录权限</strong><img src="C:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.jpg" alt="文件权限"></p>
-<p>​                    文件类型</p>
-<p>​                            — 普通文件</p>
-<p>​                            d    目录文件</p>
-<p>​                            b    块特殊文件</p>
-<p>​                            c    字符特殊文件</p>
-<p>​                            l    符连接</p>
-<p>​                            f    命名管道</p>
-<p>​                            s    套接字文件</p>
-<p>​                    字符权限表示方法</p>
-<p>​                            r    读</p>
-<p>​                            w    写</p>
-<p>​                            x    执行</p>
-<p>​                    数字权限的表示方法</p>
-<p>​                            r    4</p>
-<p>​                            w    2</p>
-<p>​                            x    1</p>
-<p><img src="C:%5CUsers%5C12082%5CDesktop%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CLinux%5C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%901.jpg" alt=""></p>
-<p>​                    修改权限命令</p>
-<p>​                            chmod    修改文件、目录权限</p>
-<p>​                                    chmod u+x/tmp/testfile：为属主添加权限</p>
-<p>​                                    chmod g-r    testfile：为属组减少权限</p>
-<p>​                                    chmod o=w testfile：为其他位置设置权限</p>
-<p>​                                    chmod a+r testfile：为所有位置添加权限</p>
-<p>​                                    chmod 755 /tmp/testfile：数字权限的使用方法</p>
-<p>​                            chown    更改属主、属组</p>
-<p>​                                    chown user /test</p>
-<p>​                                    chown :group /test</p>
-<p>​                            chgrp    可以单独更改属组，不常用</p>
-<p>​                    特殊权限</p>
-<p>​                            SUID    用于二进制可执行文件，执行命令时取得文件属主权限</p>
-<p>​                                    如/usr/bin/passwd</p>
-<p>​                            SGID    用于目录，在该目录下创建心得文件和目录，权限自动更改为该目录的属组</p>
-<p>​                            SBIT    用于目录，在该目录下的文件和目录，仅root和自己可以删除</p>
-<p>​                                    如：/tmp    </p>
-<h2 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a><strong>服务管理</strong></h2><h2 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a><strong>shell脚本</strong></h2><h2 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a><strong>文本操作</strong></h2><h2 id="常用服务搭建"><a href="#常用服务搭建" class="headerlink" title="常用服务搭建"></a><strong>常用服务搭建</strong></h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://bluesky.com/uncategorized/Java%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -4817,13 +5470,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">95k</span>
+    <span title="站点总字数">119k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:27</span>
+    <span title="站点阅读时长">1:48</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

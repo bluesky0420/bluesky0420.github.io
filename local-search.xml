@@ -35,9 +35,9 @@
   
   
   <entry>
-    <title>Pages搭建自动化博客网站</title>
-    <link href="/Hexo/2024-01-23/pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
-    <url>/Hexo/2024-01-23/pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
+    <title>Obsidian+Hexo+GitHub Pages搭建自动化博客网站</title>
+    <link href="/Hexo/2024-01-23/obsidian-hexo-github-pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
+    <url>/Hexo/2024-01-23/obsidian-hexo-github-pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
     
     <content type="html"><![CDATA[<h1 id="Obsidian-Hexo-GitHub-Pages搭建自动化博客网站"><a href="#Obsidian-Hexo-GitHub-Pages搭建自动化博客网站" class="headerlink" title="Obsidian+Hexo+GitHub Pages搭建自动化博客网站"></a>Obsidian+Hexo+GitHub Pages搭建自动化博客网站</h1><p>我期望使用Obsidian+Hexo+GitHub Pages搭建一个自动化博客网站，使用Obsidian编写博客文章，使用Hexo生成静态网页，使用GitHub Pages部署静态网页，具体需求如下：</p><ol><li><p>创建一个Obsidian vault用来存放博客分类目录、草稿箱、博客文章，主要功能有：</p><ol><li>创建、修改、删除、移动非草稿箱的博客分类目录、博客文章，自动将分类目录和其文章实时同步到Hexo博客source&#x2F;_posts&#x2F;目录下（除草稿箱、.git、.trash、.obsidian）；</li><li>创建、修改、删除、移动草稿箱及其文章实时同步到Hexo博客的source&#x2F;_drafts&#x2F;目录下；</li><li>在Obsidian创建非草稿博客文章时自动为其front matter中的categories字段添加为当前博客分类的目录名，title字段的值添加为当前的博客名，date字段的值添加为文件的创建时间精确到秒，layout字段的值添加为post；</li><li>在移动博客到其他非草稿箱的博客分类目录中时也将其front matter中categories字段修改为当前分类目录名；</li><li>将非草稿箱博客移动到草稿箱目录时将其front matter中layout字段修改为draft，date字段修改为空；</li><li>在草稿箱创建的博客文章不用为其front matter字段中的categories，date添加值，需要添加layout字段为draft，title字段的值添加为当前的博客名；</li><li>将草稿箱博客移动到其他非草稿箱的博客分类目录中时也将其front matter中categories字段修改为当前分类目录名，date字段的值添加为文件的移动时间精确到秒；</li><li>如果创建博客文章时未在分类目录中创建则front matter不用指定categories字段值即值为空，layout值为post，date值为创建时间精确到秒，title值为博客名；</li><li>在Obsidian中手动修改文章的front matter值以上规则也生效；</li><li>Obsidian中的任何符合以上规则的变更都实时同步到Hexo中，且Hexo中的任何符合以上规则的变更都实时同步到Obsidian中，两种是实时双向同步的；</li></ol></li><li><p>创建一个Hexo博客用来接收从Obsidian vault同步过来的博客文章并生成静态网页，主要功能有：</p><ol><li>在创建非草稿博客文章时，也就是在使用hexo new [post] title时可以指定分类名，例如：hexo new post title -categories “category1,category2,…”，指定分类名后，将博客front matter中的categories添加为指定的分类名，并将博客移动到分类目录中，如果不存在这个目录就创建一个同名目录在将文章移动目录中，这个过程也是实时同步到Obsidian中的；</li><li>在创建博客文章时，也就是说在hexo new [layout] title时可以指定博客文章的标签，例如：hexo new [layout] title -tags “tag1,tag2,…”；</li></ol></li><li><p>后台自动检测博客是否存在变更行为，则在停止变更行为,变更后未进行操作后10分钟自动执行清理（hexo clean）、生成（hexo generate）、部署（hexo deploy）操作将网页部署到GitHub Pages</p></li></ol>]]></content>
     

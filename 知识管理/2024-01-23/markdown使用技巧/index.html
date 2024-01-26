@@ -26,7 +26,7 @@
 <meta property="og:description" content="Markdown使用技巧基础语法标题123456# 一级标题（H1）## 二级标题（H2）### 三级标题（H3）#### 四级标题（H4）##### 五级标题（H5）###### 六级标题（H6） 段落1234this is paragraph onethis is paragraph two创建段落需要使用空白行将一行或多行文本隔开，不要使用空格（spaces）和制表符（tabs）缩进段落。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-23T11:53:47.000Z">
-<meta property="article:modified_time" content="2024-01-23T12:15:44.007Z">
+<meta property="article:modified_time" content="2024-01-26T09:27:38.520Z">
 <meta property="article:author" content="bluesky0420">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary_large_image">
@@ -337,7 +337,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年1月23日 晚上
+                    本文最后更新于 2024年1月26日 下午
                   
                 
               </p>
@@ -357,7 +357,7 @@
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">插入图片<br>![<span class="hljs-string">图片alt</span>](<span class="hljs-link">图片链接 &quot;图片title&quot;</span>)<br>链接图片<br>[<span class="hljs-string">![图片alt</span>](<span class="hljs-link">图片资源链接 &quot;图片title&quot;</span>)](<span class="hljs-link">链接地址</span>)<br></code></pre></td></tr></table></figure>
 <h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">由于Markdown语法中将很多符号都赋予了特殊的功能所以当我们想要保留符号的原格式就需要在符号前加上转义字符&quot;\&quot;<br>\转移字符的使用<br>\&gt;<br>\#<br></code></pre></td></tr></table></figure>
 <h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">对于Markdown涵盖范围之外的标签可以直接使用HTML标签作用到Markdown文本中<br>This is a regular paragraph.<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="hljs-code">    &lt;tr&gt;</span><br><span class="hljs-code">        &lt;td&gt;Foo&lt;/td&gt;</span><br><span class="hljs-code">    &lt;/tr&gt;</span><br><span class="hljs-code">&lt;/table&gt;</span><br><span class="hljs-code"></span><br>This is another regular paragraph.<br></code></pre></td></tr></table></figure>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">使用三个或多个连字符（---）创建每列的标题，并使用管道（|）分隔每列<br>通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心<br>| Syntax    | Description |   Test Text |<br>| :-------- | :---------: | ----------: |<br>| Header    |    Title    | Here&#x27;s this |<br>| Paragraph |    Text     |    And more |<br></code></pre></td></tr></table></figure>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">使用三个或多个连字符（---）创建每列的标题，并使用管道（|）分隔每列<br>通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心<br>| Syntax      | Description | Test Text     |<br>| :---        |    :---:   |          ---: |<br>| Header      | Title       | Here&#x27;s this   |<br>| Paragraph   | Text        | And more      |<br></code></pre></td></tr></table></figure>
 <h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs markdown">当我们需要对一些内容添加注释和参考时我可以使用脚注这样不会使文档正文混乱。  <br>创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。可以单击链接以跳至页面底部的脚注内容。  <br>要创建脚注参考，请在方括号（[^1]）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。<br>Here&#x27;s a simple footnote,[^1] and here&#x27;s a longer one.[^bignote]<br><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">This is the first footnote.</span><br><br>[<span class="hljs-symbol">^bignote</span>]: <span class="hljs-link">Here&#x27;s one with multiple paragraphs and code.</span><br><br><span class="hljs-code">    Indent paragraphs to include them in the footnote.</span><br><span class="hljs-code"></span><br><span class="hljs-code">    `&#123; my code &#125;`</span><br><span class="hljs-code"></span><br><span class="hljs-code">    Add as many paragraphs as you like.</span><br></code></pre></td></tr></table></figure>
 <h3 id="Emoji表情"><a href="#Emoji表情" class="headerlink" title="Emoji表情"></a>Emoji表情</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">在我们需要表达心情或者其他情况下需要在markdown中使用表情符号，在markdown中使用表情符号有两中方法：1、将表情符号直接复制粘贴到markdown文本中。2、键入emoji shortcodes。大多数情况下我们都是使用复制粘贴，但是并不排除需要使用Emoji表情的情况，Emoji表情格式为：:表情名:<br>微笑：:smile:<br>笑哭：:joy:<br></code></pre></td></tr></table></figure>
 <h2 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h2><h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Gamma公式展示 $\Gamma(n) = (n-1)!\quad\forall<br>n\in\mathbb N$ 是通过 Euler integral<br><br>$$<br>\Gamma(z) = \int<span class="hljs-emphasis">_0^\infty t^&#123;z-1&#125;e^&#123;-t&#125;dt\,.</span><br><span class="hljs-emphasis">$$</span><br></code></pre></td></tr></table></figure>
@@ -429,7 +429,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年1月23日</div>
+          <div>2024年1月26日</div>
         </div>
       
       
@@ -470,8 +470,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E6%95%88%E7%8E%87/2024-01-23/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键">
-                        <span class="hidden-mobile">快捷键</span>
+                      <a href="/%E6%95%88%E7%8E%87/2024-01-23/windows10-%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="Windows10 快捷键">
+                        <span class="hidden-mobile">Windows10 快捷键</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -482,6 +482,33 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"39e561091495b0b49f54","clientSecret":"9491039d49ac7009353d189c394633ba86495936","repo":"git@github.com:bluesky0420/hexo-blog-comments.git","owner":"bluesky0420","admin":["bluesky0420"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'af87ed062ec911ccb1746396af132fa5'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>

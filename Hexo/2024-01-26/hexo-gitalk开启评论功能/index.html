@@ -18,15 +18,15 @@
   <meta name="author" content="bluesky0420">
   <meta name="keywords" content="Java,Front-end,Back-end,Databases,Windows,Linux,Computer Fundamentals,C#,Networking">
   
-    <meta name="description" content="创建一个访问权限为public的GitHub仓库hexo-blog-comments，用来存储评论数据 创建一个GitHub Application用来授权Gitalk访问GitHub API Hexo中安装Gitalk插件，npm install gitalk --save hexo在配置文件_config.yml中配置Gitalk，以下是具体配置项（若主题配置文件中存在gitalk配置项优先">
+    <meta name="description" content="创建一个访问权限为public的GitHub仓库hexo-blog-comments，用来存储评论数据 创建一个GitHub Application用来授权Gitalk访问GitHub API（注意Homepage URL和Authorization callback URL都填你博客的访问地址） Hexo中安装Gitalk插件，npm install gitalk --save hexo在配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Gitalk开启评论功能">
 <meta property="og:url" content="https://bluesky0420.github.io/Hexo/2024-01-26/hexo-gitalk%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="Bluesky0420 の Blog">
-<meta property="og:description" content="创建一个访问权限为public的GitHub仓库hexo-blog-comments，用来存储评论数据 创建一个GitHub Application用来授权Gitalk访问GitHub API Hexo中安装Gitalk插件，npm install gitalk --save hexo在配置文件_config.yml中配置Gitalk，以下是具体配置项（若主题配置文件中存在gitalk配置项优先">
+<meta property="og:description" content="创建一个访问权限为public的GitHub仓库hexo-blog-comments，用来存储评论数据 创建一个GitHub Application用来授权Gitalk访问GitHub API（注意Homepage URL和Authorization callback URL都填你博客的访问地址） Hexo中安装Gitalk插件，npm install gitalk --save hexo在配置">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-26T09:20:10.000Z">
-<meta property="article:modified_time" content="2024-01-26T09:30:57.207Z">
+<meta property="article:modified_time" content="2024-01-26T13:07:41.336Z">
 <meta property="article:author" content="bluesky0420">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="评论">
@@ -278,7 +278,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          169 字
+          184 字
         
       </span>
     
@@ -339,7 +339,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年1月26日 下午
+                    本文最后更新于 2024年1月26日 晚上
                   
                 
               </p>
@@ -349,7 +349,7 @@
                 
                 <ol>
 <li>创建一个访问权限为public的GitHub仓库hexo-blog-comments，用来存储评论数据</li>
-<li>创建一个GitHub Application用来授权Gitalk访问GitHub API</li>
+<li>创建一个GitHub Application用来授权Gitalk访问GitHub API（注意Homepage URL和Authorization callback URL都填你博客的访问地址）</li>
 <li>Hexo中安装Gitalk插件，<code>npm install gitalk --save</code></li>
 <li>hexo在配置文件_config.yml中配置Gitalk，以下是具体配置项（若主题配置文件中存在gitalk配置项优先考虑主题配置）<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">comments:</span><br>  <span class="hljs-attr">gitalk:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">clientID:</span> <span class="hljs-string">YourGitHubAppClientID</span> <span class="hljs-comment"># 通过GitHub Application获取</span><br>    <span class="hljs-attr">clientSecret:</span> <span class="hljs-string">YourGitHubAppClientSecret</span> <span class="hljs-comment"># 通过GitHub Application获取</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">blog-comments</span>  <span class="hljs-comment"># 这里指定你创建的仓库名</span><br>    <span class="hljs-attr">owner:</span> <span class="hljs-string">YourGitHubUsername</span><br>    <span class="hljs-attr">admin:</span> <span class="hljs-string">YourGitHubUsername</span><br>    <span class="hljs-attr">distractionFreeMode:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure></li>
 <li>将需要开启评论功能博客的front matter添加comments字段，并设置值为true</li>

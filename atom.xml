@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bluesky0420 の Blog</title>
+  
+  <subtitle>Sharing my thoughts and experiences in the world of technology</subtitle>
+  <link href="https://bluesky0420.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://bluesky0420.github.io/"/>
+  <updated>2024-01-31T02:57:59.480Z</updated>
+  <id>https://bluesky0420.github.io/</id>
+  
+  <author>
+    <name>bluesky0420</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>创建SSH密码并添加到GitHub</title>
+    <link href="https://bluesky0420.github.io/Tips/2024-01-26/%E5%88%9B%E5%BB%BAssh%E5%AF%86%E7%A0%81%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0github/"/>
+    <id>https://bluesky0420.github.io/Tips/2024-01-26/%E5%88%9B%E5%BB%BAssh%E5%AF%86%E7%A0%81%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0github/</id>
+    <published>2024-01-26T09:21:52.000Z</published>
+    <updated>2024-01-31T02:57:59.480Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创建SSH密钥并添加到GitHub&quot;&gt;&lt;a href=&quot;#创建SSH密钥并添加到GitHub&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Tips" scheme="https://bluesky0420.github.io/categories/Tips/"/>
+    
+    
+    <category term="解决方法" scheme="https://bluesky0420.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Gitalk开启评论功能</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-26/hexo-gitalk%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-26/hexo-gitalk%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</id>
+    <published>2024-01-26T09:20:10.000Z</published>
+    <updated>2024-01-27T05:16:21.702Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;【参考链接】：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="评论" scheme="https://bluesky0420.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+    <category term="gitalk" scheme="https://bluesky0420.github.io/tags/gitalk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>问题记录</title>
+    <link href="https://bluesky0420.github.io/Tips/2024-01-26/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>https://bluesky0420.github.io/Tips/2024-01-26/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2024-01-26T08:19:43.000Z</published>
+    <updated>2024-01-30T14:31:03.619Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;使用hexo向GitHub仓库提交文件时出现这个错误：fatal: unable to access ‘&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Tips" scheme="https://bluesky0420.github.io/categories/Tips/"/>
+    
+    
+    <category term="解决方法" scheme="https://bluesky0420.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="问题记录" scheme="https://bluesky0420.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跨浏览器备份书签</title>
+    <link href="https://bluesky0420.github.io/Tips/2024-01-26/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%87%E4%BB%BD%E4%B9%A6%E7%AD%BE/"/>
+    <id>https://bluesky0420.github.io/Tips/2024-01-26/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%87%E4%BB%BD%E4%B9%A6%E7%AD%BE/</id>
+    <published>2024-01-26T08:18:12.000Z</published>
+    <updated>2024-01-26T09:38:20.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;跨浏览器备份书签&quot;&gt;&lt;a href=&quot;#跨浏览器备份书签&quot; class=&quot;headerlink&quot; title=&quot;跨浏览器备份书签&quot;&gt;&lt;/a&gt;跨浏览器备份书签&lt;/h1&gt;&lt;p&gt;【说明】：博主使用的是Google</summary>
+        
+      
+    
+    
+    
+    <category term="Tips" scheme="https://bluesky0420.github.io/categories/Tips/"/>
+    
+    
+    <category term="书签" scheme="https://bluesky0420.github.io/tags/%E4%B9%A6%E7%AD%BE/"/>
+    
+    <category term="跨浏览器" scheme="https://bluesky0420.github.io/tags/%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    <category term="同步" scheme="https://bluesky0420.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>磁盘数据容灾备份</title>
+    <link href="https://bluesky0420.github.io/Tips/2024-01-23/%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%AE%B9%E7%81%BE%E5%A4%87%E4%BB%BD/"/>
+    <id>https://bluesky0420.github.io/Tips/2024-01-23/%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%AE%B9%E7%81%BE%E5%A4%87%E4%BB%BD/</id>
+    <published>2024-01-23T11:55:18.000Z</published>
+    <updated>2024-01-26T09:37:41.212Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;本地主盘使用&amp;amp;存储&lt;/li&gt;
+&lt;li&gt;本地备盘定期备份（U盘移动设备）–本地冷备&lt;/li&gt;
+&lt;li&gt;本地备盘实时备份（本地NAS网络存储设备）–本地热备&lt;/li&gt;
+&lt;li&gt;异地云空间备份（其他城市网络存储设备-云主机等）-异地热备&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Tips" scheme="https://bluesky0420.github.io/categories/Tips/"/>
+    
+    
+    <category term="磁盘" scheme="https://bluesky0420.github.io/tags/%E7%A3%81%E7%9B%98/"/>
+    
+    <category term="数据" scheme="https://bluesky0420.github.io/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+    <category term="备份" scheme="https://bluesky0420.github.io/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+    <category term="容灾" scheme="https://bluesky0420.github.io/tags/%E5%AE%B9%E7%81%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Obsidian+Hexo+GitHub Pages搭建自动化博客网站</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-23/obsidian-hexo-github-pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-23/obsidian-hexo-github-pages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</id>
+    <published>2024-01-23T11:55:07.000Z</published>
+    <updated>2024-01-30T14:23:49.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Obsidian-Hexo-GitHub-Pages搭建自动化博客网站&quot;&gt;&lt;a href=&quot;#Obsidian-Hexo-GitHub-Pages搭建自动化博客网站&quot; class=&quot;headerlink&quot; title=&quot;Obsidian+Hexo+GitHub</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+    <category term="Obsidian" scheme="https://bluesky0420.github.io/tags/Obsidian/"/>
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
+    
+    <category term="自动化" scheme="https://bluesky0420.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="双向同步" scheme="https://bluesky0420.github.io/tags/%E5%8F%8C%E5%90%91%E5%90%8C%E6%AD%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo模式</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-23/hexo%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-23/hexo%E6%A8%A1%E5%BC%8F/</id>
+    <published>2024-01-23T11:55:01.000Z</published>
+    <updated>2024-01-26T09:31:42.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo模式&quot;&gt;&lt;a href=&quot;#Hexo模式&quot; class=&quot;headerlink&quot; title=&quot;Hexo模式&quot;&gt;&lt;/a&gt;Hexo模式&lt;/h1&gt;&lt;h2 id=&quot;安全模式&quot;&gt;&lt;a href=&quot;#安全模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo命令速查</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-23/hexo%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-23/hexo%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</id>
+    <published>2024-01-23T11:54:54.000Z</published>
+    <updated>2024-01-26T09:31:29.155Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo博客框架命令速查&quot;&gt;&lt;a href=&quot;#Hexo博客框架命令速查&quot; class=&quot;headerlink&quot; title=&quot;Hexo博客框架命令速查&quot;&gt;&lt;/a&gt;Hexo博客框架命令速查&lt;/h1&gt;&lt;h2 id=&quot;hexo-init&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="命令" scheme="https://bluesky0420.github.io/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+GitHub Pages搭建个人博客</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-23/hexo-github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-23/hexo-github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2024-01-23T11:54:49.000Z</published>
+    <updated>2024-01-27T05:47:00.033Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo-GitHub-Pages搭建个人博客&quot;&gt;&lt;a href=&quot;#Hexo-GitHub-Pages搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;Hexo+GitHub Pages搭建个人博客&quot;&gt;&lt;/a&gt;Hexo+GitHub</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub Pages创建个人网页</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-01-23/github-pages%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-01-23/github-pages%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5/</id>
+    <published>2024-01-23T11:54:42.000Z</published>
+    <updated>2024-01-26T09:54:56.698Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;创建博客仓库&lt;ul&gt;
+&lt;li&gt;仓库须以username.github.io规则进行命名&lt;/li&gt;
+&lt;li&gt;仓库须设置为公共仓库，否则会导致其他主机无法访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;设置博客仓库&lt;ul&gt;
+&lt;li&gt;选中这个仓库并点击设置选项&lt;/li</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+    <category term="网站" scheme="https://bluesky0420.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xmind</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/xmind/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/xmind/</id>
+    <published>2024-01-23T11:54:33.000Z</published>
+    <updated>2024-01-26T09:28:47.094Z</updated>
+    
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="思维导图" scheme="https://bluesky0420.github.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Onenote</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/onenote/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/onenote/</id>
+    <published>2024-01-23T11:54:26.000Z</published>
+    <updated>2024-01-26T09:53:58.250Z</updated>
+    
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="Onenote" scheme="https://bluesky0420.github.io/tags/Onenote/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Obsidian笔记备份方案</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/obsidian%E7%AC%94%E8%AE%B0%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/obsidian%E7%AC%94%E8%AE%B0%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/</id>
+    <published>2024-01-23T11:54:19.000Z</published>
+    <updated>2024-01-26T09:53:39.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;本地文件备份（本地主备）-本地文件库&lt;/li&gt;
+&lt;li&gt;本地移动硬盘定期备份（本地冷备）-本地文件库&lt;/li&gt;
+&lt;li&gt;云端备份-使用remotely-save插件+坚果云备份数据&lt;/li&gt;
+&lt;li&gt;git备份-使用obsidian-git插件+git+GitH</summary>
+        
+      
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="Obsidian" scheme="https://bluesky0420.github.io/tags/Obsidian/"/>
+    
+    <category term="备份" scheme="https://bluesky0420.github.io/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Obsidian</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/obsidian/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/obsidian/</id>
+    <published>2024-01-23T11:54:05.000Z</published>
+    <updated>2024-01-26T09:28:07.467Z</updated>
+    
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="Obsidian" scheme="https://bluesky0420.github.io/tags/Obsidian/"/>
+    
+    <category term="知识库" scheme="https://bluesky0420.github.io/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Notion</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/notion/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/notion/</id>
+    <published>2024-01-23T11:53:57.000Z</published>
+    <updated>2024-01-26T09:27:50.624Z</updated>
+    
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="项目管理" scheme="https://bluesky0420.github.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown使用技巧</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-01-23/markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <published>2024-01-23T11:53:47.000Z</published>
+    <updated>2024-01-26T09:27:38.520Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Markdown使用技巧&quot;&gt;&lt;a href=&quot;#Markdown使用技巧&quot; class=&quot;headerlink&quot; title=&quot;Markdown使用技巧&quot;&gt;&lt;/a&gt;Markdown使用技巧&lt;/h1&gt;&lt;h2 id=&quot;基础语法&quot;&gt;&lt;a href=&quot;#基础语法&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="markdown" scheme="https://bluesky0420.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows10 快捷键</title>
+    <link href="https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/windows10-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/windows10-%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2024-01-23T11:53:40.000Z</published>
+    <updated>2024-01-26T09:26:16.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Windows10-快捷键&quot;&gt;&lt;a href=&quot;#Windows10-快捷键&quot; class=&quot;headerlink&quot; title=&quot;Windows10 快捷键&quot;&gt;&lt;/a&gt;Windows10 快捷键&lt;/h1&gt;&lt;h2 id=&quot;1-复制、粘贴及其他常规快捷方式&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="效率" scheme="https://bluesky0420.github.io/categories/%E6%95%88%E7%8E%87/"/>
+    
+    
+    <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
+    
+    <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode使用技巧</title>
+    <link href="https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/vscode%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/vscode%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <published>2024-01-23T11:53:32.000Z</published>
+    <updated>2024-01-26T09:52:54.111Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;VSCode使用技巧（Window）&quot;&gt;&lt;a href=&quot;#VSCode使用技巧（Window）&quot; class=&quot;headerlink&quot; title=&quot;VSCode使用技巧（Window）&quot;&gt;&lt;/a&gt;VSCode使用技巧（Window）&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="效率" scheme="https://bluesky0420.github.io/categories/%E6%95%88%E7%8E%87/"/>
+    
+    
+    <category term="技巧" scheme="https://bluesky0420.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="VSCode" scheme="https://bluesky0420.github.io/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google chrome浏览器快捷方式</title>
+    <link href="https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/google-chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/"/>
+    <id>https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/google-chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/</id>
+    <published>2024-01-23T11:53:25.000Z</published>
+    <updated>2024-01-26T09:25:26.817Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Google浏览器快捷方式&quot;&gt;&lt;a href=&quot;#Google浏览器快捷方式&quot; class=&quot;headerlink&quot; title=&quot;Google浏览器快捷方式&quot;&gt;&lt;/a&gt;Google浏览器快捷方式&lt;/h1&gt;&lt;h2 id=&quot;Windows和Linux平台&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="效率" scheme="https://bluesky0420.github.io/categories/%E6%95%88%E7%8E%87/"/>
+    
+    
+    <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bash快捷方式</title>
+    <link href="https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/bash%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/"/>
+    <id>https://bluesky0420.github.io/%E6%95%88%E7%8E%87/2024-01-23/bash%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/</id>
+    <published>2024-01-23T11:53:17.000Z</published>
+    <updated>2024-01-26T09:24:29.808Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;bash快捷方式&quot;&gt;&lt;a href=&quot;#bash快捷方式&quot; class=&quot;headerlink&quot; title=&quot;bash快捷方式&quot;&gt;&lt;/a&gt;bash快捷方式&lt;/h1&gt;&lt;h2 id=&quot;编辑命令&quot;&gt;&lt;a href=&quot;#编辑命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="效率" scheme="https://bluesky0420.github.io/categories/%E6%95%88%E7%8E%87/"/>
+    
+    
+    <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+</feed>

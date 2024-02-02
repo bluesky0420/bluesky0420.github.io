@@ -19,24 +19,25 @@
   <meta name="author" content="bluesky0420">
   <meta name="keywords" content="Java,Front-end,Back-end,Databases,Windows,Linux,Computer Fundamentals,C#,Networking">
   
-    <meta name="description" content="创建SSH密钥并添加到GitHub【背景】：为了解决使用git提交文件到GitHub仓库是需要进行身份验证的流程 【说明】：以下方法同样适用与gitee和gitlab  在本地主机上创建ssh密钥，ssh-keygen -t rsa -C &quot;描述信息（一般为邮箱地址）&quot;（创建的ssh密钥一般存放到user&#x2F;.ssh&#x2F;id_rsa.pub，也可以自定义存放位置">
+    <meta name="description" content="Hexo+Fluid修改全局字体【说明】：本文使用「**霞鹜文楷**」这款免费开源的字体 【参考文章】：Hexo博客Fluid主题，字体全局更改为霞鹜文楷体【效率工具指南】、解决vscode不能识别ejs文件的问题  修改fluid主题文件，具体路径为fluid&#x2F;layout&#x2F;_partials&#x2F;head.ejs，在head标签内添加如下代码，通过引入CDN的方式使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建SSH密码并添加到GitHub">
-<meta property="og:url" content="https://bluesky0420.github.io/Tips/2024-01-26/%E5%88%9B%E5%BB%BAssh%E5%AF%86%E7%A0%81%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0github/index.html">
+<meta property="og:title" content="Hexo+Fluid修改全局字体">
+<meta property="og:url" content="https://bluesky0420.github.io/Hexo/2024-02-02/hexo-fluid%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E5%AD%97%E4%BD%93/index.html">
 <meta property="og:site_name" content="Bluesky0420 の Blog">
-<meta property="og:description" content="创建SSH密钥并添加到GitHub【背景】：为了解决使用git提交文件到GitHub仓库是需要进行身份验证的流程 【说明】：以下方法同样适用与gitee和gitlab  在本地主机上创建ssh密钥，ssh-keygen -t rsa -C &quot;描述信息（一般为邮箱地址）&quot;（创建的ssh密钥一般存放到user&#x2F;.ssh&#x2F;id_rsa.pub，也可以自定义存放位置">
+<meta property="og:description" content="Hexo+Fluid修改全局字体【说明】：本文使用「**霞鹜文楷**」这款免费开源的字体 【参考文章】：Hexo博客Fluid主题，字体全局更改为霞鹜文楷体【效率工具指南】、解决vscode不能识别ejs文件的问题  修改fluid主题文件，具体路径为fluid&#x2F;layout&#x2F;_partials&#x2F;head.ejs，在head标签内添加如下代码，通过引入CDN的方式使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-26T09:21:52.000Z">
-<meta property="article:modified_time" content="2024-01-31T02:57:59.480Z">
+<meta property="article:published_time" content="2024-02-02T14:13:00.000Z">
+<meta property="article:modified_time" content="2024-02-02T14:13:25.226Z">
 <meta property="article:author" content="bluesky0420">
-<meta property="article:tag" content="解决方法">
+<meta property="article:tag" content="字体">
+<meta property="article:tag" content="Fluid">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>创建SSH密码并添加到GitHub - Bluesky0420 の Blog</title>
+  <title>Hexo+Fluid修改全局字体 - Bluesky0420 の Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -271,7 +272,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="创建SSH密码并添加到GitHub"></span>
+            <span id="subtitle" data-typed-text="Hexo+Fluid修改全局字体"></span>
           
         </div>
 
@@ -282,8 +283,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-26 17:21" pubdate>
-          2024年1月26日 下午
+        <time datetime="2024-02-02 22:13" pubdate>
+          2024年2月2日 晚上
         </time>
       </span>
     
@@ -294,7 +295,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          185 字
+          308 字
         
       </span>
     
@@ -305,7 +306,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -350,12 +351,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">创建SSH密码并添加到GitHub</h1>
+            <h1 id="seo-header">Hexo+Fluid修改全局字体</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年1月31日 上午
+                    本文最后更新于 2024年2月2日 晚上
                   
                 
               </p>
@@ -363,13 +364,18 @@
             
               <div class="markdown-body">
                 
-                <h1 id="创建SSH密钥并添加到GitHub"><a href="#创建SSH密钥并添加到GitHub" class="headerlink" title="创建SSH密钥并添加到GitHub"></a>创建SSH密钥并添加到GitHub</h1><p>【背景】：为了解决使用git提交文件到GitHub仓库是需要进行身份验证的流程</p>
-<p>【说明】：以下方法同样适用与gitee和gitlab</p>
+                <h1 id="Hexo-Fluid修改全局字体"><a href="#Hexo-Fluid修改全局字体" class="headerlink" title="Hexo+Fluid修改全局字体"></a>Hexo+Fluid修改全局字体</h1><p>【说明】：本文使用「**<a target="_blank" rel="noopener" href="https://github.com/lxgw/LxgwWenKai">霞鹜文楷</a>**」这款免费开源的字体</p>
+<p>【参考文章】：<a target="_blank" rel="noopener" href="https://penghh.fun/2023/05/07/2023-5-7-hexo_blog_font/">Hexo博客Fluid主题，字体全局更改为霞鹜文楷体【效率工具指南】</a>、<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010047432/article/details/106080509">解决vscode不能识别ejs文件的问题</a></p>
 <ol>
-<li>在本地主机上创建ssh密钥，<code>ssh-keygen -t rsa -C &quot;描述信息（一般为邮箱地址）&quot;</code>（创建的ssh密钥一般存放到user&#x2F;.ssh&#x2F;id_rsa.pub，也可以自定义存放位置）</li>
-<li>在GitHub上创建ssh key</li>
-<li>将生成的ssh密钥复制到到GitHub创建的ssh key中（本地ssh密钥为id_rsa.pub中的内容，添加成功后GitHub会给你的个人邮箱发送一封添加成功的邮件）</li>
-<li>测试验证，将本地git仓库提交到GitHub上看看是否还需要进行身份验证</li>
+<li>修改fluid主题文件，具体路径为fluid&#x2F;layout&#x2F;_partials&#x2F;head.ejs，在head标签内添加如下代码，通过引入CDN的方式使用这个字体<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css&quot;</span> <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;print&quot;</span> <span class="hljs-attr">onload</span>=<span class="hljs-string">&quot;this.media=&#x27;all&#x27;&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li>添加fluid主题文件中的自定义样式文件，在fluid&#x2F;source&#x2F;css&#x2F;文件中新建一个custom.css文件并添加如下代码<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-class">.markdown-body</span>, <span class="hljs-selector-tag">p</span> &#123; <br>	<span class="hljs-attribute">font-family</span>: <span class="hljs-string">&#x27;LXGW WenKai Screen&#x27;</span>; <br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>修改fluid主题配置文件，具体修改项如下<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">font:</span><br>	<span class="hljs-attr">font-family:</span> <span class="hljs-string">&quot;LXGW WenKai Screen&quot;</span><br><br><span class="hljs-attr">custom_css:</span> <span class="hljs-string">custom.css文件路径（相对于主题文件的source目录）</span><br></code></pre></td></tr></table></figure></li>
+<li>清理、生成、验证s</li>
+</ol>
+<p>【问题记录】：</p>
+<ol>
+<li>VSCode修改head.ejs、custom.css文件时自带的格式化工具会自动将代码进行格式化，格式化后的ejs文件运行报错 –禁用html自动格式化功能（HTML format: disable）</li>
+<li>VSCode无法识别ejs文件 –安装ejs插件</li>
 </ol>
 
                 
@@ -389,7 +395,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Tips/" class="category-chain-item">Tips</a>
+  <a href="/categories/Hexo/" class="category-chain-item">Hexo</a>
   
   
 
@@ -404,7 +410,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="print-no-link">#解决方法</a>
+        <a href="/tags/%E5%AD%97%E4%BD%93/" class="print-no-link">#字体</a>
+      
+        <a href="/tags/Fluid/" class="print-no-link">#Fluid</a>
       
     </div>
   
@@ -416,8 +424,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>创建SSH密码并添加到GitHub</div>
-      <div>https://bluesky0420.github.io/Tips/2024-01-26/创建ssh密码并添加到github/</div>
+      <div>Hexo+Fluid修改全局字体</div>
+      <div>https://bluesky0420.github.io/Hexo/2024-02-02/hexo-fluid修改全局字体/</div>
     </div>
     <div class="license-meta">
       
@@ -429,13 +437,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月26日</div>
+          <div>2024年2月2日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年1月31日</div>
+          <div>2024年2月2日</div>
         </div>
       
       
@@ -466,9 +474,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Hexo/2024-02-02/github%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A6%96%E9%A1%B5/" title="GitHub自定义首页">
+                      <a href="/Hexo/2024-02-02/hexo%E9%83%A8%E7%BD%B2rss%E8%AE%A2%E9%98%85/" title="Hexo部署RSS订阅">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GitHub自定义首页</span>
+                        <span class="hidden-mobile">Hexo部署RSS订阅</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -476,8 +484,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Hexo/2024-01-26/hexo-gitalk%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" title="Hexo+Gitalk开启评论功能">
-                        <span class="hidden-mobile">Hexo+Gitalk开启评论功能</span>
+                      <a href="/Hexo/2024-02-02/github%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A6%96%E9%A1%B5/" title="GitHub自定义首页">
+                        <span class="hidden-mobile">GitHub自定义首页</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -500,7 +508,7 @@
         var options = Object.assign(
           {"clientID":"39e561091495b0b49f54","clientSecret":"02cb23c2722e38237b38ec610689467ceac61ad4","repo":"hexo-blog-comments","owner":"bluesky0420","admin":["bluesky0420"],"language":"zh-CN","labels":["gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '785da2025a2ee6bdb8f034b56e22fe21'
+            id: '71665e275136495849b677ade7924e49'
           }
         )
         var gitalk = new Gitalk(options);

@@ -6,7 +6,7 @@
   <link href="https://bluesky0420.github.io/atom.xml" rel="self"/>
   
   <link href="https://bluesky0420.github.io/"/>
-  <updated>2024-02-07T09:11:29.384Z</updated>
+  <updated>2024-02-08T12:16:05.784Z</updated>
   <id>https://bluesky0420.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Front Matter</title>
+    <link href="https://bluesky0420.github.io/Hexo/2024-02-08/front-matter/"/>
+    <id>https://bluesky0420.github.io/Hexo/2024-02-08/front-matter/</id>
+    <published>2024-02-08T12:15:28.000Z</published>
+    <updated>2024-02-08T12:16:05.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Front-Matter&quot;&gt;&lt;a href=&quot;#Front-Matter&quot; class=&quot;headerlink&quot; title=&quot;Front Matter&quot;&gt;&lt;/a&gt;Front Matter&lt;/h1&gt;&lt;p&gt;【说明】：front</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
+    
+    
+    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="front_matter" scheme="https://bluesky0420.github.io/tags/front-matter/"/>
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode配置文件备份方案</title>
@@ -123,9 +152,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
-    
     <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
+    
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
     
   </entry>
   
@@ -375,11 +404,11 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
+    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
+    
     <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
     
     <category term="Obsidian" scheme="https://bluesky0420.github.io/tags/Obsidian/"/>
-    
-    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
     
     <category term="自动化" scheme="https://bluesky0420.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
@@ -456,11 +485,11 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
     <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
     
-    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
     
   </entry>
   
@@ -831,9 +860,9 @@
     <category term="开发总结" scheme="https://bluesky0420.github.io/categories/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="CSharp" scheme="https://bluesky0420.github.io/tags/CSharp/"/>
-    
     <category term="WPF" scheme="https://bluesky0420.github.io/tags/WPF/"/>
+    
+    <category term="CSharp" scheme="https://bluesky0420.github.io/tags/CSharp/"/>
     
   </entry>
   

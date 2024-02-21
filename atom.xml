@@ -6,7 +6,7 @@
   <link href="https://bluesky0420.github.io/atom.xml" rel="self"/>
   
   <link href="https://bluesky0420.github.io/"/>
-  <updated>2024-02-19T05:34:24.466Z</updated>
+  <updated>2024-02-21T16:56:46.937Z</updated>
   <id>https://bluesky0420.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习方法和心得</title>
+    <link href="https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-02-22/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E5%92%8C%E5%BF%83%E5%BE%97/"/>
+    <id>https://bluesky0420.github.io/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/2024-02-22/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E5%92%8C%E5%BF%83%E5%BE%97/</id>
+    <published>2024-02-21T16:56:27.000Z</published>
+    <updated>2024-02-21T16:56:46.937Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习方法和心得&quot;&gt;&lt;a href=&quot;#学习方法和心得&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识管理" scheme="https://bluesky0420.github.io/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="学习" scheme="https://bluesky0420.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="笔记" scheme="https://bluesky0420.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>GTD时间管理</title>
@@ -506,9 +533,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
-    
     <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+    <category term="Hexo" scheme="https://bluesky0420.github.io/tags/Hexo/"/>
     
     <category term="Obsidian" scheme="https://bluesky0420.github.io/tags/Obsidian/"/>
     
@@ -587,9 +614,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+    <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
     <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
     
@@ -776,9 +803,9 @@
     <category term="效率" scheme="https://bluesky0420.github.io/categories/%E6%95%88%E7%8E%87/"/>
     
     
-    <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
-    
     <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+    <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
     
   </entry>
   

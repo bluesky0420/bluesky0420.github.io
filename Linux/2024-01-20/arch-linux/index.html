@@ -27,7 +27,7 @@
 <meta property="og:description" content="[!attention]本文只采用UEFI引导方式进行说明  基础安装 下载安装映像及相应的GnuPG签名 制作U盘启动工具（推荐使用Rufus，制作格式为UEFI + GPT）并将签名文件放置在ISO映像文件同一文件夹下 进入主板的BIOS进行设置 将安全启动（secure boot）禁用（disable） 将启动方式（boot）设置为UEFI模式（UEFI only） 设置启动项，将Arch">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-20T07:13:42.000Z">
-<meta property="article:modified_time" content="2024-02-24T08:07:10.156Z">
+<meta property="article:modified_time" content="2024-02-25T07:10:42.184Z">
 <meta property="article:author" content="bluesky0420">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Archlinux">
@@ -357,7 +357,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年2月24日 下午
+                    本文最后更新于 2024年2月25日 下午
                   
                 
               </p>
@@ -390,6 +390,7 @@
 <th>挂载点</th>
 <th>格式</th>
 <th>建议大小</th>
+<th></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -397,30 +398,35 @@
 <td>&#x2F;mnt&#x2F;boot&#x2F;efi</td>
 <td>vfat</td>
 <td>300M</td>
+<td></td>
 </tr>
 <tr>
 <td>boot</td>
 <td>&#x2F;mnt&#x2F;boot</td>
 <td>ext4</td>
 <td>500M</td>
+<td></td>
 </tr>
 <tr>
 <td>根分区</td>
 <td>&#x2F;mnt</td>
 <td>ext4</td>
 <td>100G</td>
+<td></td>
 </tr>
 <tr>
 <td>[SWAP]</td>
 <td>——</td>
 <td>swap</td>
 <td>8G左右</td>
+<td></td>
 </tr>
 <tr>
 <td>家目录</td>
 <td>&#x2F;mnt&#x2F;home</td>
 <td>xfs</td>
 <td>磁盘剩余空间</td>
+<td></td>
 </tr>
 </tbody></table>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs shell">查看硬盘状态：lsblk 或者 fdisk -l<br><span class="hljs-meta prompt_">#</span><span class="language-bash">机械硬盘一般是/dev/hdx</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">SATA固态硬盘一般是/dev/sdx</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">NVME固态硬盘一般是/dev/nvmexn1</span><br><br>对硬盘进行分区：fdisk cfdisk<br><span class="hljs-meta prompt_">#</span><span class="language-bash">注意：分区前时都要将磁盘转换为GPT格式</span><br>方法一、通过fdisk命令分区<br>1、fdisk 需分区的磁盘<br>2、g 回车（设置为gpt格式分区） <br>3、n 回车（设置分区的编号1-n） 回车（设置分区的起始位置） 输入分区的大小（+/-sizeKMGTP）<br>...依次分区直至完成<br>4、w 保存并退出<br>常用选项介绍：<br>m	#帮助<br>g	#转化为GPT格式，常见于UEFI启动<br>o	#转化为dos格式，常见于LEGACY启动<br>n	#新建分区<br>d	#删除分区<br>w	#保存数据并退出<br>q	#退出但不保存<br><br>方法二、通过cfdisk分区cfdisk 需分区的磁盘<br>1、将磁盘转换为GPT格式<br>parted /dev/sdx             #执行parted，进入交互式命令行，进行磁盘类型变更<br>(parted)mktable             #输入mktable<br>New disk label type? gpt    #输入gpt 将磁盘类型转换为gpt 如磁盘有数据会警告，输入yes即可<br>quit                        #最后quit退出parted命令行交互<br>2、cfdisk 需分区的磁盘<br>选中需要分区的磁盘并选中new 回车（输入分区大小）回车<br>...依次分区直至完成<br>分区完成后选中write保存退出<br>常用选项介绍：<br>new		#新建分区<br>quit	#退出<br>help	#帮助<br>write	#写入（保存）<br>delete	#删除<br>resize	#重新分配大小<br>type	#磁盘类型<br></code></pre></td></tr></table></figure>
@@ -536,7 +542,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年2月24日</div>
+          <div>2024年2月25日</div>
         </div>
       
       

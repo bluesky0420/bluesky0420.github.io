@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://github.com/bluesky0420/picx-image-hosting/raw/master/Linux%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8-VMware%E8%AE%BE%E7%BD%AE-%E6%9B%B4%E6%96%B0%E6%A3%80%E6%9F%A5.5qh2bki02qw0.webp">
 <meta property="og:image" content="https://github.com/bluesky0420/picx-image-hosting/raw/master/Linux%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8-VMware%E8%AE%BE%E7%BD%AE-%E4%BD%93%E9%AA%8C%E8%AE%A1%E5%88%92.3dul6aprcg80.webp">
 <meta property="article:published_time" content="2024-01-20T07:11:28.000Z">
-<meta property="article:modified_time" content="2024-02-01T06:31:34.000Z">
+<meta property="article:modified_time" content="2024-02-25T07:14:11.565Z">
 <meta property="article:author" content="bluesky0420">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="系统">
@@ -372,7 +372,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年2月1日 下午
+                    本文最后更新于 2024年2月25日 下午
                   
                 
               </p>
@@ -380,7 +380,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Linux基础使用"><a href="#Linux基础使用" class="headerlink" title="Linux基础使用"></a>Linux基础使用</h1><h2 id="第一章、Linux介绍、虚拟机安装使用"><a href="#第一章、Linux介绍、虚拟机安装使用" class="headerlink" title="第一章、Linux介绍、虚拟机安装使用"></a>第一章、Linux介绍、虚拟机安装使用</h2><h2 id="一、Linux介绍"><a href="#一、Linux介绍" class="headerlink" title="一、Linux介绍"></a>一、Linux介绍</h2><h4 id="（一）计算机资源"><a href="#（一）计算机资源" class="headerlink" title="（一）计算机资源"></a>（一）计算机资源</h4><ul>
+                <h1 id="Linux基础使用"><a href="#Linux基础使用" class="headerlink" title="Linux基础使用"></a>Linux基础使用</h1><h2 id="第一章、Linux介绍、虚拟机安装使用"><a href="#第一章、Linux介绍、虚拟机安装使用" class="headerlink" title="第一章、Linux介绍、虚拟机安装使用"></a>第一章、Linux介绍、虚拟机安装使用</h2><h3 id="一、Linux介绍"><a href="#一、Linux介绍" class="headerlink" title="一、Linux介绍"></a>一、Linux介绍</h3><h4 id="（一）计算机资源"><a href="#（一）计算机资源" class="headerlink" title="（一）计算机资源"></a>（一）计算机资源</h4><ul>
 <li><strong>硬件资源</strong>：计算机的物理设备（CPU、GPU、磁盘……）</li>
 <li><strong>软件资源</strong>：操作系统[内核空间]（特殊的软件资源），应用程序[用户空间]（根据特定的需求，使用计算机语言编写的程序，未启动的时候是一堆静态文件，保存在磁盘中，使用的时候从磁盘调入内存中）</li>
 </ul>
@@ -590,6 +590,7 @@
 </ul>
 <h3 id="五、重定向"><a href="#五、重定向" class="headerlink" title="五、重定向"></a>五、重定向</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">1、在/tmp/目录下创建一个可执行文件1.sh和1.log日志文件：touch /tmp/1.sh<br>2、将&#x27;hostname\nhello&#x27;写入1.sh可执行文件中：echo -e &#x27;hostname\nhello&#x27; &gt; 1.sh<br>3、将1.sh标准输出重定向到1.log日志文件：./1.sh &gt; 1.log<br>4、将1.sh标准错误重定向到1.log日志文件中：./1.sh 2&gt; 1.log<br>5、将1.sh标准输出和标准错误一起重定向到1.log日志文件中：./1.sh &amp;&gt; 1.log<br>6、将1.sh标准输出追加到1.log文件中：./1.sh &gt;&gt; 1.log <br>7、将1.sh标准错误追加到1.log文件中：./1.sh 2&gt;&gt; 1.log<br>8、将1.sh标准输出和标准错误追加到1.log文件中：./1.sh &amp;&gt;&gt; 1.log <br>/dev/null	linux系统下特殊的设备文件，空设备，看的见拿不出来<br></code></pre></td></tr></table></figure>
 <h3 id="六、echo命令详解"><a href="#六、echo命令详解" class="headerlink" title="六、echo命令详解"></a>六、echo命令详解</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">1、echo的作用<br>打印字符串，默认将字符串送往标准输出，默认会打印一个换行符<br>2、echo的用法<br>echo可以和&gt; &gt;&gt; 连用进行文件的创建或内容的增加<br>3、常见选线<br>echo -e	&#x27;str\nstr&#x27;解释转义字符\n<br>echo -n &#x27;str&#x27;不打印换行符<br>4、举例说明<br>打印hello：echo hello<br>打印hello不换行：echo -n &#x27;hello&#x27;<br>打印hello\nworld换行：echo -e &#x27;hello\nworld&#x27;<br>将hello重定向到1.txt文件中：echo &#x27;hello&#x27; &gt; 1.txt<br>将world追加到1.txt文件中：echo &#x27;world&#x27; &gt;&gt; 1.txt<br></code></pre></td></tr></table></figure>
+
 <h2 id="第四章、Linux文件查找、打包压缩、时间相关命令"><a href="#第四章、Linux文件查找、打包压缩、时间相关命令" class="headerlink" title="第四章、Linux文件查找、打包压缩、时间相关命令"></a>第四章、Linux文件查找、打包压缩、时间相关命令</h2><h3 id="一、Linux文件查找"><a href="#一、Linux文件查找" class="headerlink" title="一、Linux文件查找"></a>一、Linux文件查找</h3><h4 id="（一）命令查找（which，whereis）"><a href="#（一）命令查找（which，whereis）" class="headerlink" title="（一）命令查找（which，whereis）"></a>（一）命令查找（which，whereis）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1、which 命令（查找命令存放位置）<br>2、whereis 命令（查看命令存放位置及其他信息）<br></code></pre></td></tr></table></figure>
 <h4 id="（二）文件查找（find）"><a href="#（二）文件查找（find）" class="headerlink" title="（二）文件查找（find）"></a>（二）文件查找（find）</h4><ul>
 <li>按需求查找文件<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">find 路径 [选项] 关键字<br>find --help（查看帮助信息）<br>find 路径 -name &quot;filename&quot;（按名字查找文件，区分大小写）<br>find 路径 -iname &quot;filename&quot;（按名字查找文件，不区分大小写）<br>find 路径 -size +2M（按文件大小查找文件，+2M表示查找所有大于2M和查找文件相匹配的文件）<br>find 路径 -type b（按文件类型查找文件）<br>find 路径 -mtime +2（按文件时间查找文件，+2表示2天以前的所有和查找选项相匹配的文件，-2表示两天内，2表示两天前当天）<br>find 路径 -user username -group groupname （按文件的属主和属组查找文件）<br>注意：选项可以按需求组合<br></code></pre></td></tr></table></figure></li>
@@ -653,6 +654,7 @@
 <h4 id="（三）timedatectl（设置系统和硬件时间）"><a href="#（三）timedatectl（设置系统和硬件时间）" class="headerlink" title="（三）timedatectl（设置系统和硬件时间）"></a>（三）timedatectl（设置系统和硬件时间）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">timedatectl -h --help<br>timedatectl [选项] 命令<br>timedatectl status	查看当前系统硬件时间状态<br>timedatectl show 显示当前系统时间时区硬件时间ntp服务的状态<br>timedatectl set-time TIME 设置系统时间<br>timedatectl list-timezones 列出系统时区<br>timedatectl set-timezones ZONE 设置系统时区<br>timedatectl set-local-rtc BOOL 设置硬件时间是否为本地时间<br>timedatectl set-ntp BOOL 设置时间同步服务是否开启<br></code></pre></td></tr></table></figure>
 <h4 id="（四）cal日历命令"><a href="#（四）cal日历命令" class="headerlink" title="（四）cal日历命令"></a>（四）cal日历命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">cal / cal -1  打印当月日历<br>cal -3 打印前三个月日历<br>cal -n number 打印前n月的日历<br>cal -y 打印一整年的日历<br></code></pre></td></tr></table></figure>
 <h4 id="（五）时间相关命令使用"><a href="#（五）时间相关命令使用" class="headerlink" title="（五）时间相关命令使用"></a>（五）时间相关命令使用</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">当我们需要当前系统时间要如何调用当前时间？<br><span class="hljs-meta prompt_">$</span><span class="language-bash">(<span class="hljs-built_in">command</span>)：优先执行括号内的命令</span><br>·command·：优先执行``内的命令<br>例如：<br>创建一个目录以当前系统时间作为目录名，目录内有一文件，文件名为三天前的日期.log进行打包压缩<br>mkdir $(date +%F)<br>cd 目录<br>touch $(date -d &quot;+3days&quot; +%T)<br>tar -zcvf 目录.tar.gz 目录<br></code></pre></td></tr></table></figure>
+
 <h2 id="第五章、Linux用户管理、vim编辑器、可执行文件"><a href="#第五章、Linux用户管理、vim编辑器、可执行文件" class="headerlink" title="第五章、Linux用户管理、vim编辑器、可执行文件"></a>第五章、Linux用户管理、vim编辑器、可执行文件</h2><h3 id="一、用户管理"><a href="#一、用户管理" class="headerlink" title="一、用户管理"></a>一、用户管理</h3><h4 id="（一）Linux下用户管理"><a href="#（一）Linux下用户管理" class="headerlink" title="（一）Linux下用户管理"></a>（一）Linux下用户管理</h4><ul>
 <li><strong>用户概念和作用</strong><ul>
 <li><strong>什么是用户</strong>：用户就是管理系统和服务的人。</li>
@@ -1935,7 +1937,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年2月1日</div>
+          <div>2024年2月25日</div>
         </div>
       
       

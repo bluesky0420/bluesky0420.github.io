@@ -591,11 +591,11 @@
   </entry>
   
   <entry>
-    <title>Markdown使用技巧</title>
-    <link href="https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/markdown%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <title>Markdown</title>
+    <link href="https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/markdown/"/>
+    <id>https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/markdown/</id>
     <published>2024-01-23T11:53:47.000Z</published>
-    <updated>2024-02-26T08:52:55.491Z</updated>
+    <updated>2024-02-26T12:16:32.124Z</updated>
     
     
       
@@ -636,18 +636,18 @@
     <category term="Tips" scheme="https://bluesky0420.github.io/categories/Tips/"/>
     
     
-    <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
     <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
+    
+    <category term="快捷键" scheme="https://bluesky0420.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
   <entry>
-    <title>VSCode使用技巧</title>
-    <link href="https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/vscode%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/vscode%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <title>VSCode</title>
+    <link href="https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/vscode/"/>
+    <id>https://bluesky0420.github.io/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/2024-01-23/vscode/</id>
     <published>2024-01-23T11:53:32.000Z</published>
-    <updated>2024-02-26T08:53:08.747Z</updated>
+    <updated>2024-02-26T12:16:18.408Z</updated>
     
     
       
@@ -1166,9 +1166,9 @@
     <category term="Windows" scheme="https://bluesky0420.github.io/categories/Windows/"/>
     
     
-    <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
-    
     <category term="运维" scheme="https://bluesky0420.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="Windows" scheme="https://bluesky0420.github.io/tags/Windows/"/>
     
     <category term="教程" scheme="https://bluesky0420.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     

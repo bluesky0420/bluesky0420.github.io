@@ -27,7 +27,7 @@
 <meta property="og:description" content="知识管理框架引言在当今信息爆炸的时代，有效地管理个人知识变得尤为重要。本文将介绍我个人的知识管理框架，以及我所以用的工具和技术，希望能为大家提供一些启发和帮助。 背景知识管理框架概述工具和技术介绍 Obsidian-编写文章 Markdown-文章格式标准 Front Matter-文章附属信息 Git-版本控制 GitHub-远程备份仓库 Hexo-静态博客生成器 Webdav-网络存储共享 坚">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-02T06:40:20.000Z">
-<meta property="article:modified_time" content="2024-03-02T08:09:11.539Z">
+<meta property="article:modified_time" content="2024-03-15T07:40:37.897Z">
 <meta property="article:author" content="bluesky0420">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,7 +294,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          454 字
+          477 字
         
       </span>
     
@@ -355,7 +355,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年3月2日 下午
+                    本文最后更新于 2024年3月15日 下午
                   
                 
               </p>
@@ -376,7 +376,7 @@
 <li>PowerShell-博客文章同步至hexo脚本</li>
 </ol>
 <h2 id="知识管理实践"><a href="#知识管理实践" class="headerlink" title="知识管理实践"></a>知识管理实践</h2><ol>
-<li>创建Obsidian仓库管理本地知识库，仓库结构如下。<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">├─<span class="hljs-string">.obsidian</span>    <span class="hljs-comment"># obsidian配置文件-存放obsidian个人配置文件</span><br>├─<span class="hljs-string">.trash</span>       <span class="hljs-comment"># 废纸篓-默认删除目录</span><br>├─<span class="hljs-string">.git</span>         <span class="hljs-comment"># git本地库</span><br>├─<span class="hljs-string">.gitignore</span>   <span class="hljs-comment"># git忽略配置文件，包含.obsidian、.trash、.gitignore</span><br>├─attachments  <span class="hljs-comment"># 附件目录-默认附件存放目录</span><br>├─attachments  <span class="hljs-comment"># 附件目录-默认附件存放目录</span><br>├─canvas       <span class="hljs-comment"># 画板目录-默认画板文件存放目录</span><br>├─dailys       <span class="hljs-comment"># 日记目录-默认日记文件存放目录</span><br>├─drafts       <span class="hljs-comment"># 草稿箱-新建笔记默认存目录</span><br>├─index        <span class="hljs-comment"># 索引目录-对notes、posts目录下文章创建索引</span><br>├─notes        <span class="hljs-comment"># 笔记目录，一般有多个下级分类目录-用来存放个人学习笔记</span><br>├─posts        <span class="hljs-comment"># 文章目录，一般有多个下级分类目录-用来存放个人博客文章</span><br>└─templates    <span class="hljs-comment"># 模板目录-用来存放常用的模板，例如draft、post、page等模板</span><br></code></pre></td></tr></table></figure></li>
+<li>创建Obsidian仓库管理本地知识库，仓库结构如下。<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">├─<span class="hljs-string">.obsidian</span>    <span class="hljs-comment"># obsidian配置文件-存放obsidian个人配置文件</span><br>├─<span class="hljs-string">.trash</span>       <span class="hljs-comment"># 废纸篓-默认删除目录</span><br>├─<span class="hljs-string">.git</span>         <span class="hljs-comment"># git本地库</span><br>├─<span class="hljs-string">.gitignore</span>   <span class="hljs-comment"># git忽略配置文件，包含.obsidian、.trash、.gitignore</span><br>├─attachments  <span class="hljs-comment"># 附件目录-默认附件存放目录</span><br>├─canvas       <span class="hljs-comment"># 画板目录-默认画板文件存放目录</span><br>├─dailys       <span class="hljs-comment"># 日记目录-默认日记文件存放目录</span><br>├─drafts       <span class="hljs-comment"># 草稿箱-新建笔记默认存目录</span><br>├─index        <span class="hljs-comment"># 索引目录-对notes、posts目录下文章创建索引</span><br>├─notes        <span class="hljs-comment"># 笔记目录，一般有多个下级分类目录-用来存放个人学习笔记</span><br>├─posts        <span class="hljs-comment"># 文章目录，一般有多个下级分类目录-用来存放个人博客文章</span><br>├─problems     <span class="hljs-comment"># 附件目录-保存常见故障问题及解决方案目录</span><br>├─rules        <span class="hljs-comment"># 规范目录-保存各种规范文档的目录</span><br>└─templates    <span class="hljs-comment"># 模板目录-用来存放常用的模板，例如draft、post、page等模板</span><br></code></pre></td></tr></table></figure></li>
 <li>Obsidain按照markdown格式编写博客。</li>
 <li>使用front matter定义文档属性。</li>
 <li>使用git进行版本控制并将本地知识库推送到GitHub远程仓库进行远端备份。</li>
@@ -446,7 +446,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年3月2日</div>
+          <div>2024年3月15日</div>
         </div>
       
       

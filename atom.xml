@@ -6,7 +6,7 @@
   <link href="https://bluesky0420.github.io/atom.xml" rel="self"/>
   
   <link href="https://bluesky0420.github.io/"/>
-  <updated>2024-05-20T05:17:42.983Z</updated>
+  <updated>2024-05-30T07:30:33.459Z</updated>
   <id>https://bluesky0420.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>综合实践管理策略</title>
+    <link href="https://bluesky0420.github.io/%E6%96%B9%E6%B3%95%E8%AE%BA/2024-05-26/%E7%BB%BC%E5%90%88%E5%AE%9E%E8%B7%B5%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5/"/>
+    <id>https://bluesky0420.github.io/%E6%96%B9%E6%B3%95%E8%AE%BA/2024-05-26/%E7%BB%BC%E5%90%88%E5%AE%9E%E8%B7%B5%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5/</id>
+    <published>2024-05-26T11:44:18.000Z</published>
+    <updated>2024-05-30T07:30:33.459Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-设定明确的目标：SMART-OKR&quot;&gt;&lt;a href=&quot;#1-设定明确的目标：SMART-OKR&quot; class=&quot;headerlink&quot; title=&quot;1. 设定明确的目标：SMART + OKR&quot;&gt;&lt;/a&gt;1. 设定明确的目标：SMART +</summary>
+        
+      
+    
+    
+    
+    <category term="方法论" scheme="https://bluesky0420.github.io/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    
+    <category term="时间管理" scheme="https://bluesky0420.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>OKR目标管理</title>
@@ -654,9 +679,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
-    
     <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
     
     <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
     
@@ -1340,9 +1365,9 @@
     <category term="Linux" scheme="https://bluesky0420.github.io/categories/Linux/"/>
     
     
-    <category term="Archlinux" scheme="https://bluesky0420.github.io/tags/Archlinux/"/>
-    
     <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Archlinux" scheme="https://bluesky0420.github.io/tags/Archlinux/"/>
     
   </entry>
   

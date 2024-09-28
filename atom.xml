@@ -6,7 +6,7 @@
   <link href="https://bluesky0420.github.io/atom.xml" rel="self"/>
   
   <link href="https://bluesky0420.github.io/"/>
-  <updated>2024-09-28T07:55:53.788Z</updated>
+  <updated>2024-04-11T09:48:43.000Z</updated>
   <id>https://bluesky0420.github.io/</id>
   
   <author>
@@ -15,52 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://bluesky0420.github.io/uncategorized/2024-09-28/"/>
-    <id>https://bluesky0420.github.io/uncategorized/2024-09-28/</id>
-    <published>2024-09-28T09:15:35.637Z</published>
-    <updated>2024-09-28T07:55:53.788Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;系统安装流程&quot;&gt;&lt;a href=&quot;#系统安装流程&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>电脑开机启动流程</title>
-    <link href="https://bluesky0420.github.io/uncategorized/2024-02-22/%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"/>
-    <id>https://bluesky0420.github.io/uncategorized/2024-02-22/%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/</id>
-    <published>2024-02-22T06:05:26.000Z</published>
-    <updated>2024-04-11T09:48:45.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;电脑开机启动流程&quot;&gt;&lt;a href=&quot;#电脑开机启动流程&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="流程" scheme="https://bluesky0420.github.io/tags/%E6%B5%81%E7%A8%8B/"/>
-    
-    <category term="电脑" scheme="https://bluesky0420.github.io/tags/%E7%94%B5%E8%84%91/"/>
-    
-  </entry>
   
   <entry>
     <title>Front Matter</title>
@@ -110,9 +64,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
-    
     <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
+    <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
     
   </entry>
   
@@ -162,9 +116,9 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
-    <category term="字体" scheme="https://bluesky0420.github.io/tags/%E5%AD%97%E4%BD%93/"/>
-    
     <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
+    
+    <category term="字体" scheme="https://bluesky0420.github.io/tags/%E5%AD%97%E4%BD%93/"/>
     
   </entry>
   
@@ -363,11 +317,11 @@
     <category term="Hexo" scheme="https://bluesky0420.github.io/categories/Hexo/"/>
     
     
+    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
+    
     <category term="Fluid" scheme="https://bluesky0420.github.io/tags/Fluid/"/>
     
     <category term="博客" scheme="https://bluesky0420.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="GitHub" scheme="https://bluesky0420.github.io/tags/GitHub/"/>
     
   </entry>
   
@@ -467,9 +421,9 @@
     <category term="Windows" scheme="https://bluesky0420.github.io/categories/Windows/"/>
     
     
-    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="教程" scheme="https://bluesky0420.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="设置" scheme="https://bluesky0420.github.io/tags/%E8%AE%BE%E7%BD%AE/"/>
     
@@ -496,9 +450,9 @@
     <category term="Windows" scheme="https://bluesky0420.github.io/categories/Windows/"/>
     
     
-    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="教程" scheme="https://bluesky0420.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="设置" scheme="https://bluesky0420.github.io/tags/%E8%AE%BE%E7%BD%AE/"/>
     
@@ -525,11 +479,11 @@
     <category term="Windows" scheme="https://bluesky0420.github.io/categories/Windows/"/>
     
     
-    <category term="教程" scheme="https://bluesky0420.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="封装" scheme="https://bluesky0420.github.io/tags/%E5%B0%81%E8%A3%85/"/>
     
     <category term="运维" scheme="https://bluesky0420.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="教程" scheme="https://bluesky0420.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -557,9 +511,9 @@
     <category term="Linux" scheme="https://bluesky0420.github.io/categories/Linux/"/>
     
     
-    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="Archlinux" scheme="https://bluesky0420.github.io/tags/Archlinux/"/>
+    
+    <category term="系统" scheme="https://bluesky0420.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
